@@ -14,8 +14,8 @@ export const Section = styled.section`
   position: relative;
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
-  gap: clamp(1.5rem, 3vw, 3rem);
-  padding: clamp(2rem, 5vw, 6rem) clamp(1rem, 6vw, 6rem);
+  gap: clamp(2rem, 5vw, 5rem);
+  padding: clamp(2rem, 5vw, 3.5rem) clamp(1rem, 6vw, 5rem);
   background: ${({ bgimage }) =>
     bgimage
       ? `linear-gradient(180deg, rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
@@ -67,11 +67,19 @@ export const Title = styled.div`
 export const KeywordWrapper = styled.ul`
   list-style: none;
   padding: 0;
-  margin: clamp(0.75rem, 1.5vw, 1.25rem) 0 0 0;
+  margin: 2.5rem 0 0 0;
 
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: clamp(0.5rem, 1.2vw, 0.75rem);
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 1.25rem;
+  }
 `;
 
 export const Keyword = styled.li`
@@ -146,6 +154,23 @@ export const InputWrapper = styled.div`
   display: grid;
   gap: 0.4rem;
 
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  position: relative;
+
+  label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+  }
+
+  .label-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   label {
     font-size: 0.95rem;
     font-weight: 600;
@@ -196,12 +221,23 @@ export const InputWrapper = styled.div`
       visibility: visible;
     }
   }
+
+  .error-message {
+    color: ${tokens.error};
+    font-size: 0.75rem;
+    margin-left: 0.5rem;
+    visibility: hidden;
+    white-space: nowrap;
+    &.visible {
+      visibility: visible;
+    }
+  }
 `;
 
 export const TextArea = styled.textarea`
   resize: vertical;
   min-height: 120px;
-  max-height: 200px;
+  max-height: 150px;
   width: 100%;
 `;
 

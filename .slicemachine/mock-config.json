@@ -1,6 +1,9 @@
 {
   "_cts": {
-    "landingpage": {}
+    "landingpage": {},
+    "landingnav": {
+      "navlink": {}
+    }
   },
   "slices": {
     "LandingFaq": {

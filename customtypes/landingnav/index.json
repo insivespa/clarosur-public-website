@@ -1,0 +1,65 @@
+{
+  "id": "landingnav",
+  "label": "LandingNav",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "logo": {
+        "type": "Image",
+        "config": {
+          "label": "logo",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "logourl": {
+        "type": "Link",
+        "config": {
+          "label": "logoUrl",
+          "placeholder": "",
+          "select": null
+        }
+      },
+      "navlink": {
+        "type": "Group",
+        "config": {
+          "label": "navLink",
+          "fields": {
+            "text": {
+              "type": "Text",
+              "config": {
+                "label": "text",
+                "placeholder": ""
+              }
+            },
+            "url": {
+              "type": "Link",
+              "config": {
+                "label": "url",
+                "placeholder": "",
+                "allowTargetBlank": false,
+                "select": null
+              }
+            }
+          }
+        }
+      },
+      "callbtn": {
+        "type": "Text",
+        "config": {
+          "label": "callBtn",
+          "placeholder": ""
+        }
+      },
+      "callbtnlink": {
+        "type": "Link",
+        "config": {
+          "label": "callBtnLink",
+          "placeholder": "",
+          "select": null
+        }
+      }
+    }
+  }
+}

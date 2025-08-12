@@ -35,14 +35,14 @@ export async function getStaticProps({ previewData, params: { uid } }) {
     const client = createClient({ previewData });
 
     const page = await client.getByUID("landingpage", uid);
-    //const landingNav = await client.getSingle("landingnav");
-    //const landingFooter = await client.getSingle("landingfooter");
+    const landingNav = await client.getSingle("landingnav");
+    const landingFooter = await client.getSingle("landingfooter");
 
     return {
       props: {
         page: page || null,
-        //landingNav,
-        //landingFooter,
+        landingNav,
+        landingFooter,
       },
       revalidate: 60,
     };

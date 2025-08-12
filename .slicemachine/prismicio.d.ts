@@ -177,6 +177,102 @@ interface HomepageDocumentData {
  */
 export type HomepageDocument<Lang extends string = string> = prismic.PrismicDocumentWithUID<Simplify<HomepageDocumentData>, "homepage", Lang>;
 
+/**
+ * Item in *LandingNav → navLink*
+ */
+export interface LandingnavDocumentDataNavlinkItem {
+	/**
+	 * text field in *LandingNav → navLink*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landingnav.navlink[].text
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	text: prismic.KeyTextField;
+	
+	/**
+	 * url field in *LandingNav → navLink*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landingnav.navlink[].url
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	url: prismic.LinkField;
+}
+
+/**
+ * Content for LandingNav documents
+ */
+interface LandingnavDocumentData {
+	/**
+	 * logo field in *LandingNav*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landingnav.logo
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	logo: prismic.ImageField<never>;
+	
+	/**
+	 * logoUrl field in *LandingNav*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landingnav.logourl
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	logourl: prismic.LinkField;
+	
+	/**
+	 * navLink field in *LandingNav*
+	 *
+	 * - **Field Type**: Group
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landingnav.navlink[]
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#group
+	 */
+	navlink: prismic.GroupField<Simplify<LandingnavDocumentDataNavlinkItem>>;
+	
+	/**
+	 * callBtn field in *LandingNav*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landingnav.callbtn
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	callbtn: prismic.KeyTextField;
+	
+	/**
+	 * callBtnLink field in *LandingNav*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landingnav.callbtnlink
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	callbtnlink: prismic.LinkField;
+}
+
+/**
+ * LandingNav document from Prismic
+ *
+ * - **API ID**: `landingnav`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type LandingnavDocument<Lang extends string = string> = prismic.PrismicDocumentWithoutUID<Simplify<LandingnavDocumentData>, "landingnav", Lang>;
+
 type LandingpageDocumentDataSlicesSlice = LandingCustomerReviewSlice | LandingFaqSlice | LandingHeroSlice | LandingTimelineSlice | AboutSlice | LandingServicesSlice | OurProjectsSlice | SliceBenefitsSlice
 
 /**
@@ -375,7 +471,7 @@ interface PageDocumentData {
  */
 export type PageDocument<Lang extends string = string> = prismic.PrismicDocumentWithUID<Simplify<PageDocumentData>, "page", Lang>;
 
-export type AllDocumentTypes = FootermenuDocument | HomepageDocument | LandingpageDocument | MenutopDocument | PageDocument;
+export type AllDocumentTypes = FootermenuDocument | HomepageDocument | LandingnavDocument | LandingpageDocument | MenutopDocument | PageDocument;
 
 /**
  * Primary content in *CardList → Default → Primary*
@@ -2526,6 +2622,9 @@ declare module "@prismicio/client" {
 			HomepageDocument,
 			HomepageDocumentData,
 			HomepageDocumentDataSlicesSlice,
+			LandingnavDocument,
+			LandingnavDocumentData,
+			LandingnavDocumentDataNavlinkItem,
 			LandingpageDocument,
 			LandingpageDocumentData,
 			LandingpageDocumentDataSlicesSlice,

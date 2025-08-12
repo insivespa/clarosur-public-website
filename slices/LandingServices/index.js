@@ -1,5 +1,5 @@
 import { PrismicLink, PrismicRichText } from "@prismicio/react";
-import { Section, ServicesWrapper, Service } from "./style";
+import { Section, ServicesWrapper, ServiceNoHover, ServiceHover } from "./style";
 
 /**
  * @typedef {import("@prismicio/client").Content.LandingServicesSlice} LandingServicesSlice
@@ -7,38 +7,59 @@ import { Section, ServicesWrapper, Service } from "./style";
  * @param { LandingServicesProps }
  */
 
+/** -------- variant objects ---------- **/
+
+const NoHover = ({ title, items }) => (
+  <Section id="servicios">
+    <PrismicRichText field={title} />
+    <ServicesWrapper>
+      {items.map((i, idx) => (
+        <ServiceNoHover key={idx} bgimage={i.bgimage?.url}>
+          <div className="service-link">
+            <div className="service-content">
+              <PrismicRichText field={i.servicetitle} />
+              <PrismicRichText field={i.description} />
+            </div>
+          </div>
+        </ServiceNoHover>
+      ))}
+    </ServicesWrapper>
+  </Section>
+);
+
+const Hover = ({ title, items }) => (
+  <Section id="other-services">
+    <PrismicRichText field={title} />
+    <ServicesWrapper>
+      {items.map((i, idx) => (
+        <ServiceHover key={idx} bgimage={i.bgimage?.url}>
+          <PrismicLink field={i.link} className="service-link">
+            <div className="service-content">
+              <PrismicRichText field={i.servicetitle} />
+              <PrismicRichText field={i.description} />
+            </div>
+          </PrismicLink>
+        </ServiceHover>
+      ))}
+    </ServicesWrapper>
+  </Section>
+);
+
+/** -------- main slice ---------- **/
+
 const LandingServices = ({ slice }) => {
-  const title = slice.primary.title;
-  const items = slice.items || [];
-  const isNoHover = slice.variation === "nohover";
+  const { variation, primary, items = [] } = slice;
+  const title = primary?.title;
 
-  return (
-    <Section id={isNoHover ? "services" : "other-services"}>
-      <PrismicRichText field={title} />
+  // choose object by variation
+  const Variants = {
+    nohover: NoHover,
+    default: Hover,
+    hover: Hover,
+  };
 
-      <ServicesWrapper>
-        {items.map((i, index) => (
-          <Service key={index} bgimage={i.bgimage.url} nohover={isNoHover}>
-            {isNoHover ? (
-              <div className="service-link">
-                <div className="service-content">
-                  <PrismicRichText field={i.servicetitle} />
-                  <PrismicRichText field={i.description} />
-                </div>
-              </div>
-            ) : (
-              <PrismicLink field={i.link} className="service-link">
-                <div className="service-content">
-                  <PrismicRichText field={i.servicetitle} />
-                  <PrismicRichText field={i.description} />
-                </div>
-              </PrismicLink>
-            )}
-          </Service>
-        ))}
-      </ServicesWrapper>
-    </Section>
-  );
+  const Variant = Variants[variation] || Variants.default;
+  return <Variant title={title} items={items} />;
 };
 
 export default LandingServices;

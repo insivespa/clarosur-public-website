@@ -19,9 +19,15 @@ import { useState } from "react";
  */
 
 const SliceBenefits = ({ slice }) => {
-  const [openIndex, setOpenIndex] = useState(null);
+  const [openIndexes, setOpenIndexes] = useState(
+    slice.items?.map((_, idx) => idx) || []
+  );
 
-  const toggle = (i) => setOpenIndex((prev) => (prev === i ? null : i));
+  const toggle = (i) => {
+    setOpenIndexes((prev) =>
+      prev.includes(i) ? prev.filter((idx) => idx !== i) : [...prev, i]
+    );
+  };
 
   return (
     <Section aria-labelledby="benefits-title">
@@ -33,7 +39,7 @@ const SliceBenefits = ({ slice }) => {
 
       <Grid>
         {slice.items?.map((item, i) => {
-          const isOpen = openIndex === i;
+          const isOpen = openIndexes.includes(i);
           return (
             <Card key={i}>
               <IconButton

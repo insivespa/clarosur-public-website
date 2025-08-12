@@ -111,7 +111,7 @@ const LandingHero = ({ slice }) => {
   };
 
   return (
-    <Section id="banner" bgimage={bgimage?.url}>
+    <Section id="inicio" bgimage={bgimage?.url}>
       <div>
         <Title>
           {title && <PrismicRichText field={title} />}
@@ -146,22 +146,36 @@ const LandingHero = ({ slice }) => {
           )}
 
           <InputWrapper>
-            <label htmlFor="name">Nombre</label>
+            <div className="label-row">
+              <label htmlFor="name">Nombre</label>
+              <span
+                id="name-error"
+                className={`error-message ${errors.name ? "visible" : ""}`}
+              >
+                Por favor ingresa tu nombre
+              </span>
+            </div>
             <input
               id="name"
               type="text"
               placeholder="Ej. Juan Pérez"
               {...register("name", { required: true })}
               aria-invalid={!!errors.name}
+              aria-describedby="name-error"
               className={errors.name ? "input-error" : ""}
             />
-            <span className={`error-message ${errors.name ? "visible" : ""}`}>
-              Por favor ingresa tu nombre
-            </span>
           </InputWrapper>
 
           <InputWrapper>
-            <label htmlFor="email">Email</label>
+            <div className="label-row">
+              <label htmlFor="email">Email</label>
+              <span
+                id="email-error"
+                className={`error-message ${errors.email ? "visible" : ""}`}
+              >
+                {errors.email?.message || "\u00A0"}
+              </span>
+            </div>
             <input
               id="email"
               type="email"
@@ -176,16 +190,20 @@ const LandingHero = ({ slice }) => {
               })}
               className={errors.email ? "input-error" : ""}
               aria-invalid={!!errors.email}
+              aria-describedby="email-error"
             />
-            <span
-              className={`error-message ${errors.email ? "visible" : "hidden"}`}
-            >
-              {errors.email?.message || "\u00A0"}
-            </span>
           </InputWrapper>
 
           <InputWrapper>
-            <label htmlFor="phone">Teléfono</label>
+            <div className="label-row">
+              <label htmlFor="phone">Teléfono</label>
+              <span
+                id="phone-error"
+                className={`error-message ${errors.phone ? "visible" : ""}`}
+              >
+                {errors.phone?.message || "\u00A0"}
+              </span>
+            </div>
             <input
               id="phone"
               type="tel"
@@ -208,24 +226,22 @@ const LandingHero = ({ slice }) => {
                 },
               })}
               aria-invalid={!!errors.phone}
+              aria-describedby="phone-error"
               className={errors.phone ? "input-error" : ""}
             />
-            <span
-              className={`error-message ${errors.phone ? "visible" : "hidden"}`}
-            >
-              {errors.phone?.message || " "}
-            </span>
           </InputWrapper>
 
           <InputWrapper>
-            <label htmlFor="message">Mensaje (opcional)</label>
+            <div className="label-row">
+              <label htmlFor="message">Mensaje (opcional)</label>
+              <span className="error-message">&nbsp;</span>
+            </div>
             <TextArea
               id="message"
               placeholder="Escribe tu mensaje aquí..."
               {...register("message")}
               rows={4}
             />
-            <span className="error-message hidden">&nbsp;</span>
           </InputWrapper>
 
           <ButtonWrapper>

@@ -18,7 +18,7 @@ import {
  * @param { OurProjectsProps }
  */
 const OurProjects = ({ slice }) => (
-  <Section>
+  <Section id="trabajos">
     <Title>
       {slice.primary.title && (
         <>

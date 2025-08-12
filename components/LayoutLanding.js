@@ -1,7 +1,7 @@
 import Head from "next/head";
 import styled from "styled-components";
-//import LandingNav from "./common/LandingNav/LandingNav";
-//import LandingFooter from "./common/LandingFooter/LandingFooter";
+import LandingNav from "./common/LandingNav/LandingNav";
+import LandingFooter from "./common/LandingFooter/LandingFooter";
 import { getMetaTags } from "../utils/seo";
 import { FaWhatsapp } from "react-icons/fa";
 
@@ -49,19 +49,12 @@ export const LandingLayout = (props) => {
           title,
         })}
       </Head>
-
-      {/*<LandingNav landingNav={header} />*/}
+      <LandingNav landingNav={header} />
       <main>{children}</main>
-
-      <WhatsAppButton
-        href="https://api.whatsapp.com/send?phone=56959382761&text=Hola,%20Quiero%20cotizar%20mi%20proyecto%20con%20ustedes"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <WhatsAppButton href="#" target="_blank" rel="noopener noreferrer">
         <FaWhatsapp color="white" size={40} />
       </WhatsAppButton>
-
-      {/*<LandingFooter landingFooter={footer} />*/}
+      <LandingFooter landingFooter={footer} />
     </>
   );
 };

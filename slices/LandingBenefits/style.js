@@ -23,11 +23,17 @@ const Header = styled.header`
 const Grid = styled.div`
   max-width: 1200px;
   margin: 20px auto 0;
-
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
   gap: 3rem;
+  grid-template-columns: minmax(0, 1fr);
+
+  @media (min-width: 640px) {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 `;
 
 const Card = styled.article`
@@ -35,9 +41,11 @@ const Card = styled.article`
   flex-direction: column;
   align-items: center;
   text-align: center;
+  width: 100%;
 
-  flex: 1 1 260px;
-  max-width: 320px;
+  @media (min-width: 640px) {
+    max-width: 420px;
+  }
 `;
 
 const IconButton = styled.button`

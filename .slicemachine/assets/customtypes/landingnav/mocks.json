@@ -1,0 +1,42 @@
+{
+  "id": "mock-doc-id",
+  "url": null,
+  "type": "landingnav",
+  "href": null,
+  "tags": [],
+  "first_publication_date": "1970-01-01T00:00:01+0000",
+  "last_publication_date": "1970-01-01T00:00:01+0000",
+  "slugs": [],
+  "linked_documents": [],
+  "lang": "en-us",
+  "alternate_languages": [],
+  "data": {
+    "logo": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1471897488648-5eae4ac6686b"
+    },
+    "logourl": {
+      "link_type": "Web",
+      "url": "https://prismic.io"
+    },
+    "navlink": [
+      {
+        "text": "had",
+        "url": {
+          "link_type": "Web",
+          "url": "https://prismic.io"
+        }
+      }
+    ],
+    "callbtn": "before",
+    "callbtnlink": {
+      "link_type": "Web",
+      "url": "http://twitter.com"
+    }
+  }
+}
