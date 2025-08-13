@@ -28,6 +28,15 @@
             "single": "paragraph"
           }
         },
+        "tagline": {
+          "type": "StructuredText",
+          "config": {
+            "label": "tagline",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph"
+          }
+        },
         "formtitle": {
           "type": "StructuredText",
           "config": {

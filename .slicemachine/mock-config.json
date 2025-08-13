@@ -71,6 +71,12 @@
               "patternType": "PARAGRAPH",
               "blocks": 1
             }
+          },
+          "tagline": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
           }
         },
         "items": {}
@@ -111,6 +117,18 @@
           "description": {
             "config": {
               "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    },
+    "LandingProjects": {
+      "default": {
+        "items": {
+          "projecttitle": {
+            "config": {
+              "patternType": "HEADING",
               "blocks": 1
             }
           }

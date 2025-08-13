@@ -30,6 +30,7 @@ export const NavLinks = styled.ul`
     position: relative;
     text-decoration: none;
     color: #4f4c58;
+    font-size: 1.05rem;
     font-weight: 500;
     padding-bottom: 4px;
     transition: all 0.3s ease;
@@ -147,28 +148,32 @@ export const ContactButtons = styled.div`
     align-items: center;
     gap: 0.5rem;
     padding: 10px 18px;
-    background: #f5f5f5;
-    color: #4f4c58;
     border-radius: 10px;
     text-decoration: none;
     font-weight: 500;
-    transition: all 0.3s ease;
-    border: 1px solid #ddd;
 
+    background: rgba(0, 102, 204, 0.08);
+    border: 1px solid rgba(0, 102, 204, 0.2);
+    backdrop-filter: saturate(140%) blur(8px);
+    -webkit-backdrop-filter: saturate(140%) blur(8px);
+
+    color: #0066cc;
     svg {
       font-size: 1rem;
-      color: #4f4c58;
+      color: #0066cc;
       transition: color 0.3s ease;
     }
 
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
     &:hover {
-      background: #e6f0fa;
-      color: #0066cc;
-      border-color: #0066cc;
+      background: rgba(0, 102, 204, 0.12);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    }
 
-      svg {
-        color: #0066cc;
-      }
+    &:active {
+      transform: translateY(0);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08) inset;
     }
   }
 `;

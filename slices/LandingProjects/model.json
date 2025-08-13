@@ -29,6 +29,15 @@
         }
       },
       "items": {
+        "projecttitle": {
+          "type": "StructuredText",
+          "config": {
+            "label": "projectTitle",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading2"
+          }
+        },
         "projectdescription": {
           "type": "StructuredText",
           "config": {

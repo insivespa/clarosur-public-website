@@ -6,8 +6,22 @@ const text = "#0a0a0a";
 
 const Section = styled.section`
   width: 100%;
-  padding: clamp(24px, 5vw, 64px) 16px;
   color: ${text};
+
+  /* unified responsive padding */
+  padding: 4rem 10rem;
+
+  @media (max-width: 1200px) {
+    padding: 2rem 6rem;
+  }
+
+  @media (max-width: 992px) {
+    padding: 2rem 1rem;
+  }
+
+  @media (max-width: 768px) {
+    padding: 1rem;
+  }
 `;
 
 const Header = styled.header`
@@ -22,17 +36,17 @@ const Header = styled.header`
 
 const Grid = styled.div`
   max-width: 1200px;
-  margin: 20px auto 0;
+  margin: 40px auto 0;
   display: grid;
   gap: 3rem;
-  grid-template-columns: minmax(0, 1fr);
+
+  grid-template-columns: 1fr;
+  justify-content: center;
+  justify-items: center;
+  align-items: start;
 
   @media (min-width: 640px) {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  }
-
-  @media (min-width: 1024px) {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
   }
 `;
 
@@ -51,8 +65,8 @@ const Card = styled.article`
 const IconButton = styled.button`
   display: grid;
   place-items: center;
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   border: 3px solid ${primary};
   background: transparent;
@@ -85,8 +99,15 @@ const Heading = styled.div`
 
   p {
     font-weight: 600;
+    font-size: 1.25rem;
     line-height: 1.2;
     margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    p {
+      font-size: 1.05rem;
+    }
   }
 `;
 
@@ -104,7 +125,8 @@ const BodyCopy = styled.div`
 
   p {
     margin: 0.25rem 0;
-    text-align: justify;
+    text-align: center;
+    padding: 0 30px;
   }
 `;
 

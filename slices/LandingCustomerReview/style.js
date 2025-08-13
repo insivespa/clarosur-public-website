@@ -5,6 +5,15 @@ export const Section = styled.section`
   padding: 2rem;
   background: white;
   padding: 1rem 10rem;
+
+  @media (max-width: 1200px) {
+    padding: 2rem 6rem;
+  }
+
+  @media (max-width: 992px) {
+    padding: 2rem 1rem;
+  }
+
   @media (max-width: 768px) {
     padding: 1rem;
   }

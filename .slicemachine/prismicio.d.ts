@@ -178,6 +178,101 @@ interface HomepageDocumentData {
 export type HomepageDocument<Lang extends string = string> = prismic.PrismicDocumentWithUID<Simplify<HomepageDocumentData>, "homepage", Lang>;
 
 /**
+ * Item in *landingFooter → contactgroup*
+ */
+export interface LandingfooterDocumentDataContactgroupItem {
+	/**
+	 * icon field in *landingFooter → contactgroup*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landingfooter.contactgroup[].icon
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	icon: prismic.ImageField<never>;
+	
+	/**
+	 * label field in *landingFooter → contactgroup*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landingfooter.contactgroup[].label
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	label: prismic.RichTextField;
+	
+	/**
+	 * url field in *landingFooter → contactgroup*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landingfooter.contactgroup[].url
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	url: prismic.LinkField;
+}
+
+/**
+ * Content for landingFooter documents
+ */
+interface LandingfooterDocumentData {
+	/**
+	 * logo field in *landingFooter*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landingfooter.logo
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	logo: prismic.ImageField<never>;
+	
+	/**
+	 * description field in *landingFooter*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landingfooter.description
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	description: prismic.RichTextField;
+	
+	/**
+	 * copyright field in *landingFooter*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landingfooter.copyright
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	copyright: prismic.RichTextField;
+	
+	/**
+	 * contactgroup field in *landingFooter*
+	 *
+	 * - **Field Type**: Group
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landingfooter.contactgroup[]
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#group
+	 */
+	contactgroup: prismic.GroupField<Simplify<LandingfooterDocumentDataContactgroupItem>>;
+}
+
+/**
+ * landingFooter document from Prismic
+ *
+ * - **API ID**: `landingfooter`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type LandingfooterDocument<Lang extends string = string> = prismic.PrismicDocumentWithoutUID<Simplify<LandingfooterDocumentData>, "landingfooter", Lang>;
+
+/**
  * Item in *LandingNav → navLink*
  */
 export interface LandingnavDocumentDataNavlinkItem {
@@ -471,7 +566,7 @@ interface PageDocumentData {
  */
 export type PageDocument<Lang extends string = string> = prismic.PrismicDocumentWithUID<Simplify<PageDocumentData>, "page", Lang>;
 
-export type AllDocumentTypes = FootermenuDocument | HomepageDocument | LandingnavDocument | LandingpageDocument | MenutopDocument | PageDocument;
+export type AllDocumentTypes = FootermenuDocument | HomepageDocument | LandingfooterDocument | LandingnavDocument | LandingpageDocument | MenutopDocument | PageDocument;
 
 /**
  * Primary content in *CardList → Default → Primary*
@@ -1568,6 +1663,16 @@ export interface LandingHeroSliceDefaultPrimary {
 	subtitle: prismic.RichTextField;
 	
 	/**
+	 * tagline field in *LandingHero → Default → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landing_hero.default.primary.tagline
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	tagline: prismic.RichTextField;
+	
+	/**
 	 * formTitle field in *LandingHero → Default → Primary*
 	 *
 	 * - **Field Type**: Title
@@ -1685,6 +1790,16 @@ export interface OurProjectsSliceDefaultPrimary {
  * Primary content in *LandingProjects → Items*
  */
 export interface OurProjectsSliceDefaultItem {
+	/**
+	 * projectTitle field in *LandingProjects → Items*
+	 *
+	 * - **Field Type**: Title
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: our_projects.items[].projecttitle
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	projecttitle: prismic.TitleField;
+	
 	/**
 	 * projectDescription field in *LandingProjects → Items*
 	 *
@@ -2622,6 +2737,9 @@ declare module "@prismicio/client" {
 			HomepageDocument,
 			HomepageDocumentData,
 			HomepageDocumentDataSlicesSlice,
+			LandingfooterDocument,
+			LandingfooterDocumentData,
+			LandingfooterDocumentDataContactgroupItem,
 			LandingnavDocument,
 			LandingnavDocumentData,
 			LandingnavDocumentDataNavlinkItem,

@@ -3,15 +3,24 @@ import styled from "styled-components";
 export const Section = styled.div`
   background-color: white;
   padding: 1rem 10rem;
-  @media (max-width: 1100px) {
-    padding: 1rem;
-  }
 
   h1 {
     color: #3962e9;
     text-align: center;
     margin-top: 0;
     font-size: 2rem;
+  }
+
+  @media (max-width: 1200px) {
+    padding: 2rem 6rem;
+  }
+
+  @media (max-width: 992px) {
+    padding: 2rem 1rem;
+  }
+
+  @media (max-width: 768px) {
+    padding: 1rem;
   }
 `;
 
@@ -32,10 +41,10 @@ export const ServiceNoHover = styled.div`
     bgimage ? `url(${bgimage}) center/cover no-repeat` : "#3962E9"};
   overflow: hidden;
   cursor: pointer;
-  transition: transform 0.3s ease; /* hover animation back */
+  transition: transform 0.3s ease;
 
   &:hover {
-    transform: translateY(-5px); /* subtle lift on hover */
+    transform: translateY(-5px);
   }
 
   &::before {
@@ -43,7 +52,7 @@ export const ServiceNoHover = styled.div`
     position: absolute;
     inset: 0;
     background: rgba(0, 0, 0, 0.5);
-    opacity: 1; /* always visible */
+    opacity: 1;
     z-index: 1;
   }
 
@@ -61,13 +70,13 @@ export const ServiceNoHover = styled.div`
   }
 
   .service-content {
-    text-align: left; /* Removed pointer-events: none */
+    text-align: left;
   }
 
   .service-content h2,
   .service-content p {
     color: white;
-    opacity: 1; /* always visible */
+    opacity: 1;
     transform: translateY(0);
     margin: 0;
     padding: 0 10px;
@@ -88,9 +97,7 @@ export const ServiceNoHover = styled.div`
     line-height: 1.2;
     max-height: 120px;
     overflow: auto;
-    pointer-events: auto; /* ✅ Allow scrolling */
-
-    /* Optional: smoother, more touch-friendly scrolling */
+    pointer-events: auto;
     -webkit-overflow-scrolling: touch;
     overscroll-behavior: contain;
 

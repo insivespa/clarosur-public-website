@@ -5,6 +5,7 @@ import {
 } from "react-compare-slider";
 import {
   Project,
+  ProjectTitle,
   ProjectDescription,
   ProjectsWrapper,
   Section,
@@ -20,65 +21,52 @@ import {
 const OurProjects = ({ slice }) => (
   <Section id="trabajos">
     <Title>
-      {slice.primary.title && (
-        <>
-          <PrismicRichText field={slice.primary.title} />
-          <PrismicRichText field={slice.primary.description} />
-        </>
+      {slice?.primary?.title && <PrismicRichText field={slice.primary.title} />}
+      {slice?.primary?.description && (
+        <PrismicRichText field={slice.primary.description} />
       )}
     </Title>
 
     <ProjectsWrapper>
       {slice?.items?.map((item, i) => (
         <Project key={i}>
-          <ProjectDescription>
-            <PrismicRichText field={item.projectdescription} />
-          </ProjectDescription>
+          {item?.projecttitle && (
+            <ProjectTitle>
+              <PrismicRichText field={item.projecttitle} />
+            </ProjectTitle>
+          )}
+
+          {item?.projectdescription && (
+            <ProjectDescription>
+              <PrismicRichText field={item.projectdescription} />
+            </ProjectDescription>
+          )}
 
           {item?.before?.url && item?.after?.url ? (
             <CompareSliderWrapper>
               <ReactCompareSlider
-                style={{ width: "100%", height: "300px" }}
+                style={{ width: "100%", height: "100%" }}
                 itemOne={
                   <ReactCompareSliderImage
                     src={item.before.url}
-                    alt={item.before.alt || "Before image"}
+                    alt={item.before?.alt || "Before image"}
                     style={{
                       width: "100%",
                       height: "100%",
-                      objectFit: "fill",
+                      objectFit: "cover",
                     }}
                   />
                 }
                 itemTwo={
                   <ReactCompareSliderImage
                     src={item.after.url}
-                    alt={item.after.alt || "After image"}
+                    alt={item.after?.alt || "After image"}
                     style={{
                       width: "100%",
                       height: "100%",
-                      objectFit: "fill",
+                      objectFit: "cover",
                     }}
                   />
-                }
-                position={50}
-                handle={
-                  <div
-                    style={{
-                      width: "30px",
-                      height: "30px",
-                      borderRadius: "50%",
-                      backgroundColor: "#ffffff",
-                      border: "2px solid #000000",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      cursor: "ew-resize",
-                      boxShadow: "0 0 4px rgba(0,0,0,0.4)",
-                    }}
-                  >
-                    <span style={{ color: "#000", fontWeight: "bold" }}>⇆</span>
-                  </div>
                 }
               />
             </CompareSliderWrapper>

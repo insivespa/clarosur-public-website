@@ -1,8 +1,24 @@
 import styled from "styled-components";
 
+const colors = {
+  primaryBackground: "#0066cc",
+  primaryText: "#ffffff",
+  accent: "#004c99",
+};
+
 export const Section = styled.div`
-  background-color: white;
+  background-color: ${colors.primaryBackground};
+  color: ${colors.primaryText};
   padding: 1rem 10rem;
+
+  @media (max-width: 1200px) {
+    padding: 2rem 6rem;
+  }
+
+  @media (max-width: 992px) {
+    padding: 2rem 1rem;
+  }
+
   @media (max-width: 768px) {
     padding: 1rem;
   }
@@ -10,7 +26,7 @@ export const Section = styled.div`
   .title h1 {
     font-weight: 900;
     font-size: 2rem;
-    color: #3962e9;
+    color: ${colors.primaryText};
     text-align: center;
     margin: 0 0 1rem 0;
   }
@@ -30,7 +46,7 @@ export const Section = styled.div`
       left: var(--line-left, 40px);
       right: var(--line-right, 40px);
       height: 2px;
-      background-color: #3962e9;
+      background-color: ${colors.accent};
       z-index: 0;
       transition: left 0.3s ease, right 0.3s ease;
     }
@@ -50,10 +66,10 @@ export const Section = styled.div`
       align-items: center;
       width: 40px;
       height: 40px;
-      color: white;
+      color: ${colors.primaryText};
       font-weight: 700;
       font-size: 1.2rem;
-      background: #3962e9;
+      background: ${colors.accent};
       border-radius: 10px;
       margin-bottom: 1rem;
     }
@@ -61,6 +77,7 @@ export const Section = styled.div`
     .step-text {
       text-align: center;
       max-width: 120px;
+      color: ${colors.primaryText};
     }
   }
 
@@ -86,25 +103,13 @@ export const Section = styled.div`
       padding: 10px;
       font-weight: bold;
       font-size: 1.5rem;
-      color: white;
-      background-color: #3962e9;
+      color: ${colors.primaryText};
+      background-color: ${colors.accent};
       border-radius: 5px;
     }
 
     .mobile-step-text {
+      color: ${colors.primaryText};
     }
   }
-
-  /* Connect to <p>
-  .step-number::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 2px;
-    height: 20px;
-    background-color: #3962e9;
-  }*/
 `;

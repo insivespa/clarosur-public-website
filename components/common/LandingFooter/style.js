@@ -83,6 +83,14 @@ export const Footer = styled.footer`
 
   /* Mobile styles */
 
+  @media (max-width: 1200px) {
+    padding: 2rem 6rem;
+  }
+
+  @media (max-width: 992px) {
+    padding: 2rem 1rem;
+  }
+
   @media (max-width: 768px) {
     padding: 1rem;
     grid-template-columns: 1fr;

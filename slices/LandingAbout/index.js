@@ -1,5 +1,5 @@
 import { PrismicRichText } from "@prismicio/react";
-import { Content, Description, Title, VideoWrapper, Wrapper } from "./style";
+import { Wrapper, VideoWrapper, TextSection } from "./style";
 
 /**
  * @typedef {import("@prismicio/client").Content.AboutSlice} AboutSlice
@@ -9,23 +9,20 @@ import { Content, Description, Title, VideoWrapper, Wrapper } from "./style";
 const About = ({ slice }) => {
   return (
     <Wrapper>
-      <Content>
-        <Title>
+      <TextSection>
+        <div className="text-block">
           <PrismicRichText field={slice.primary.title} />
-        </Title>
-
-        {slice.primary.description && (
-          <Description>
+          {slice.primary.description && (
             <PrismicRichText field={slice.primary.description} />
-          </Description>
-        )}
+          )}
+        </div>
+      </TextSection>
 
-        {slice.primary.video?.html && (
-          <VideoWrapper
-            dangerouslySetInnerHTML={{ __html: slice.primary.video.html }}
-          />
-        )}
-      </Content>
+      {slice.primary.video?.html && (
+        <VideoWrapper
+          dangerouslySetInnerHTML={{ __html: slice.primary.video.html }}
+        />
+      )}
     </Wrapper>
   );
 };

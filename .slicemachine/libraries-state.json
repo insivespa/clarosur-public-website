@@ -1555,6 +1555,15 @@
                     "single": "paragraph"
                   }
                 },
+                "tagline": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "tagline",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph"
+                  }
+                },
                 "formtitle": {
                   "type": "StructuredText",
                   "config": {
@@ -1627,12 +1636,12 @@
                   },
                   "alt": null,
                   "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1600861194802-a2b11076bc51"
+                  "url": "https://images.unsplash.com/photo-1593642633279-1796119d5482"
                 },
                 "keyword": [
                   {
                     "type": "paragraph",
-                    "text": "Sint ea voluptate occaecat irure non non laboris non adipisicing.",
+                    "text": "Duis dolor tempor quis cupidatat reprehenderit enim reprehenderit magna sunt aute tempor laboris. Culpa minim sint mollit pariatur minim adipisicing exercitation culpa ullamco voluptate voluptate consectetur veniam minim.",
                     "spans": []
                   }
                 ]
@@ -1642,35 +1651,42 @@
               "title": [
                 {
                   "type": "heading1",
-                  "text": "Planet",
+                  "text": "Check",
                   "spans": []
                 }
               ],
               "subtitle": [
                 {
                   "type": "paragraph",
-                  "text": "Sint elit aute ut sit cillum consectetur nulla consequat nisi voluptate ad ut. Officia officia incididunt ea magna in quis labore duis ut officia excepteur ut voluptate culpa. Laboris magna et anim velit.",
+                  "text": "Labore ut cupidatat adipisicing ea officia consectetur adipisicing. Deserunt ad ex ad minim sit mollit cillum eu anim. Proident anim sit sint amet nulla do laboris ad eu eu consectetur consectetur exercitation magna nulla.",
+                  "spans": []
+                }
+              ],
+              "tagline": [
+                {
+                  "type": "paragraph",
+                  "text": "Sit nisi pariatur ad laborum officia ullamco. Incididunt sit ea laboris adipisicing veniam ad quis exercitation ea laboris.",
                   "spans": []
                 }
               ],
               "formtitle": [
                 {
                   "type": "heading1",
-                  "text": "Yourself",
+                  "text": "Party",
                   "spans": []
                 }
               ],
               "formsubtitle": [
                 {
                   "type": "paragraph",
-                  "text": "Amet occaecat cillum pariatur occaecat labore ex adipisicing enim mollit officia id exercitation voluptate irure adipisicing.",
+                  "text": "In ut occaecat ipsum. Mollit dolor laborum eiusmod aute nulla.",
                   "spans": []
                 }
               ],
               "ctatext": [
                 {
                   "type": "paragraph",
-                  "text": "Nulla ut consequat fugiat ipsum commodo irure proident. Amet est nulla in occaecat nulla labore aliqua adipisicing fugiat qui ea.",
+                  "text": "Dolore esse minim ullamco aliquip elit.",
                   "spans": []
                 }
               ],
@@ -1681,7 +1697,7 @@
                 },
                 "alt": null,
                 "copyright": null,
-                "url": "https://images.unsplash.com/photo-1596195689404-24d8a8d1c6ea"
+                "url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085"
               }
             },
             "slice_type": "landing_hero"
@@ -1729,6 +1745,15 @@
                 }
               },
               "items": {
+                "projecttitle": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "projectTitle",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "heading2"
+                  }
+                },
                 "projectdescription": {
                   "type": "StructuredText",
                   "config": {
@@ -1765,10 +1790,17 @@
             "version": "sktwi1xtmkfgx8626",
             "items": [
               {
+                "projecttitle": [
+                  {
+                    "type": "heading2",
+                    "text": "Telephone",
+                    "spans": []
+                  }
+                ],
                 "projectdescription": [
                   {
                     "type": "paragraph",
-                    "text": "Laboris velit enim velit exercitation aliqua laborum reprehenderit cupidatat aliqua et ea consectetur laboris et sunt. Ullamco cillum commodo est eiusmod ad ex adipisicing sunt sit officia excepteur quis. Occaecat duis anim sint voluptate aliqua consectetur esse fugiat magna dolore labore nulla.",
+                    "text": "Culpa ea nostrud ad ex labore dolore ea nulla aute mollit nostrud esse.",
                     "spans": []
                   }
                 ],
@@ -1779,7 +1811,7 @@
                   },
                   "alt": null,
                   "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1586952518485-11b180e92764"
+                  "url": "https://images.unsplash.com/photo-1596195689404-24d8a8d1c6ea"
                 },
                 "after": {
                   "dimensions": {
@@ -1788,7 +1820,7 @@
                   },
                   "alt": null,
                   "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1545239351-1141bd82e8a6"
+                  "url": "https://images.unsplash.com/photo-1448932223592-d1fc686e76ea"
                 }
               }
             ],
@@ -1796,14 +1828,14 @@
               "title": [
                 {
                   "type": "heading1",
-                  "text": "Shaking",
+                  "text": "Couple",
                   "spans": []
                 }
               ],
               "description": [
                 {
                   "type": "paragraph",
-                  "text": "Irure voluptate excepteur ipsum do est non ad voluptate dolore ut.",
+                  "text": "Pariatur enim fugiat in sit eu eiusmod. Exercitation incididunt do in exercitation irure velit ex laborum. Veniam reprehenderit dolor id sit labore nulla sunt mollit sunt aliquip.",
                   "spans": []
                 }
               ]
