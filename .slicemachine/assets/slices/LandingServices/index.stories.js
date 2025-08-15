@@ -1,0 +1,12 @@
+import MyComponent from '../../../../slices/LandingServices';
+
+export default {
+  title: 'slices/LandingServices'
+}
+
+
+export const _Default = () => <MyComponent slice={{"variation":"default","version":"sktwi1xtmkfgx8626","items":[{"bgimage":{"dimensions":{"width":900,"height":500},"alt":null,"copyright":null,"url":"https://images.unsplash.com/photo-1589652717521-10c0d092dea9"},"servicetitle":[{"type":"heading2","text":"Blind","spans":[]}],"description":[{"type":"paragraph","text":"In pariatur cillum amet. Elit aliquip sunt non cillum labore aliquip nisi ut nisi consectetur ea Lorem sint ad.","spans":[]}],"link":{"link_type":"Web","url":"http://google.com"}}],"primary":{"title":[{"type":"heading1","text":"White","spans":[]}]},"slice_type":"landing_services","id":"_Default"}} />
+_Default.storyName = ''
+
+export const _Nohover = () => <MyComponent slice={{"variation":"nohover","version":"sktwi1xtmkfgx8626","items":[{"bgimage":{"dimensions":{"width":900,"height":500},"alt":null,"copyright":null,"url":"https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2"},"servicetitle":[{"type":"heading2","text":"Success","spans":[]}],"description":[{"type":"paragraph","text":"Officia non magna reprehenderit amet velit eu. Fugiat duis in exercitation officia eu nostrud officia ex in ad tempor.","spans":[]}]}],"primary":{"title":[{"type":"heading1","text":"Recently","spans":[]}],"ctatext":[{"type":"paragraph","text":"Pariatur eiusmod nostrud eu minim consectetur dolore officia occaecat quis commodo quis do in. Ea eiusmod deserunt tempor eu velit laboris adipisicing aute id commodo minim magna non esse. Quis ullamco irure nostrud aliqua.","spans":[]}],"ctaurl":{"link_type":"Web","url":"http://twitter.com"}},"slice_type":"landing_services","id":"_Nohover"}} />
+_Nohover.storyName = ''

@@ -1,11 +1,17 @@
 import styled from "styled-components";
 
+const colors = {
+  wrapperBg: "#0066cc",
+  titleText: "white",
+  descriptionText: "#f2f2f2",
+};
+
 export const Wrapper = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 4rem 10rem;
-  background-color: #0066cc;
+  background-color: ${colors.wrapperBg};
   gap: 2rem;
   flex-wrap: wrap;
 
@@ -21,7 +27,7 @@ export const Wrapper = styled.section`
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: stretch;
-    padding: 1rem;
+    padding: 2rem 1rem;
     gap: 1.25rem;
   }
 `;
@@ -41,14 +47,14 @@ export const TextSection = styled.div`
   .text-block h1 {
     font-weight: 900;
     font-size: 3rem;
-    color: white;
+    color: ${colors.titleText};
     margin: 0 0 1rem 0;
     line-height: 1;
   }
 
   /* Description styles */
   .text-block p {
-    color: #f2f2f2;
+    color: ${colors.descriptionText};
     font-size: 1.125rem;
     line-height: 1.75rem;
     text-align: justify;

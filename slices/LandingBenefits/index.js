@@ -11,14 +11,15 @@ import {
   Section,
 } from "./style";
 import { useState } from "react";
+import LandingBenefitsTop from "../LandingBenefitsTop";
 
 /**
  * @typedef {import("@prismicio/client").Content.SliceBenefitsSlice} SliceBenefitsSlice
  * @typedef {import("@prismicio/react").SliceComponentProps<SliceBenefitsSlice>} SliceBenefitsProps
- * @param { SliceBenefitsProps }
+ * @param { SliceBenefitsProps & { topSlice?: any } }
  */
 
-const SliceBenefits = ({ slice }) => {
+const SliceBenefits = ({ slice, topSlice }) => {
   const [openIndexes, setOpenIndexes] = useState(
     slice.items?.map((_, idx) => idx) || []
   );
@@ -36,6 +37,8 @@ const SliceBenefits = ({ slice }) => {
           <PrismicRichText field={slice.primary.title} />
         </Header>
       )}
+
+      {topSlice && <LandingBenefitsTop slice={topSlice} />}
 
       <Grid>
         {slice.items?.map((item, i) => {

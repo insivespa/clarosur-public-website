@@ -54,6 +54,15 @@
             },
             "slice_benefits": {
               "type": "SharedSlice"
+            },
+            "landing_subhero": {
+              "type": "SharedSlice"
+            },
+            "landing_benefits_top": {
+              "type": "SharedSlice"
+            },
+            "landing_closing_form": {
+              "type": "SharedSlice"
             }
           }
         }

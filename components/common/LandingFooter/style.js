@@ -1,12 +1,20 @@
 import styled from "styled-components";
 
+const colors = {
+  footerBackground: "#0b3954",
+  footerText: "#ffffff",
+  footerLink: "#0070f3",
+  footerBottomText: "#cccccc",
+  footerBottomBorder: "#dddddd",
+};
+
 export const Footer = styled.footer`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
   gap: 2rem;
   padding: 1rem 10rem;
-  background-color: #0b3954;
+  background-color: ${colors.footerBackground};
 
   .footer-top {
     grid-column: 1 / 2;
@@ -25,7 +33,7 @@ export const Footer = styled.footer`
       text-align: justify;
       width: 70%;
       font-size: 1rem;
-      color: #fff;
+      color: ${colors.footerText};
     }
   }
 
@@ -54,7 +62,7 @@ export const Footer = styled.footer`
       }
 
       a {
-        color: #0070f3;
+        color: ${colors.footerLink};
         text-decoration: none;
       }
 
@@ -65,7 +73,7 @@ export const Footer = styled.footer`
       p,
       span,
       div {
-        color: #fff;
+        color: ${colors.footerText};
       }
     }
   }
@@ -75,14 +83,13 @@ export const Footer = styled.footer`
     grid-column: 1 / 3;
     grid-row: 2 / 3;
     font-size: 0.875rem;
-    color: #ccc;
-    border-top: 1px solid #ddd;
+    color: ${colors.footerBottomText};
+    border-top: 1px solid ${colors.footerBottomBorder};
     padding-top: 1rem;
     text-align: center;
   }
 
   /* Mobile styles */
-
   @media (max-width: 1200px) {
     padding: 2rem 6rem;
   }

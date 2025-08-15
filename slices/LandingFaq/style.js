@@ -1,7 +1,17 @@
 import styled from "styled-components";
 
+const colors = {
+  wrapperBackground: "#ffffff",
+  iconLine: "#333333",
+  iconLineOpen: "#ffffff",
+  titleText: "#3962e9",
+  faqBorder: "#dddddd",
+  faqActiveBackground: "#3962e9",
+  faqActiveText: "#ffffff",
+};
+
 export const Wrapper = styled.div`
-  background-color: #fff;
+  background-color: ${colors.wrapperBackground};
   padding: 2rem 10rem;
 
   @media (max-width: 1200px) {
@@ -30,7 +40,7 @@ export const Icon = styled.span`
   &::after {
     content: "";
     position: absolute;
-    background-color: #333;
+    background-color: ${colors.iconLine};
     transition: all 0.3s ease;
     border-radius: 2px;
   }
@@ -62,7 +72,7 @@ export const Icon = styled.span`
   }
 
   &.open::before {
-    background-color: white;
+    background-color: ${colors.iconLineOpen};
   }
 
   @media (max-width: 768px) {
@@ -85,18 +95,18 @@ export const FaqSection = styled.section`
   .title h1 {
     font-size: 2rem;
     text-align: center;
-    color: #3962e9;
+    color: ${colors.titleText};
     margin-top: 0;
   }
 
   .faq-item {
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid ${colors.faqBorder};
     padding: 0.5rem 0;
 
     &.open .faq-question {
       font-weight: 600;
-      background-color: #3962e9;
-      color: white;
+      background-color: ${colors.faqActiveBackground};
+      color: ${colors.faqActiveText};
       border-radius: 5px;
     }
   }

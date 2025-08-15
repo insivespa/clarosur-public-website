@@ -1,6 +1,22 @@
+import { PrismicLink } from "@prismicio/react";
 import styled from "styled-components";
 
-const Section = styled.section`
+const colors = {
+  titleText: "#3962e9",
+  projectBorder: "#cccc",
+  projectTitle: "#111827",
+  ctaBorder: "#ffa500",
+  ctaText: "#ffa500",
+  ctaHoverBg: "#ffa500",
+  ctaHoverText: "white",
+  ctaActiveBg: "#0069d9",
+  ctaActiveBorder: "#0062cc",
+  ctaActiveText: "white",
+  boxShadowDefault: "rgba(0, 0, 0, 0.1)",
+  boxShadowHover: "rgba(0, 0, 0, 0.15)",
+};
+
+export const Section = styled.section`
   text-align: center;
   padding: 2rem 10rem;
   display: flex;
@@ -21,17 +37,17 @@ const Section = styled.section`
   }
 `;
 
-const Title = styled.div`
+export const Title = styled.div`
   h1 {
     font-weight: 900;
     font-size: 2rem;
-    color: #3962e9;
+    color: ${colors.titleText};
     text-align: center;
     margin: 0 0 1rem 0;
   }
 `;
 
-const ProjectsWrapper = styled.div`
+export const ProjectsWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
@@ -48,11 +64,11 @@ const ProjectsWrapper = styled.div`
   }
 `;
 
-const Project = styled.div`
-  border: 1px solid #cccc;
+export const Project = styled.div`
+  border: 1px solid ${colors.projectBorder};
   padding: 1.5rem;
   border-radius: 16px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px ${colors.boxShadowDefault};
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -67,13 +83,13 @@ const Project = styled.div`
   }
 `;
 
-const ProjectTitle = styled.div`
+export const ProjectTitle = styled.div`
   h2 {
     margin: 0;
     font-size: 1.5rem;
     line-height: 1.2;
     font-weight: 700;
-    color: #111827;
+    color: ${colors.projectTitle};
   }
 
   @media (max-width: 768px) {
@@ -83,7 +99,7 @@ const ProjectTitle = styled.div`
   }
 `;
 
-const ProjectDescription = styled.div`
+export const ProjectDescription = styled.div`
   text-align: center;
   max-width: 600px;
   text-align: justify;
@@ -92,7 +108,7 @@ const ProjectDescription = styled.div`
   }
 `;
 
-const CompareSliderWrapper = styled.div`
+export const CompareSliderWrapper = styled.div`
   width: 100%;
   border-radius: 16px;
   overflow: hidden;
@@ -106,12 +122,42 @@ const CompareSliderWrapper = styled.div`
   }
 `;
 
-export {
-  Section,
-  Title,
-  ProjectsWrapper,
-  Project,
-  ProjectTitle,
-  ProjectDescription,
-  CompareSliderWrapper,
-};
+export const CtaButton = styled(PrismicLink)`
+  gap: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 1rem 2rem;
+  border-radius: 999px;
+  border: 2px solid ${colors.ctaBorder};
+  background-color: transparent;
+  color: ${colors.ctaText};
+
+  font-size: 1rem;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color 0.25s ease, color 0.25s ease,
+    border-color 0.25s ease;
+
+  box-shadow: 0 4px 6px ${colors.boxShadowDefault};
+
+  p {
+    font-weight: 600;
+  }
+
+  &:hover {
+    background-color: ${colors.ctaHoverBg};
+    color: ${colors.ctaHoverText};
+    border-color: ${colors.ctaHoverBg};
+    box-shadow: 0 6px 8px ${colors.boxShadowHover};
+  }
+
+  &:active {
+    background-color: ${colors.ctaActiveBg};
+    border-color: ${colors.ctaActiveBorder};
+    color: ${colors.ctaActiveText};
+  }
+
+  min-height: 44px;
+`;

@@ -1,5 +1,12 @@
 import { PrismicLink, PrismicRichText } from "@prismicio/react";
-import { Section, ServicesWrapper, ServiceNoHover, ServiceHover } from "./style";
+import {
+  Section,
+  ServicesWrapper,
+  ServiceNoHover,
+  ServiceHover,
+  CtaButton,
+} from "./style";
+import { FiArrowRight } from "react-icons/fi";
 
 /**
  * @typedef {import("@prismicio/client").Content.LandingServicesSlice} LandingServicesSlice
@@ -7,36 +14,54 @@ import { Section, ServicesWrapper, ServiceNoHover, ServiceHover } from "./style"
  * @param { LandingServicesProps }
  */
 
-/** -------- variant objects ---------- **/
+/** -------- variant components ---------- **/
 
-const NoHover = ({ title, items }) => (
-  <Section id="servicios">
-    <PrismicRichText field={title} />
-    <ServicesWrapper>
-      {items.map((i, idx) => (
-        <ServiceNoHover key={idx} bgimage={i.bgimage?.url}>
-          <div className="service-link">
-            <div className="service-content">
-              <PrismicRichText field={i.servicetitle} />
-              <PrismicRichText field={i.description} />
+const NoHover = ({ title, items, ctatext, ctaurl, defaultBg }) => (
+  <>
+    <Section id="servicios">
+      {title && <PrismicRichText field={title} />}
+      <ServicesWrapper>
+        {items.map((i, idx) => (
+          <ServiceNoHover key={idx} bgimage={i.bgimage?.url || defaultBg}>
+            <div className="service-link">
+              <div className="service-content">
+                {i.servicetitle && <PrismicRichText field={i.servicetitle} />}
+                {i.description && <PrismicRichText field={i.description} />}
+              </div>
             </div>
-          </div>
-        </ServiceNoHover>
-      ))}
-    </ServicesWrapper>
-  </Section>
+          </ServiceNoHover>
+        ))}
+      </ServicesWrapper>
+    </Section>
+
+    {(ctatext || ctaurl) && (
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          marginTop: "20px",
+        }}
+      >
+        <CtaButton field={ctaurl}>
+          {ctatext && <PrismicRichText field={ctatext} />}
+          <FiArrowRight size={20} />
+        </CtaButton>
+      </div>
+    )}
+  </>
 );
 
 const Hover = ({ title, items }) => (
   <Section id="other-services">
-    <PrismicRichText field={title} />
+    {title && <PrismicRichText field={title} />}
     <ServicesWrapper>
       {items.map((i, idx) => (
         <ServiceHover key={idx} bgimage={i.bgimage?.url}>
           <PrismicLink field={i.link} className="service-link">
             <div className="service-content">
-              <PrismicRichText field={i.servicetitle} />
-              <PrismicRichText field={i.description} />
+              {i.servicetitle && <PrismicRichText field={i.servicetitle} />}
+              {i.description && <PrismicRichText field={i.description} />}
             </div>
           </PrismicLink>
         </ServiceHover>
@@ -49,9 +74,8 @@ const Hover = ({ title, items }) => (
 
 const LandingServices = ({ slice }) => {
   const { variation, primary, items = [] } = slice;
-  const title = primary?.title;
+  const { title, ctatext, ctaurl, bgimage } = primary || {};
 
-  // choose object by variation
   const Variants = {
     nohover: NoHover,
     default: Hover,
@@ -59,7 +83,16 @@ const LandingServices = ({ slice }) => {
   };
 
   const Variant = Variants[variation] || Variants.default;
-  return <Variant title={title} items={items} />;
+
+  return (
+    <Variant
+      title={title}
+      items={items}
+      ctatext={ctatext}
+      ctaurl={ctaurl}
+      defaultBg={bgimage?.url}
+    />
+  );
 };
 
 export default LandingServices;

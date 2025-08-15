@@ -75,6 +75,23 @@
             "allowTargetBlank": true,
             "single": "heading1"
           }
+        },
+        "ctatext": {
+          "type": "StructuredText",
+          "config": {
+            "label": "ctaText",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph"
+          }
+        },
+        "ctaurl": {
+          "type": "Link",
+          "config": {
+            "label": "ctaUrl",
+            "placeholder": "",
+            "select": null
+          }
         }
       },
       "items": {

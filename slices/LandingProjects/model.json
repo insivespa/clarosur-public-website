@@ -26,6 +26,23 @@
             "label": "Description",
             "placeholder": "A nice description of your feature"
           }
+        },
+        "ctatext": {
+          "type": "StructuredText",
+          "config": {
+            "label": "ctaText",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph"
+          }
+        },
+        "ctaurl": {
+          "type": "Link",
+          "config": {
+            "label": "ctaUrl",
+            "placeholder": "",
+            "select": null
+          }
         }
       },
       "items": {

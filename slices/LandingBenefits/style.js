@@ -1,15 +1,21 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
-const primary = "#0066cc";
-const text = "#0a0a0a";
+const colors = {
+  primary: "#0066cc",
+  text: "#0a0a0a",
+  headerTitle: "#3962e9",
+  iconBorder: "#0066cc",
+  chevron: "#0066cc",
+  iconShadow: "rgba(0, 0, 0, 0.15)",
+  iconHoverShadow: "rgba(0, 0, 0, 0.2)",
+};
 
-const Section = styled.section`
+export const Section = styled.section`
   width: 100%;
-  color: ${text};
+  color: ${colors.text};
 
-  /* unified responsive padding */
-  padding: 4rem 10rem;
+  padding: 2rem 10rem;
 
   @media (max-width: 1200px) {
     padding: 2rem 6rem;
@@ -24,19 +30,19 @@ const Section = styled.section`
   }
 `;
 
-const Header = styled.header`
+export const Header = styled.header`
   h1 {
     font-weight: 900;
     font-size: 2rem;
-    color: #3962e9;
+    color: ${colors.headerTitle};
     text-align: center;
     margin: 0 0 1rem 0;
   }
 `;
 
-const Grid = styled.div`
+export const Grid = styled.div`
   max-width: 1200px;
-  margin: 40px auto 0;
+  margin: 30px auto 30px;
   display: grid;
   gap: 3rem;
 
@@ -50,7 +56,7 @@ const Grid = styled.div`
   }
 `;
 
-const Card = styled.article`
+export const Card = styled.article`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -62,18 +68,18 @@ const Card = styled.article`
   }
 `;
 
-const IconButton = styled.button`
+export const IconButton = styled.button`
   display: grid;
   place-items: center;
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  border: 3px solid ${primary};
+  border: 3px solid ${colors.iconBorder};
   background: transparent;
   cursor: pointer;
   padding: 0;
   margin-bottom: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 12px ${colors.iconShadow};
 
   img {
     width: 60%;
@@ -85,11 +91,11 @@ const IconButton = styled.button`
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   &:hover {
     transform: scale(1.05);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 18px ${colors.iconHoverShadow};
   }
 `;
 
-const Heading = styled.div`
+export const Heading = styled.div`
   gap: 8px;
   cursor: pointer;
   user-select: none;
@@ -111,15 +117,15 @@ const Heading = styled.div`
   }
 `;
 
-const Chevron = styled(motion.div)`
+export const Chevron = styled(motion.div)`
   width: 0;
   height: 0;
-  border-left: 8px solid ${primary};
+  border-left: 8px solid ${colors.chevron};
   border-top: 6px solid transparent;
   border-bottom: 6px solid transparent;
 `;
 
-const BodyCopy = styled.div`
+export const BodyCopy = styled.div`
   margin-top: 12px;
   overflow: hidden;
 
@@ -129,5 +135,3 @@ const BodyCopy = styled.div`
     padding: 0 30px;
   }
 `;
-
-export { Section, Header, Grid, Card, IconButton, Heading, Chevron, BodyCopy };

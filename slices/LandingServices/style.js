@@ -1,11 +1,33 @@
+import { PrismicLink } from "@prismicio/react";
 import styled from "styled-components";
 
+const colors = {
+  sectionBg: "white",
+  sectionHeading: "#3962e9",
+
+  serviceBgFallback: "#3962E9",
+  serviceOverlay: "rgba(0, 0, 0, 0.5)",
+  serviceText: "white",
+  scrollbarThumb: "rgba(255, 255, 255, 0.3)",
+
+  ctaBorder: "#ffa500",
+  ctaText: "#ffa500",
+  ctaHoverBg: "#ffa500",
+  ctaHoverText: "white",
+  ctaActiveBg: "#0069d9",
+  ctaActiveBorder: "#0062cc",
+  ctaActiveText: "white",
+
+  boxShadowDefault: "rgba(0, 0, 0, 0.1)",
+  boxShadowHover: "rgba(0, 0, 0, 0.15)",
+};
+
 export const Section = styled.div`
-  background-color: white;
+  background-color: ${colors.sectionBg};
   padding: 1rem 10rem;
 
   h1 {
-    color: #3962e9;
+    color: ${colors.sectionHeading};
     text-align: center;
     margin-top: 0;
     font-size: 2rem;
@@ -38,7 +60,9 @@ export const ServiceNoHover = styled.div`
   height: 300px;
   border-radius: 8px;
   background: ${({ bgimage }) =>
-    bgimage ? `url(${bgimage}) center/cover no-repeat` : "#3962E9"};
+    bgimage
+      ? `url(${bgimage}) center/cover no-repeat`
+      : colors.serviceBgFallback};
   overflow: hidden;
   cursor: pointer;
   transition: transform 0.3s ease;
@@ -51,7 +75,7 @@ export const ServiceNoHover = styled.div`
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: ${colors.serviceOverlay};
     opacity: 1;
     z-index: 1;
   }
@@ -75,7 +99,7 @@ export const ServiceNoHover = styled.div`
 
   .service-content h2,
   .service-content p {
-    color: white;
+    color: ${colors.serviceText};
     opacity: 1;
     transform: translateY(0);
     margin: 0;
@@ -109,7 +133,7 @@ export const ServiceNoHover = styled.div`
       width: 4px;
     }
     &::-webkit-scrollbar-thumb {
-      background-color: rgba(255, 255, 255, 0.3);
+      background-color: ${colors.scrollbarThumb};
       border-radius: 4px;
     }
   }
@@ -130,7 +154,9 @@ export const ServiceHover = styled.div`
   height: 300px;
   border-radius: 8px;
   background: ${({ bgimage }) =>
-    bgimage ? `url(${bgimage}) center/cover no-repeat` : "#3962E9"};
+    bgimage
+      ? `url(${bgimage}) center/cover no-repeat`
+      : colors.serviceBgFallback};
   overflow: hidden;
   cursor: pointer;
   transition: transform 0.3s ease;
@@ -143,7 +169,7 @@ export const ServiceHover = styled.div`
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: ${colors.serviceOverlay};
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
     z-index: 1;
@@ -173,7 +199,7 @@ export const ServiceHover = styled.div`
 
   .service-content h2,
   .service-content p {
-    color: white;
+    color: ${colors.serviceText};
     opacity: 0;
     transform: translateY(10px);
     transition: opacity 0.3s ease, transform 0.3s ease;
@@ -219,7 +245,7 @@ export const ServiceHover = styled.div`
       width: 4px;
     }
     &::-webkit-scrollbar-thumb {
-      background-color: rgba(255, 255, 255, 0.3);
+      background-color: ${colors.scrollbarThumb};
       border-radius: 4px;
     }
   }
@@ -231,4 +257,44 @@ export const ServiceHover = styled.div`
   @media (max-width: 600px) {
     flex: 0 1 100%;
   }
+`;
+
+export const CtaButton = styled(PrismicLink)`
+  gap: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 1rem 2rem;
+  border-radius: 999px;
+  border: 2px solid ${colors.ctaBorder};
+  background-color: transparent;
+  color: ${colors.ctaText};
+
+  font-size: 1rem;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color 0.25s ease, color 0.25s ease,
+    border-color 0.25s ease;
+
+  box-shadow: 0 4px 6px ${colors.boxShadowDefault};
+
+  p {
+    font-weight: 600;
+  }
+
+  &:hover {
+    background-color: ${colors.ctaHoverBg};
+    color: ${colors.ctaHoverText};
+    border-color: ${colors.ctaHoverBg};
+    box-shadow: 0 6px 8px ${colors.boxShadowHover};
+  }
+
+  &:active {
+    background-color: ${colors.ctaActiveBg};
+    border-color: ${colors.ctaActiveBorder};
+    color: ${colors.ctaActiveText};
+  }
+
+  min-height: 44px;
 `;

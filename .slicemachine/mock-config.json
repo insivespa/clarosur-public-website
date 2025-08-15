@@ -132,6 +132,70 @@
               "blocks": 1
             }
           }
+        },
+        "primary": {
+          "ctatext": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    },
+    "LandingSubhero": {
+      "default": {
+        "primary": {},
+        "items": {
+          "text": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    },
+    "LandingServices": {
+      "nohover": {
+        "primary": {
+          "ctatext": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    },
+    "LandingBenefitsTop": {
+      "default": {
+        "primary": {},
+        "items": {
+          "metric": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          },
+          "metrictext": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    },
+    "LandingClosingForm": {
+      "default": {
+        "primary": {
+          "ctatext": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
         }
       }
     }
