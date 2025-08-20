@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 const colors = {
-  primaryBackground: "#0066cc",
+  primaryBackground: "#19bcd4",
   primaryText: "#ffffff",
-  accent: "#004c99",
+  accent: "#1599ac",
 };
 
 export const Section = styled.div`

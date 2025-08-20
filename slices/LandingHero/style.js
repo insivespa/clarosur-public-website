@@ -2,37 +2,23 @@ import styled from "styled-components";
 
 const tokens = {
   maxContentWidth: "68rem",
-
-  // Surfaces
   surface: "rgba(255,255,255,0.08)",
   surfaceHover: "rgba(255,255,255,0.12)",
   border: "rgba(255,255,255,0.18)",
-
-  // Gradients & Backgrounds
   bgGradientDefault:
-    "linear-gradient(135deg, #0f3d87 0%, #0b2c63 60%, #071f45 100%)",
+    "linear-gradient(135deg, #19bcd4 0%, #1599ac 60%, #0f6f7f 100%)",
   bgGradientOverlay:
     "linear-gradient(180deg, rgba(0,0,0,0.55), rgba(0,0,0,0.55))",
   titleGradient: "linear-gradient(90deg, #ffffff 0%, #cfe8ff 100%)",
-
-  // Text
   textWhite: "white",
   textWhiteTransparent: "rgba(255, 255, 255, 0.55)",
-
-  // Inputs & Effects
   inputBackground: "rgba(255, 255, 255, 0.06)",
   inputHoverBackground: "rgba(255, 255, 255, 0.08)",
-  inputFocusShadow: "rgba(59, 160, 255, 0.35)",
-
-  // States
-  error: "#FFB02E",
-  errorShadow: "rgba(255, 176, 46, 0.25)",
-
-  // Primary Actions
-  primary: "#0066CC",
-  primaryHover: "#005AB4",
-
-  // Shadows
+  inputFocusShadow: "rgba(25, 188, 212, 0.35)",
+  error: "#ffc107",
+  errorShadow: "rgba(255, 193, 7, 0.25)",
+  primary: "#19bcd4",
+  primaryHover: "#1599ac",
   cardShadow: "rgba(0, 0, 0, 0.3)",
   cardShadowInset: "rgba(255, 255, 255, 0.06)",
   buttonShadow: "rgba(0, 0, 0, 0.28)",

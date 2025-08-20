@@ -2,17 +2,17 @@ import styled from "styled-components";
 import Slider from "react-slick";
 
 const colors = {
-  sectionBg: "white",
-  titleText: "#3962e9",
-  sliderDot: "rgb(90, 115, 198)",
-  sliderDotActive: "#3962e9",
+  sectionBg: "#ffffff",
+  titleText: "#19bcd4",
+  sliderDot: "rgba(25, 188, 212, 0.6)",
+  sliderDotActive: "#19bcd4",
   reviewBg: "#ffffff",
-  reviewBorder: "#ddd",
+  reviewBorder: "#d3d6d8",
   reviewShadow: "rgba(0, 0, 0, 0.05)",
   reviewHoverShadow: "rgba(0, 0, 0, 0.1)",
-  letterFallbackBg: "#007bff",
-  letterFallbackText: "white",
-  reviewText: "#555",
+  letterFallbackBg: "#19bcd4",
+  letterFallbackText: "#ffffff",
+  reviewText: "#5c5e5a",
 };
 
 export const Section = styled.section`

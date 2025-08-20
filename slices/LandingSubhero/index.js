@@ -31,8 +31,8 @@ export default LandingSubhero;
 
 /* ---------- styled-components ---------- */
 const colors = {
-  barBackground: "#003586",
-  barText: "white",
+  barBackground: "#19bcd4",
+  barText: "#ffffff",
   cellBorder: "rgba(255, 255, 255, 0.4)",
 };
 

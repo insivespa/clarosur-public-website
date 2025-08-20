@@ -1,24 +1,26 @@
 import styled from "styled-components";
 
-const navBgColor = "white";
-const navLinkColor = "#4f4c58";
+const navBgColor = "#fff";
+const navLinkColor = "#393b37";
 const navLinkHoverColor = "#19bcd4";
 const navLinkUnderlineColor = "#19bcd4";
-const mobileMenuIconColor = "#243c70";
-const mobileMenuBgColor = "white";
-const closeIconColor = "#243c70";
-const mobileNavLinkColor = "#4f4c58";
-const contactBtnBgColor = "#0066cc";
-const contactBtnTextColor = "white";
-const contactBtnIconColor = "white";
-const contactBtnBgHover = "rgba(0, 102, 204, 0.12)";
-const contactBtnBg = "rgba(0, 102, 204, 0.08)";
-const contactBtnBorder = "rgba(0, 102, 204, 0.2)";
-const contactBtnText = "#0066cc";
-const contactBtnIcon = "#0066cc";
+const mobileMenuIconColor = "#393b37";
+const mobileMenuBgColor = "#ffffff";
+const closeIconColor = "#393b37";
+const mobileNavLinkColor = "#393b37";
+const contactBtnBgColor = "#19bcd4";
+const contactBtnTextColor = "#ffffff";
+const contactBtnIconColor = "#ffffff";
+const contactBtnBgHover = "rgba(25, 188, 212, 0.12)";
+const contactBtnBg = "rgba(25, 188, 212, 0.08)";
+const contactBtnBorder = "rgba(25, 188, 212, 0.2)";
+const contactBtnText = "#0f4c54";
+const contactBtnIcon = "#0f4c54";
 
 export const Nav = styled.nav`
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;

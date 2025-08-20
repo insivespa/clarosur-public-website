@@ -1,42 +1,29 @@
 import styled from "styled-components";
 
 const tokens = {
-  // Layout
   maxContentWidth: "68rem",
-
-  // Surfaces & borders
   surface: "rgba(255,255,255,0.08)",
   surfaceHover: "rgba(255,255,255,0.12)",
   border: "rgba(255,255,255,0.18)",
-
-  // Text
-  textOnDark: "white",
+  textOnDark: "#ffffff",
   placeholderOnDark: "rgba(255, 255, 255, 0.55)",
-
-  // Backgrounds / gradients / overlays
   heroOverlay: "rgba(0,0,0,0.55)",
-  heroGradientStart: "#0f3d87",
-  heroGradientMid: "#0b2c63",
-  heroGradientEnd: "#071f45",
+  heroGradientStart: "#19bcd4",
+  heroGradientMid: "#1599ac",
+  heroGradientEnd: "#0f6f7f",
   titleGradientStart: "#ffffff",
   titleGradientEnd: "#cfe8ff",
-
-  // Primary & states
-  primary: "#0066CC",
-  primaryHover: "#005AB4",
-  ring: "#3BA0FF",
-  error: "#FFB02E",
-
-  // Input backgrounds
+  primary: "#19bcd4",
+  primaryHover: "#1599ac",
+  ring: "#19bcd4",
+  error: "#ffc107",
   inputBg: "rgba(255, 255, 255, 0.06)",
   inputBgHover: "rgba(255, 255, 255, 0.08)",
-
-  // Shadows / effects
   cardShadow: "rgba(0, 0, 0, 0.3)",
   cardFocusShadow: "rgba(0, 0, 0, 0.34)",
   cardInnerHighlight: "rgba(255, 255, 255, 0.06)",
-  focusRingShadow: "rgba(59, 160, 255, 0.35)",
-  errorRingShadow: "rgba(255, 176, 46, 0.25)",
+  focusRingShadow: "rgba(25, 188, 212, 0.35)",
+  errorRingShadow: "rgba(255, 193, 7, 0.25)",
   buttonShadow: "rgba(0, 0, 0, 0.28)",
   buttonHoverShadow: "rgba(0, 0, 0, 0.32)",
 };

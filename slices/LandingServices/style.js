@@ -2,22 +2,19 @@ import { PrismicLink } from "@prismicio/react";
 import styled from "styled-components";
 
 const colors = {
-  sectionBg: "white",
-  sectionHeading: "#3962e9",
-
-  serviceBgFallback: "#3962E9",
+  sectionBg: "#ffffff",
+  sectionHeading: "#19bcd4",
+  serviceBgFallback: "#19bcd4",
   serviceOverlay: "rgba(0, 0, 0, 0.5)",
-  serviceText: "white",
+  serviceText: "#ffffff",
   scrollbarThumb: "rgba(255, 255, 255, 0.3)",
-
-  ctaBorder: "#ffa500",
-  ctaText: "#ffa500",
-  ctaHoverBg: "#ffa500",
-  ctaHoverText: "white",
-  ctaActiveBg: "#0069d9",
-  ctaActiveBorder: "#0062cc",
-  ctaActiveText: "white",
-
+  ctaBorder: "#ffc107",
+  ctaText: "#ffc107",
+  ctaHoverBg: "#ffc107",
+  ctaHoverText: "#393b37",
+  ctaActiveBg: "#e0a800",
+  ctaActiveBorder: "#d39e00",
+  ctaActiveText: "#ffffff",
   boxShadowDefault: "rgba(0, 0, 0, 0.1)",
   boxShadowHover: "rgba(0, 0, 0, 0.15)",
 };

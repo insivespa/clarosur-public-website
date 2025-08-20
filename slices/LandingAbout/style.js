@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 const colors = {
-  wrapperBg: "#0066cc",
-  titleText: "white",
-  descriptionText: "#f2f2f2",
+  wrapperBg: "#19bcd4",
+  titleText: "#ffffff",
+  descriptionText: "#e9ecef",
 };
 
 export const Wrapper = styled.section`

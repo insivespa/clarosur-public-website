@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 const colors = {
-  footerBackground: "#0b3954",
+  footerBackground: "#393b37",
   footerText: "#ffffff",
-  footerLink: "#0070f3",
-  footerBottomText: "#cccccc",
-  footerBottomBorder: "#dddddd",
+  footerLink: "#19bcd4",
+  footerBottomText: "#e9ecef",
+  footerBottomBorder: "#d3d6d8",
 };
 
 export const Footer = styled.footer`

@@ -2,11 +2,11 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 const colors = {
-  primary: "#0066cc",
-  text: "#0a0a0a",
-  headerTitle: "#3962e9",
-  iconBorder: "#0066cc",
-  chevron: "#0066cc",
+  primary: "#19bcd4",
+  text: "#393b37",
+  headerTitle: "#19bcd4",
+  iconBorder: "#19bcd4",
+  chevron: "#19bcd4",
   iconShadow: "rgba(0, 0, 0, 0.15)",
   iconHoverShadow: "rgba(0, 0, 0, 0.2)",
 };

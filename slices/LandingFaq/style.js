@@ -2,11 +2,11 @@ import styled from "styled-components";
 
 const colors = {
   wrapperBackground: "#ffffff",
-  iconLine: "#333333",
+  iconLine: "#393b37",
   iconLineOpen: "#ffffff",
-  titleText: "#3962e9",
-  faqBorder: "#dddddd",
-  faqActiveBackground: "#3962e9",
+  titleText: "#19bcd4",
+  faqBorder: "#d3d6d8",
+  faqActiveBackground: "#19bcd4",
   faqActiveText: "#ffffff",
 };
 
