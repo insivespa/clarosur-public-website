@@ -1386,14 +1386,14 @@ export interface AboutSliceDefaultPrimary {
 	description: prismic.RichTextField;
 	
 	/**
-	 * video field in *LandingAbout → Default → Primary*
+	 * image field in *LandingAbout → Default → Primary*
 	 *
-	 * - **Field Type**: Embed
+	 * - **Field Type**: Image
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: about.default.primary.video
-	 * - **Documentation**: https://prismic.io/docs/field#embed
+	 * - **API ID Path**: about.default.primary.image
+	 * - **Documentation**: https://prismic.io/docs/field#image
 	 */
-	video: prismic.EmbedField
+	image: prismic.ImageField<never>;
 }
 
 /**
@@ -1681,6 +1681,16 @@ export interface LandingCustomerReviewSliceDefaultItem {
 	 * - **Documentation**: https://prismic.io/docs/field#number
 	 */
 	stars: prismic.NumberField;
+	
+	/**
+	 * googleLink field in *LandingCustomerReview → Items*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landing_customer_review.items[].googlelink
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	googlelink: prismic.LinkField;
 }
 
 /**

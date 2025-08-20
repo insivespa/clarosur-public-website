@@ -198,6 +198,11 @@
           }
         }
       }
+    },
+    "LandingAbout": {
+      "default": {
+        "primary": {}
+      }
     }
   }
 }

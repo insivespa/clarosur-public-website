@@ -27,11 +27,12 @@
             "placeholder": "A nice description of your feature"
           }
         },
-        "video": {
-          "type": "Embed",
+        "image": {
+          "type": "Image",
           "config": {
-            "label": "video",
-            "placeholder": ""
+            "label": "image",
+            "constraint": {},
+            "thumbnails": []
           }
         }
       },

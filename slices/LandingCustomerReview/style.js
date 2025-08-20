@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Slider from "react-slick";
+import { PrismicLink } from "@prismicio/react";
 
 const colors = {
   sectionBg: "#ffffff",
@@ -90,11 +91,38 @@ export const Review = styled.div`
 export const ReviewHead = styled.div`
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 1rem;
   margin-bottom: 1rem;
   padding-bottom: 0.8rem;
   border-bottom: 1px solid ${colors.reviewBorder};
   flex-shrink: 0;
+`;
+
+export const GoogleReviewLink = styled(PrismicLink)`
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  color: #4285f4;
+  padding: 0.3em;
+  border-radius: 999px;
+  text-decoration: none;
+  box-shadow: 0 1px 1px 1px ${colors.reviewBorder};
+
+  &:hover {
+    background: #f5f5f5;
+  }
+
+  &:focus-visible {
+    outline: 2px solid #4285f4;
+    outline-offset: 2px;
+  }
+
+  svg {
+    display: block;
+    flex-shrink: 0;
+  }
 `;
 
 export const UserIcon = styled.img`

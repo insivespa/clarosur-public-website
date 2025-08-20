@@ -1,5 +1,5 @@
 import { PrismicRichText } from "@prismicio/react";
-import { Wrapper, VideoWrapper, TextSection } from "./style";
+import { Wrapper, ImageWrapper, TextSection } from "./style";
 
 /**
  * @typedef {import("@prismicio/client").Content.AboutSlice} AboutSlice
@@ -7,6 +7,8 @@ import { Wrapper, VideoWrapper, TextSection } from "./style";
  * @param { AboutProps }
  */
 const About = ({ slice }) => {
+  const image = slice?.primary?.image;
+
   return (
     <Wrapper>
       <TextSection>
@@ -18,10 +20,14 @@ const About = ({ slice }) => {
         </div>
       </TextSection>
 
-      {slice.primary.video?.html && (
-        <VideoWrapper
-          dangerouslySetInnerHTML={{ __html: slice.primary.video.html }}
-        />
+      {image?.url && (
+        <ImageWrapper>
+          <img
+            src={image.url}
+            alt={image.alt || "About section image"}
+            loading="lazy"
+          />
+        </ImageWrapper>
       )}
     </Wrapper>
   );

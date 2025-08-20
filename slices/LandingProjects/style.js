@@ -3,15 +3,22 @@ import styled from "styled-components";
 
 const colors = {
   titleText: "#19bcd4",
+
   projectBorder: "#d3d6d8",
   projectTitle: "#393b37",
+
   ctaBorder: "#ffc107",
-  ctaText: "#ffc107",
-  ctaHoverBg: "#ffc107",
+  ctaText: "#393b37",
+  ctaBg: "#ffc107",
+
+  ctaHoverBg: "#ffd633",
+  ctaHoverBorder: "#ffd633",
   ctaHoverText: "#393b37",
+
   ctaActiveBg: "#e0a800",
   ctaActiveBorder: "#d39e00",
   ctaActiveText: "#ffffff",
+
   boxShadowDefault: "rgba(0, 0, 0, 0.1)",
   boxShadowHover: "rgba(0, 0, 0, 0.15)",
 };
@@ -131,14 +138,14 @@ export const CtaButton = styled(PrismicLink)`
   padding: 1rem 2rem;
   border-radius: 999px;
   border: 2px solid ${colors.ctaBorder};
-  background-color: transparent;
+  background-color: ${colors.ctaBg};
   color: ${colors.ctaText};
 
   font-size: 1rem;
   text-decoration: none;
   white-space: nowrap;
   transition: background-color 0.25s ease, color 0.25s ease,
-    border-color 0.25s ease;
+    border-color 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
 
   box-shadow: 0 4px 6px ${colors.boxShadowDefault};
 
@@ -148,15 +155,18 @@ export const CtaButton = styled(PrismicLink)`
 
   &:hover {
     background-color: ${colors.ctaHoverBg};
+    border-color: ${colors.ctaHoverBorder};
     color: ${colors.ctaHoverText};
-    border-color: ${colors.ctaHoverBg};
     box-shadow: 0 6px 8px ${colors.boxShadowHover};
+    transform: translateY(-2px);
   }
 
   &:active {
     background-color: ${colors.ctaActiveBg};
     border-color: ${colors.ctaActiveBorder};
     color: ${colors.ctaActiveText};
+    transform: translateY(0);
+    box-shadow: 0 4px 6px ${colors.boxShadowDefault};
   }
 
   min-height: 44px;

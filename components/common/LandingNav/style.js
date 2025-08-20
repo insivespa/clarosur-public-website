@@ -1,21 +1,34 @@
 import styled from "styled-components";
 
-const navBgColor = "#fff";
-const navLinkColor = "#393b37";
-const navLinkHoverColor = "#19bcd4";
-const navLinkUnderlineColor = "#19bcd4";
-const mobileMenuIconColor = "#393b37";
-const mobileMenuBgColor = "#ffffff";
-const closeIconColor = "#393b37";
-const mobileNavLinkColor = "#393b37";
-const contactBtnBgColor = "#19bcd4";
-const contactBtnTextColor = "#ffffff";
-const contactBtnIconColor = "#ffffff";
-const contactBtnBgHover = "rgba(25, 188, 212, 0.12)";
-const contactBtnBg = "rgba(25, 188, 212, 0.08)";
-const contactBtnBorder = "rgba(25, 188, 212, 0.2)";
-const contactBtnText = "#0f4c54";
-const contactBtnIcon = "#0f4c54";
+const theme = {
+  // Nav
+  navBg: "#ffffff",
+  navShadowLight: "rgba(0, 0, 0, 0.05)",
+  navShadowMedium: "rgba(0, 0, 0, 0.08)",
+  navShadowStrong: "rgba(0, 0, 0, 0.12)",
+
+  // Links
+  navLink: "#393b37",
+  navLinkHover: "#19bcd4",
+  navLinkUnderline: "#19bcd4",
+
+  // Mobile
+  mobileMenuIcon: "#393b37",
+  mobileMenuBg: "#ffffff",
+  closeIcon: "#393b37",
+  mobileNavLink: "#393b37",
+
+  // Contact buttons
+  contactBtnBgColor: "#19bcd4",
+  contactBtnTextColor: "#ffffff",
+  contactBtnIconColor: "#ffffff",
+
+  contactBtnBgHover: "rgba(25, 188, 212, 0.12)",
+  contactBtnBg: "rgba(25, 188, 212, 0.08)",
+  contactBtnBorder: "rgba(25, 188, 212, 0.2)",
+  contactBtnText: "#0f4c54",
+  contactBtnIcon: "#0f4c54",
+};
 
 export const Nav = styled.nav`
   position: sticky;
@@ -25,8 +38,13 @@ export const Nav = styled.nav`
   justify-content: space-between;
   align-items: center;
   padding: 1rem 10rem;
-  background-color: ${navBgColor};
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  background-color: ${theme.navBg};
+
+  box-shadow: 0 2px 6px ${theme.navShadowLight},
+    0 4px 12px ${theme.navShadowMedium}, 0 8px 24px ${theme.navShadowStrong};
+
+  backdrop-filter: blur(8px) saturate(120%);
+  -webkit-backdrop-filter: blur(8px) saturate(120%);
 
   img {
     cursor: pointer;
@@ -47,7 +65,7 @@ export const NavLinks = styled.ul`
   li a {
     position: relative;
     text-decoration: none;
-    color: ${navLinkColor};
+    color: ${theme.navLink};
     font-size: 1.05rem;
     font-weight: 500;
     padding-bottom: 4px;
@@ -60,12 +78,12 @@ export const NavLinks = styled.ul`
       bottom: 0;
       width: 0%;
       height: 2px;
-      background: ${navLinkUnderlineColor};
+      background: ${theme.navLinkUnderline};
       transition: width 0.3s ease;
     }
 
     &:hover {
-      color: ${navLinkHoverColor};
+      color: ${theme.navLinkHover};
     }
 
     &:hover::after {
@@ -84,7 +102,7 @@ export const MobileMenuIcon = styled.div`
   @media (max-width: 1160px) {
     display: block;
     cursor: pointer;
-    color: ${mobileMenuIconColor};
+    color: ${theme.mobileMenuIcon};
     z-index: 1100;
   }
 `;
@@ -94,7 +112,7 @@ export const MobileMenu = styled.div`
   inset: 0;
   height: 100vh;
   width: 100vw;
-  background-color: ${mobileMenuBgColor};
+  background-color: ${theme.mobileMenuBg};
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.15);
   transform: translateX(${({ isOpen }) => (isOpen ? "0" : "100%")});
   transition: transform 0.3s ease-in-out;
@@ -106,7 +124,7 @@ export const CloseIcon = styled.div`
   display: flex;
   justify-content: flex-end;
   cursor: pointer;
-  color: ${closeIconColor};
+  color: ${theme.closeIcon};
 `;
 
 export const MobileNavLinks = styled.ul`
@@ -118,9 +136,8 @@ export const MobileNavLinks = styled.ul`
   gap: 1.5rem;
 
   li a {
-    position: relative;
     text-decoration: none;
-    color: ${mobileNavLinkColor};
+    color: ${theme.mobileNavLink};
     font-weight: 500;
     padding-bottom: 4px;
     transition: all 0.3s ease;
@@ -132,15 +149,15 @@ export const MobileNavLinks = styled.ul`
     justify-content: center;
     gap: 0.5rem;
     padding: 12px 18px;
-    background: ${contactBtnBgColor};
-    color: ${contactBtnTextColor};
+    background: ${theme.contactBtnBgColor};
+    color: ${theme.contactBtnTextColor};
     border-radius: 6px;
     font-weight: 500;
     text-decoration: none;
 
     svg {
       font-size: 1rem;
-      color: ${contactBtnIconColor};
+      color: ${theme.contactBtnIconColor};
     }
   }
 `;
@@ -175,21 +192,21 @@ export const ContactButtons = styled.div`
     text-decoration: none;
     font-weight: 500;
 
-    background: ${contactBtnBg};
-    border: 1px solid ${contactBtnBorder};
+    background: ${theme.contactBtnBg};
+    border: 1px solid ${theme.contactBtnBorder};
     backdrop-filter: saturate(140%) blur(8px);
     -webkit-backdrop-filter: saturate(140%) blur(8px);
 
-    color: ${contactBtnText};
+    color: ${theme.contactBtnText};
     svg {
       font-size: 1rem;
-      color: ${contactBtnIcon};
+      color: ${theme.contactBtnIcon};
       transition: color 0.3s ease;
     }
 
     transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
     &:hover {
-      background: ${contactBtnBgHover};
+      background: ${theme.contactBtnBgHover};
       transform: translateY(-1px);
       box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
     }

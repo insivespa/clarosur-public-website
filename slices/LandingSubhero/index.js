@@ -41,7 +41,7 @@ const Bar = styled.section`
   background: ${colors.barBackground};
   color: ${colors.barText};
 
-  padding: 2.3rem 10rem;
+  padding: 1rem 10rem;
 
   @media (max-width: 1200px) {
     padding: 2rem 6rem;

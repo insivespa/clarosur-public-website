@@ -7,28 +7,38 @@ const colors = {
 };
 
 export const Wrapper = styled.section`
+  --pad-x: 10rem;
+  --pad-y: 4rem;
+
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding: 4rem 10rem;
+  align-items: stretch;
+  padding: var(--pad-y) var(--pad-x);
   background-color: ${colors.wrapperBg};
   gap: 2rem;
   flex-wrap: wrap;
 
   @media (max-width: 1200px) {
-    padding: 2rem 6rem;
+    --pad-x: 6rem;
+    --pad-y: 2rem;
+    padding: var(--pad-y) var(--pad-x);
     gap: 1.5rem;
   }
 
   @media (max-width: 992px) {
-    padding: 2rem 1rem;
+    --pad-x: 1rem;
+    --pad-y: 2rem;
+    padding: var(--pad-y) var(--pad-x);
   }
 
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: stretch;
-    padding: 2rem 1rem;
-    gap: 1.25rem;
+    --pad-x: 1rem;
+    --pad-y: 2rem;
+    padding: var(--pad-y) var(--pad-x);
+
+    gap: 2.5rem;
   }
 `;
 
@@ -37,13 +47,12 @@ export const TextSection = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  text-align: left;
 
   .text-block {
     width: clamp(20rem, 70%, 60rem);
   }
 
-  /* Title styles */
   .text-block h1 {
     font-weight: 900;
     font-size: 3rem;
@@ -52,7 +61,6 @@ export const TextSection = styled.div`
     line-height: 1;
   }
 
-  /* Description styles */
   .text-block p {
     color: ${colors.descriptionText};
     font-size: 1.125rem;
@@ -75,28 +83,41 @@ export const TextSection = styled.div`
       line-height: 1.5;
       font-size: 1rem;
     }
+
+    margin-bottom: 1.5rem;
   }
 `;
 
-export const VideoWrapper = styled.div`
+export const ImageWrapper = styled.div`
   flex: 1;
   display: flex;
+  align-items: stretch;
   justify-content: center;
-  align-items: center;
 
-  iframe {
-    width: 90%;
-    height: auto;
-    aspect-ratio: 16 / 9;
-    border: none;
-    border-radius: 10px;
+  margin-right: calc(-1 * var(--pad-x));
+  margin-top: calc(-1 * var(--pad-y));
+  margin-bottom: calc(-1 * var(--pad-y));
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
   }
 
   @media (max-width: 768px) {
-    iframe {
+    margin-left: calc(-1 * var(--pad-x));
+    margin-right: calc(-1 * var(--pad-x));
+    margin-top: calc(-1 * var(--pad-y));
+    margin-bottom: calc(-1 * var(--pad-y));
+
+    img {
       width: 100%;
+      height: auto;
+      border-radius: 10px 10px 0 0;
     }
-    width: 100%;
-    max-width: 100%;
   }
 `;
