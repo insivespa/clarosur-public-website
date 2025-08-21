@@ -22,7 +22,7 @@ export default class MyDocument extends Document {
               src="https://www.googletagmanager.com/ns.html?id=GTM-PFK27GSR"
               height="0"
               width="0"
-              style="display:none;visibility:hidden"
+              style={{ display: 'none', visibility: 'hidden' }} 
             ></iframe>
           </noscript>
           {/* End Google Tag Manager (noscript) */}
