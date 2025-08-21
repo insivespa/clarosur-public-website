@@ -48,11 +48,11 @@ const Bar = styled.section`
   }
 
   @media (max-width: 992px) {
-    padding: 2rem 1rem;
+    padding: 1rem;
   }
 
   @media (max-width: 768px) {
-    padding: 2rem 1rem;
+    padding: 1rem;
   }
 `;
 

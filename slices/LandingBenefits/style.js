@@ -86,6 +86,8 @@ export const IconButton = styled.button`
     height: 60%;
     object-fit: contain;
     display: block;
+    filter: invert(24%) sepia(3%) saturate(464%) hue-rotate(52deg)
+      brightness(93%) contrast(90%);
   }
 
   transition: transform 0.25s ease, box-shadow 0.25s ease;

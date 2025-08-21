@@ -98,11 +98,11 @@ export const Title = styled.div`
 `;
 
 export const Tagline = styled.div`
-  margin-top: 1rem;
-  font-size: 1.1rem;
+  margin-top: 1.3rem;
   line-height: 1.5;
   opacity: 0.85;
   p {
+    font-size: 1.125rem;
     font-style: italic;
   }
 `;
