@@ -20,9 +20,9 @@ import { asText } from "@prismicio/helpers";
  */
 
 // EmailJS configuration
-const SERVICE_ID = "";
-const TEMPLATE_ID = "";
-const PUBLIC_KEY = "";
+const SERVICE_ID = "service_yy76iay";
+const TEMPLATE_ID = "template_tjnet8s";
+const PUBLIC_KEY = "kDFbozqH1THWp3UdO";
 
 const LandingClosingForm = ({ slice }) => {
   const { title, description, ctatext, bgimage } = slice.primary || {};
