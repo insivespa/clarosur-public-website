@@ -3,6 +3,16 @@
     "landingpage": {},
     "landingnav": {
       "navlink": {}
+    },
+    "landingfooter": {
+      "navlinks": {
+        "nav": {
+          "config": {
+            "patternType": "PARAGRAPH",
+            "blocks": 1
+          }
+        }
+      }
     }
   },
   "slices": {
@@ -131,6 +141,12 @@
               "patternType": "HEADING",
               "blocks": 1
             }
+          },
+          "location": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
           }
         },
         "primary": {
@@ -165,7 +181,8 @@
               "blocks": 1
             }
           }
-        }
+        },
+        "items": {}
       }
     },
     "LandingBenefitsTop": {

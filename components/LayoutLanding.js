@@ -51,7 +51,11 @@ export const LandingLayout = (props) => {
       </Head>
       <LandingNav landingNav={header} />
       <main>{children}</main>
-      <WhatsAppButton href="#" target="_blank" rel="noopener noreferrer">
+      <WhatsAppButton
+        href="https://wa.me/56964904389"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <FaWhatsapp color="white" size={40} />
       </WhatsAppButton>
       <LandingFooter landingFooter={footer} />

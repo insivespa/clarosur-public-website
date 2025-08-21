@@ -97,6 +97,16 @@ export const Title = styled.div`
   }
 `;
 
+export const Tagline = styled.div`
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  opacity: 0.85;
+  p {
+    font-style: italic;
+  }
+`;
+
 /* ======= Keyword “chips” ======= */
 export const KeywordWrapper = styled.ul`
   list-style: none;

@@ -55,6 +55,15 @@
             "single": "heading2"
           }
         },
+        "location": {
+          "type": "StructuredText",
+          "config": {
+            "label": "location",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph"
+          }
+        },
         "projectdescription": {
           "type": "StructuredText",
           "config": {

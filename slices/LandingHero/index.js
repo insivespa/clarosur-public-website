@@ -12,6 +12,7 @@ import {
   KeywordWrapper,
   Keyword,
   TextArea,
+  Tagline,
 } from "./style";
 import { asText } from "@prismicio/helpers";
 
@@ -119,20 +120,24 @@ const LandingHero = ({ slice }) => {
         </Title>
 
         {items.length > 0 && (
-          <KeywordWrapper>
-            {items.map((i, idx) => {
-              const iconUrl = i?.icon?.url;
-              const iconAlt = i?.icon?.alt || "";
-              return (
+          <>
+            <KeywordWrapper>
+              {items.map((i, idx) => (
                 <Keyword key={idx}>
-                  {iconUrl ? (
-                    <img src={iconUrl} alt={iconAlt} loading="lazy" />
-                  ) : null}
+                  {i?.icon?.url && (
+                    <img src={i.icon.url} alt={i.icon.alt || ""} />
+                  )}
                   {i?.keyword && <PrismicRichText field={i.keyword} />}
                 </Keyword>
-              );
-            })}
-          </KeywordWrapper>
+              ))}
+            </KeywordWrapper>
+
+            {slice.primary?.tagline && (
+              <Tagline>
+                <PrismicRichText field={slice.primary.tagline} />
+              </Tagline>
+            )}
+          </>
         )}
       </div>
 

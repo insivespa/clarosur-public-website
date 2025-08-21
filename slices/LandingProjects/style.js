@@ -93,7 +93,7 @@ export const Project = styled.div`
 export const ProjectTitle = styled.div`
   h2 {
     margin: 0;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     line-height: 1.2;
     font-weight: 700;
     color: ${colors.projectTitle};
@@ -102,6 +102,53 @@ export const ProjectTitle = styled.div`
   @media (max-width: 768px) {
     h2 {
       font-size: 1.05rem;
+    }
+  }
+`;
+
+export const ProjectLocation = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  color: #333;
+  background-color: #fafafa;
+  border: 1px solid #e0e0e0;
+  border-radius: 999px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+
+  /* sizing */
+  width: 40%;
+  max-width: 420px;
+  min-height: 32px;
+  padding: clamp(4px, 0.6vw, 8px) clamp(10px, 1.2vw, 16px);
+
+  p {
+    margin: 0;
+    font-weight: 500;
+    line-height: 1.4;
+    white-space: nowrap;
+    text-align: center;
+    font-size: clamp(11px, 1.1vw, 13px);
+  }
+
+  @media (max-width: 1200px) {
+    width: 50%;
+    max-width: 360px;
+  }
+
+  @media (max-width: 992px) {
+    width: 60%;
+    max-width: 320px;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    max-width: none;
+    padding: 6px 14px;
+    p {
+      font-size: 12px;
     }
   }
 `;

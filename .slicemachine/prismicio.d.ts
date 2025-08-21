@@ -213,6 +213,31 @@ export interface LandingfooterDocumentDataContactgroupItem {
 }
 
 /**
+ * Item in *landingFooter → navLinks*
+ */
+export interface LandingfooterDocumentDataNavlinksItem {
+	/**
+	 * nav field in *landingFooter → navLinks*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landingfooter.navlinks[].nav
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	nav: prismic.RichTextField;
+	
+	/**
+	 * link field in *landingFooter → navLinks*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landingfooter.navlinks[].link
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	link: prismic.LinkField;
+}
+
+/**
  * Content for landingFooter documents
  */
 interface LandingfooterDocumentData {
@@ -259,6 +284,17 @@ interface LandingfooterDocumentData {
 	 * - **Documentation**: https://prismic.io/docs/field#group
 	 */
 	contactgroup: prismic.GroupField<Simplify<LandingfooterDocumentDataContactgroupItem>>;
+	
+	/**
+	 * navLinks field in *landingFooter*
+	 *
+	 * - **Field Type**: Group
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landingfooter.navlinks[]
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#group
+	 */
+	navlinks: prismic.GroupField<Simplify<LandingfooterDocumentDataNavlinksItem>>;
 }
 
 /**
@@ -1962,6 +1998,16 @@ export interface OurProjectsSliceDefaultItem {
 	projecttitle: prismic.TitleField;
 	
 	/**
+	 * location field in *LandingProjects → Items*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: our_projects.items[].location
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	location: prismic.RichTextField;
+	
+	/**
 	 * projectDescription field in *LandingProjects → Items*
 	 *
 	 * - **Field Type**: Rich Text
@@ -2959,6 +3005,7 @@ declare module "@prismicio/client" {
 			LandingfooterDocument,
 			LandingfooterDocumentData,
 			LandingfooterDocumentDataContactgroupItem,
+			LandingfooterDocumentDataNavlinksItem,
 			LandingnavDocument,
 			LandingnavDocumentData,
 			LandingnavDocumentDataNavlinkItem,

@@ -12,8 +12,10 @@ import {
   Title,
   CompareSliderWrapper,
   CtaButton,
+  ProjectLocation,
 } from "./style";
 import { FiArrowRight } from "react-icons/fi";
+import { TiLocation } from "react-icons/ti";
 
 /**
  * @typedef {import("@prismicio/client").Content.OurProjectsSlice} OurProjectsSlice
@@ -39,6 +41,13 @@ const OurProjects = ({ slice }) => (
               <ProjectTitle>
                 <PrismicRichText field={item.projecttitle} />
               </ProjectTitle>
+            )}
+
+            {item?.location && (
+              <ProjectLocation>
+                <TiLocation size={15} style={{ color: "#333", flexShrink: 0 }} />
+                <PrismicRichText field={item.location} />
+              </ProjectLocation>
             )}
 
             {item?.projectdescription && (
@@ -85,7 +94,7 @@ const OurProjects = ({ slice }) => (
       </ProjectsWrapper>
     </Section>
     <div
-      style={{ 
+      style={{
         display: "flex",
         justifyContent: "center",
         alignItems: "center",

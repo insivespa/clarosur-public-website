@@ -63,6 +63,31 @@
             }
           }
         }
+      },
+      "navlinks": {
+        "type": "Group",
+        "config": {
+          "label": "navLinks",
+          "fields": {
+            "nav": {
+              "type": "StructuredText",
+              "config": {
+                "label": "nav",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "paragraph"
+              }
+            },
+            "link": {
+              "type": "Link",
+              "config": {
+                "label": "link",
+                "placeholder": "",
+                "select": null
+              }
+            }
+          }
+        }
       }
     }
   }

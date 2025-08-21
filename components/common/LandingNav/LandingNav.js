@@ -33,6 +33,17 @@ const LandingNav = ({ landingNav }) => {
     return () => (document.body.style.overflow = "");
   }, [isMenuOpen]);
 
+  const handleScroll = (e, id) => {
+    e.preventDefault();
+    const el = document.querySelector(id);
+    if (el) {
+      const navHeight = document.querySelector("nav")?.offsetHeight || 0;
+      const y = el.getBoundingClientRect().top + window.scrollY - navHeight;
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
+    setIsMenuOpen(false);
+  };
+
   return (
     <Nav>
       {/* Logo */}
@@ -48,7 +59,9 @@ const LandingNav = ({ landingNav }) => {
           return (
             <li key={index}>
               {href.startsWith("#") ? (
-                <a href={href}>{name}</a>
+                <a href={href} onClick={(e) => handleScroll(e, href)}>
+                  {name}
+                </a>
               ) : (
                 <Link href={href}>{name}</Link>
               )}
@@ -101,14 +114,22 @@ const LandingNav = ({ landingNav }) => {
             const name = item.text || "Link";
             const href = item.url?.url || "#";
             return (
-              <li key={index} onClick={() => setIsMenuOpen(false)}>
-                <Link href={href}>{name}</Link>
+              <li key={index}>
+                {href.startsWith("#") ? (
+                  <a href={href} onClick={(e) => handleScroll(e, href)}>
+                    {name}
+                  </a>
+                ) : (
+                  <Link href={href} onClick={() => setIsMenuOpen(false)}>
+                    {name}
+                  </Link>
+                )}
               </li>
             );
           })}
 
           {/* Mobile Call Button */}
-          <li onClick={() => setIsMenuOpen(false)}>
+          <li>
             {isTel ? (
               <a href={callBtnLink} className="contact-btn" aria-label="Call">
                 <FiPhone />
