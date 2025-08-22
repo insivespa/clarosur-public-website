@@ -1,0 +1,96 @@
+{
+  "id": "our_projects",
+  "type": "SharedSlice",
+  "name": "LandingProjects",
+  "description": "OurProjects",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "OurProjects",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading1",
+            "label": "Title",
+            "placeholder": "This is where it all begins..."
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "single": "paragraph",
+            "label": "Description",
+            "placeholder": "A nice description of your feature"
+          }
+        },
+        "ctatext": {
+          "type": "StructuredText",
+          "config": {
+            "label": "ctaText",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph"
+          }
+        },
+        "ctaurl": {
+          "type": "Link",
+          "config": {
+            "label": "ctaUrl",
+            "placeholder": "",
+            "select": null
+          }
+        }
+      },
+      "items": {
+        "projecttitle": {
+          "type": "StructuredText",
+          "config": {
+            "label": "projectTitle",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading2"
+          }
+        },
+        "location": {
+          "type": "StructuredText",
+          "config": {
+            "label": "location",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph"
+          }
+        },
+        "projectdescription": {
+          "type": "StructuredText",
+          "config": {
+            "label": "projectDescription",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "before": {
+          "type": "Image",
+          "config": {
+            "label": "before",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "after": {
+          "type": "Image",
+          "config": {
+            "label": "after",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}

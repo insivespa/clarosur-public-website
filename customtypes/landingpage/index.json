@@ -1,7 +1,7 @@
 {
   "id": "landingpage",
   "label": "LandingPage",
-  "repeatable": false,
+  "repeatable": true,
   "status": true,
   "json": {
     "Main": {
@@ -31,6 +31,9 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "landing_customer_review": {
+              "type": "SharedSlice"
+            },
             "landing_faq": {
               "type": "SharedSlice"
             },
@@ -40,7 +43,25 @@
             "landing_timeline": {
               "type": "SharedSlice"
             },
-            "landing_customer_review": {
+            "about": {
+              "type": "SharedSlice"
+            },
+            "landing_services": {
+              "type": "SharedSlice"
+            },
+            "our_projects": {
+              "type": "SharedSlice"
+            },
+            "slice_benefits": {
+              "type": "SharedSlice"
+            },
+            "landing_subhero": {
+              "type": "SharedSlice"
+            },
+            "landing_benefits_top": {
+              "type": "SharedSlice"
+            },
+            "landing_closing_form": {
               "type": "SharedSlice"
             }
           }

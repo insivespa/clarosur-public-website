@@ -177,7 +177,234 @@ interface HomepageDocumentData {
  */
 export type HomepageDocument<Lang extends string = string> = prismic.PrismicDocumentWithUID<Simplify<HomepageDocumentData>, "homepage", Lang>;
 
-type LandingpageDocumentDataSlicesSlice = LandingFaqSlice | LandingHeroSlice | LandingTimelineSlice | LandingCustomerReviewSlice
+/**
+ * Item in *landingFooter → contactgroup*
+ */
+export interface LandingfooterDocumentDataContactgroupItem {
+	/**
+	 * icon field in *landingFooter → contactgroup*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landingfooter.contactgroup[].icon
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	icon: prismic.ImageField<never>;
+	
+	/**
+	 * label field in *landingFooter → contactgroup*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landingfooter.contactgroup[].label
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	label: prismic.RichTextField;
+	
+	/**
+	 * url field in *landingFooter → contactgroup*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landingfooter.contactgroup[].url
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	url: prismic.LinkField;
+}
+
+/**
+ * Item in *landingFooter → navLinks*
+ */
+export interface LandingfooterDocumentDataNavlinksItem {
+	/**
+	 * nav field in *landingFooter → navLinks*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landingfooter.navlinks[].nav
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	nav: prismic.RichTextField;
+	
+	/**
+	 * link field in *landingFooter → navLinks*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landingfooter.navlinks[].link
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	link: prismic.LinkField;
+}
+
+/**
+ * Content for landingFooter documents
+ */
+interface LandingfooterDocumentData {
+	/**
+	 * logo field in *landingFooter*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landingfooter.logo
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	logo: prismic.ImageField<never>;
+	
+	/**
+	 * description field in *landingFooter*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landingfooter.description
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	description: prismic.RichTextField;
+	
+	/**
+	 * copyright field in *landingFooter*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landingfooter.copyright
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	copyright: prismic.RichTextField;
+	
+	/**
+	 * contactgroup field in *landingFooter*
+	 *
+	 * - **Field Type**: Group
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landingfooter.contactgroup[]
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#group
+	 */
+	contactgroup: prismic.GroupField<Simplify<LandingfooterDocumentDataContactgroupItem>>;
+	
+	/**
+	 * navLinks field in *landingFooter*
+	 *
+	 * - **Field Type**: Group
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landingfooter.navlinks[]
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#group
+	 */
+	navlinks: prismic.GroupField<Simplify<LandingfooterDocumentDataNavlinksItem>>;
+}
+
+/**
+ * landingFooter document from Prismic
+ *
+ * - **API ID**: `landingfooter`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type LandingfooterDocument<Lang extends string = string> = prismic.PrismicDocumentWithoutUID<Simplify<LandingfooterDocumentData>, "landingfooter", Lang>;
+
+/**
+ * Item in *LandingNav → navLink*
+ */
+export interface LandingnavDocumentDataNavlinkItem {
+	/**
+	 * text field in *LandingNav → navLink*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landingnav.navlink[].text
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	text: prismic.KeyTextField;
+	
+	/**
+	 * url field in *LandingNav → navLink*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landingnav.navlink[].url
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	url: prismic.LinkField;
+}
+
+/**
+ * Content for LandingNav documents
+ */
+interface LandingnavDocumentData {
+	/**
+	 * logo field in *LandingNav*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landingnav.logo
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	logo: prismic.ImageField<never>;
+	
+	/**
+	 * logoUrl field in *LandingNav*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landingnav.logourl
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	logourl: prismic.LinkField;
+	
+	/**
+	 * navLink field in *LandingNav*
+	 *
+	 * - **Field Type**: Group
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landingnav.navlink[]
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#group
+	 */
+	navlink: prismic.GroupField<Simplify<LandingnavDocumentDataNavlinkItem>>;
+	
+	/**
+	 * callBtn field in *LandingNav*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landingnav.callbtn
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	callbtn: prismic.KeyTextField;
+	
+	/**
+	 * callBtnLink field in *LandingNav*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landingnav.callbtnlink
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	callbtnlink: prismic.LinkField;
+}
+
+/**
+ * LandingNav document from Prismic
+ *
+ * - **API ID**: `landingnav`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type LandingnavDocument<Lang extends string = string> = prismic.PrismicDocumentWithoutUID<Simplify<LandingnavDocumentData>, "landingnav", Lang>;
+
+type LandingpageDocumentDataSlicesSlice = LandingCustomerReviewSlice | LandingFaqSlice | LandingHeroSlice | LandingTimelineSlice | AboutSlice | LandingServicesSlice | OurProjectsSlice | SliceBenefitsSlice | LandingSubheroSlice | LandingBenefitsTopSlice | LandingClosingFormSlice
 
 /**
  * Content for LandingPage documents
@@ -221,7 +448,7 @@ interface LandingpageDocumentData {
  * LandingPage document from Prismic
  *
  * - **API ID**: `landingpage`
- * - **Repeatable**: `false`
+ * - **Repeatable**: `true`
  * - **Documentation**: https://prismic.io/docs/custom-types
  *
  * @typeParam Lang - Language API ID of the document.
@@ -375,7 +602,7 @@ interface PageDocumentData {
  */
 export type PageDocument<Lang extends string = string> = prismic.PrismicDocumentWithUID<Simplify<PageDocumentData>, "page", Lang>;
 
-export type AllDocumentTypes = FootermenuDocument | HomepageDocument | LandingpageDocument | MenutopDocument | PageDocument;
+export type AllDocumentTypes = FootermenuDocument | HomepageDocument | LandingfooterDocument | LandingnavDocument | LandingpageDocument | MenutopDocument | PageDocument;
 
 /**
  * Primary content in *CardList → Default → Primary*
@@ -1171,6 +1398,268 @@ type IdeasSliceVariation = IdeasSliceDefault | IdeasSliceNoButtonNobg | IdeasSli
 export type IdeasSlice = prismic.SharedSlice<"ideas", IdeasSliceVariation>;
 
 /**
+ * Primary content in *LandingAbout → Default → Primary*
+ */
+export interface AboutSliceDefaultPrimary {
+	/**
+	 * Title field in *LandingAbout → Default → Primary*
+	 *
+	 * - **Field Type**: Title
+	 * - **Placeholder**: This is where it all begins...
+	 * - **API ID Path**: about.default.primary.title
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	title: prismic.TitleField;
+	
+	/**
+	 * Description field in *LandingAbout → Default → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: A nice description of your feature
+	 * - **API ID Path**: about.default.primary.description
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	description: prismic.RichTextField;
+	
+	/**
+	 * image field in *LandingAbout → Default → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: about.default.primary.image
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	image: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for LandingAbout Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: About
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type AboutSliceDefault = prismic.SharedSliceVariation<"default", Simplify<AboutSliceDefaultPrimary>, never>;
+
+/**
+ * Slice variation for *LandingAbout*
+ */
+type AboutSliceVariation = AboutSliceDefault
+
+/**
+ * LandingAbout Shared Slice
+ *
+ * - **API ID**: `about`
+ * - **Description**: About
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type AboutSlice = prismic.SharedSlice<"about", AboutSliceVariation>;
+
+/**
+ * Primary content in *LandingBenefits → Default → Primary*
+ */
+export interface SliceBenefitsSliceDefaultPrimary {
+	/**
+	 * Title field in *LandingBenefits → Default → Primary*
+	 *
+	 * - **Field Type**: Title
+	 * - **Placeholder**: This is where it all begins...
+	 * - **API ID Path**: slice_benefits.default.primary.title
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	title: prismic.TitleField;
+}
+
+/**
+ * Primary content in *LandingBenefits → Items*
+ */
+export interface SliceBenefitsSliceDefaultItem {
+	/**
+	 * icon field in *LandingBenefits → Items*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: slice_benefits.items[].icon
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	icon: prismic.ImageField<never>;
+	
+	/**
+	 * keyTitle field in *LandingBenefits → Items*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: slice_benefits.items[].keytitle
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	keytitle: prismic.RichTextField;
+	
+	/**
+	 * description field in *LandingBenefits → Items*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: slice_benefits.items[].description
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	description: prismic.RichTextField;
+}
+
+/**
+ * Default variation for LandingBenefits Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: SliceBenefits
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SliceBenefitsSliceDefault = prismic.SharedSliceVariation<"default", Simplify<SliceBenefitsSliceDefaultPrimary>, Simplify<SliceBenefitsSliceDefaultItem>>;
+
+/**
+ * Slice variation for *LandingBenefits*
+ */
+type SliceBenefitsSliceVariation = SliceBenefitsSliceDefault
+
+/**
+ * LandingBenefits Shared Slice
+ *
+ * - **API ID**: `slice_benefits`
+ * - **Description**: SliceBenefits
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SliceBenefitsSlice = prismic.SharedSlice<"slice_benefits", SliceBenefitsSliceVariation>;
+
+/**
+ * Primary content in *LandingBenefitsTop → Default → Primary*
+ */
+export interface LandingBenefitsTopSliceDefaultPrimary {
+	/**
+	 * bgImage field in *LandingBenefitsTop → Default → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landing_benefits_top.default.primary.bgimage
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	bgimage: prismic.ImageField<never>;
+}
+
+/**
+ * Primary content in *LandingBenefitsTop → Items*
+ */
+export interface LandingBenefitsTopSliceDefaultItem {
+	/**
+	 * metric field in *LandingBenefitsTop → Items*
+	 *
+	 * - **Field Type**: Title
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landing_benefits_top.items[].metric
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	metric: prismic.TitleField;
+	
+	/**
+	 * metricText field in *LandingBenefitsTop → Items*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landing_benefits_top.items[].metrictext
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	metrictext: prismic.RichTextField;
+}
+
+/**
+ * Default variation for LandingBenefitsTop Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: LandingBenefitsTop
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type LandingBenefitsTopSliceDefault = prismic.SharedSliceVariation<"default", Simplify<LandingBenefitsTopSliceDefaultPrimary>, Simplify<LandingBenefitsTopSliceDefaultItem>>;
+
+/**
+ * Slice variation for *LandingBenefitsTop*
+ */
+type LandingBenefitsTopSliceVariation = LandingBenefitsTopSliceDefault
+
+/**
+ * LandingBenefitsTop Shared Slice
+ *
+ * - **API ID**: `landing_benefits_top`
+ * - **Description**: LandingBenefitsTop
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type LandingBenefitsTopSlice = prismic.SharedSlice<"landing_benefits_top", LandingBenefitsTopSliceVariation>;
+
+/**
+ * Primary content in *LandingClosingForm → Default → Primary*
+ */
+export interface LandingClosingFormSliceDefaultPrimary {
+	/**
+	 * Title field in *LandingClosingForm → Default → Primary*
+	 *
+	 * - **Field Type**: Title
+	 * - **Placeholder**: This is where it all begins...
+	 * - **API ID Path**: landing_closing_form.default.primary.title
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	title: prismic.TitleField;
+	
+	/**
+	 * Description field in *LandingClosingForm → Default → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: A nice description of your feature
+	 * - **API ID Path**: landing_closing_form.default.primary.description
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	description: prismic.RichTextField;
+	
+	/**
+	 * ctaText field in *LandingClosingForm → Default → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landing_closing_form.default.primary.ctatext
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	ctatext: prismic.RichTextField;
+	
+	/**
+	 * bgImage field in *LandingClosingForm → Default → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landing_closing_form.default.primary.bgimage
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	bgimage: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for LandingClosingForm Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: LandingClosingForm
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type LandingClosingFormSliceDefault = prismic.SharedSliceVariation<"default", Simplify<LandingClosingFormSliceDefaultPrimary>, never>;
+
+/**
+ * Slice variation for *LandingClosingForm*
+ */
+type LandingClosingFormSliceVariation = LandingClosingFormSliceDefault
+
+/**
+ * LandingClosingForm Shared Slice
+ *
+ * - **API ID**: `landing_closing_form`
+ * - **Description**: LandingClosingForm
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type LandingClosingFormSlice = prismic.SharedSlice<"landing_closing_form", LandingClosingFormSliceVariation>;
+
+/**
  * Primary content in *LandingCustomerReview → Default → Primary*
  */
 export interface LandingCustomerReviewSliceDefaultPrimary {
@@ -1228,6 +1717,16 @@ export interface LandingCustomerReviewSliceDefaultItem {
 	 * - **Documentation**: https://prismic.io/docs/field#number
 	 */
 	stars: prismic.NumberField;
+	
+	/**
+	 * googleLink field in *LandingCustomerReview → Items*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landing_customer_review.items[].googlelink
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	googlelink: prismic.LinkField;
 }
 
 /**
@@ -1341,6 +1840,16 @@ export interface LandingHeroSliceDefaultPrimary {
 	subtitle: prismic.RichTextField;
 	
 	/**
+	 * tagline field in *LandingHero → Default → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landing_hero.default.primary.tagline
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	tagline: prismic.RichTextField;
+	
+	/**
 	 * formTitle field in *LandingHero → Default → Primary*
 	 *
 	 * - **Field Type**: Title
@@ -1428,6 +1937,329 @@ type LandingHeroSliceVariation = LandingHeroSliceDefault
  * - **Documentation**: https://prismic.io/docs/slice
  */
 export type LandingHeroSlice = prismic.SharedSlice<"landing_hero", LandingHeroSliceVariation>;
+
+/**
+ * Primary content in *LandingProjects → Default → Primary*
+ */
+export interface OurProjectsSliceDefaultPrimary {
+	/**
+	 * Title field in *LandingProjects → Default → Primary*
+	 *
+	 * - **Field Type**: Title
+	 * - **Placeholder**: This is where it all begins...
+	 * - **API ID Path**: our_projects.default.primary.title
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	title: prismic.TitleField;
+	
+	/**
+	 * Description field in *LandingProjects → Default → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: A nice description of your feature
+	 * - **API ID Path**: our_projects.default.primary.description
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	description: prismic.RichTextField;
+	
+	/**
+	 * ctaText field in *LandingProjects → Default → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: our_projects.default.primary.ctatext
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	ctatext: prismic.RichTextField;
+	
+	/**
+	 * ctaUrl field in *LandingProjects → Default → Primary*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: our_projects.default.primary.ctaurl
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	ctaurl: prismic.LinkField;
+}
+
+/**
+ * Primary content in *LandingProjects → Items*
+ */
+export interface OurProjectsSliceDefaultItem {
+	/**
+	 * projectTitle field in *LandingProjects → Items*
+	 *
+	 * - **Field Type**: Title
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: our_projects.items[].projecttitle
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	projecttitle: prismic.TitleField;
+	
+	/**
+	 * location field in *LandingProjects → Items*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: our_projects.items[].location
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	location: prismic.RichTextField;
+	
+	/**
+	 * projectDescription field in *LandingProjects → Items*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: our_projects.items[].projectdescription
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	projectdescription: prismic.RichTextField;
+	
+	/**
+	 * before field in *LandingProjects → Items*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: our_projects.items[].before
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	before: prismic.ImageField<never>;
+	
+	/**
+	 * after field in *LandingProjects → Items*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: our_projects.items[].after
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	after: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for LandingProjects Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: OurProjects
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type OurProjectsSliceDefault = prismic.SharedSliceVariation<"default", Simplify<OurProjectsSliceDefaultPrimary>, Simplify<OurProjectsSliceDefaultItem>>;
+
+/**
+ * Slice variation for *LandingProjects*
+ */
+type OurProjectsSliceVariation = OurProjectsSliceDefault
+
+/**
+ * LandingProjects Shared Slice
+ *
+ * - **API ID**: `our_projects`
+ * - **Description**: OurProjects
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type OurProjectsSlice = prismic.SharedSlice<"our_projects", OurProjectsSliceVariation>;
+
+/**
+ * Primary content in *LandingServices → Default → Primary*
+ */
+export interface LandingServicesSliceDefaultPrimary {
+	/**
+	 * title field in *LandingServices → Default → Primary*
+	 *
+	 * - **Field Type**: Title
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landing_services.default.primary.title
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	title: prismic.TitleField;
+}
+
+/**
+ * Primary content in *LandingServices → Items*
+ */
+export interface LandingServicesSliceDefaultItem {
+	/**
+	 * bgimage field in *LandingServices → Items*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landing_services.items[].bgimage
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	bgimage: prismic.ImageField<never>;
+	
+	/**
+	 * servicetitle field in *LandingServices → Items*
+	 *
+	 * - **Field Type**: Title
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landing_services.items[].servicetitle
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	servicetitle: prismic.TitleField;
+	
+	/**
+	 * description field in *LandingServices → Items*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landing_services.items[].description
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	description: prismic.RichTextField;
+	
+	/**
+	 * link field in *LandingServices → Items*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landing_services.items[].link
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	link: prismic.LinkField;
+}
+
+/**
+ * Default variation for LandingServices Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: LandingServices
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type LandingServicesSliceDefault = prismic.SharedSliceVariation<"default", Simplify<LandingServicesSliceDefaultPrimary>, Simplify<LandingServicesSliceDefaultItem>>;
+
+/**
+ * Primary content in *LandingServices → nohover → Primary*
+ */
+export interface LandingServicesSliceNohoverPrimary {
+	/**
+	 * title field in *LandingServices → nohover → Primary*
+	 *
+	 * - **Field Type**: Title
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landing_services.nohover.primary.title
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	title: prismic.TitleField;
+	
+	/**
+	 * ctaText field in *LandingServices → nohover → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landing_services.nohover.primary.ctatext
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	ctatext: prismic.RichTextField;
+	
+	/**
+	 * ctaUrl field in *LandingServices → nohover → Primary*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landing_services.nohover.primary.ctaurl
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	ctaurl: prismic.LinkField;
+}
+
+/**
+ * Primary content in *LandingServices → Items*
+ */
+export interface LandingServicesSliceNohoverItem {
+	/**
+	 * bgimage field in *LandingServices → Items*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landing_services.items[].bgimage
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	bgimage: prismic.ImageField<never>;
+	
+	/**
+	 * servicetitle field in *LandingServices → Items*
+	 *
+	 * - **Field Type**: Title
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landing_services.items[].servicetitle
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	servicetitle: prismic.TitleField;
+	
+	/**
+	 * description field in *LandingServices → Items*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landing_services.items[].description
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	description: prismic.RichTextField;
+}
+
+/**
+ * nohover variation for LandingServices Slice
+ *
+ * - **API ID**: `nohover`
+ * - **Description**: LandingServices
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type LandingServicesSliceNohover = prismic.SharedSliceVariation<"nohover", Simplify<LandingServicesSliceNohoverPrimary>, Simplify<LandingServicesSliceNohoverItem>>;
+
+/**
+ * Slice variation for *LandingServices*
+ */
+type LandingServicesSliceVariation = LandingServicesSliceDefault | LandingServicesSliceNohover
+
+/**
+ * LandingServices Shared Slice
+ *
+ * - **API ID**: `landing_services`
+ * - **Description**: LandingServices
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type LandingServicesSlice = prismic.SharedSlice<"landing_services", LandingServicesSliceVariation>;
+
+/**
+ * Primary content in *LandingSubhero → Items*
+ */
+export interface LandingSubheroSliceDefaultItem {
+	/**
+	 * text field in *LandingSubhero → Items*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landing_subhero.items[].text
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	text: prismic.RichTextField;
+}
+
+/**
+ * Default variation for LandingSubhero Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: LandingSubhero
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type LandingSubheroSliceDefault = prismic.SharedSliceVariation<"default", Record<string, never>, Simplify<LandingSubheroSliceDefaultItem>>;
+
+/**
+ * Slice variation for *LandingSubhero*
+ */
+type LandingSubheroSliceVariation = LandingSubheroSliceDefault
+
+/**
+ * LandingSubhero Shared Slice
+ *
+ * - **API ID**: `landing_subhero`
+ * - **Description**: LandingSubhero
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type LandingSubheroSlice = prismic.SharedSlice<"landing_subhero", LandingSubheroSliceVariation>;
 
 /**
  * Primary content in *LandingTimeline → Default → Primary*
@@ -2170,6 +3002,13 @@ declare module "@prismicio/client" {
 			HomepageDocument,
 			HomepageDocumentData,
 			HomepageDocumentDataSlicesSlice,
+			LandingfooterDocument,
+			LandingfooterDocumentData,
+			LandingfooterDocumentDataContactgroupItem,
+			LandingfooterDocumentDataNavlinksItem,
+			LandingnavDocument,
+			LandingnavDocumentData,
+			LandingnavDocumentDataNavlinkItem,
 			LandingpageDocument,
 			LandingpageDocumentData,
 			LandingpageDocumentDataSlicesSlice,
@@ -2212,6 +3051,24 @@ declare module "@prismicio/client" {
 			IdeasSliceDefault,
 			IdeasSliceNoButtonNobg,
 			IdeasSliceNoButton,
+			AboutSlice,
+			AboutSliceDefaultPrimary,
+			AboutSliceVariation,
+			AboutSliceDefault,
+			SliceBenefitsSlice,
+			SliceBenefitsSliceDefaultPrimary,
+			SliceBenefitsSliceDefaultItem,
+			SliceBenefitsSliceVariation,
+			SliceBenefitsSliceDefault,
+			LandingBenefitsTopSlice,
+			LandingBenefitsTopSliceDefaultPrimary,
+			LandingBenefitsTopSliceDefaultItem,
+			LandingBenefitsTopSliceVariation,
+			LandingBenefitsTopSliceDefault,
+			LandingClosingFormSlice,
+			LandingClosingFormSliceDefaultPrimary,
+			LandingClosingFormSliceVariation,
+			LandingClosingFormSliceDefault,
 			LandingCustomerReviewSlice,
 			LandingCustomerReviewSliceDefaultPrimary,
 			LandingCustomerReviewSliceDefaultItem,
@@ -2227,6 +3084,23 @@ declare module "@prismicio/client" {
 			LandingHeroSliceDefaultItem,
 			LandingHeroSliceVariation,
 			LandingHeroSliceDefault,
+			OurProjectsSlice,
+			OurProjectsSliceDefaultPrimary,
+			OurProjectsSliceDefaultItem,
+			OurProjectsSliceVariation,
+			OurProjectsSliceDefault,
+			LandingServicesSlice,
+			LandingServicesSliceDefaultPrimary,
+			LandingServicesSliceDefaultItem,
+			LandingServicesSliceNohoverPrimary,
+			LandingServicesSliceNohoverItem,
+			LandingServicesSliceVariation,
+			LandingServicesSliceDefault,
+			LandingServicesSliceNohover,
+			LandingSubheroSlice,
+			LandingSubheroSliceDefaultItem,
+			LandingSubheroSliceVariation,
+			LandingSubheroSliceDefault,
 			LandingTimelineSlice,
 			LandingTimelineSliceDefaultPrimary,
 			LandingTimelineSliceDefaultItem,

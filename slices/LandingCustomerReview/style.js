@@ -1,23 +1,46 @@
 import styled from "styled-components";
 import Slider from "react-slick";
+import { PrismicLink } from "@prismicio/react";
+
+const colors = {
+  sectionBg: "#ffffff",
+  titleText: "#19bcd4",
+  sliderDot: "rgba(25, 188, 212, 0.6)",
+  sliderDotActive: "#19bcd4",
+  reviewBg: "#ffffff",
+  reviewBorder: "#d3d6d8",
+  reviewShadow: "rgba(0, 0, 0, 0.05)",
+  reviewHoverShadow: "rgba(0, 0, 0, 0.1)",
+  letterFallbackBg: "#19bcd4",
+  letterFallbackText: "#ffffff",
+  reviewText: "#5c5e5a",
+};
 
 export const Section = styled.section`
-  padding: 2rem;
-  background: white;
-  padding: 1rem 10rem;
+  background: ${colors.sectionBg};
+  padding: 3rem 10rem;
+
+  @media (max-width: 1200px) {
+    padding: 3rem 6rem;
+  }
+
+  @media (max-width: 992px) {
+    padding: 3rem 1rem;
+  }
+
   @media (max-width: 768px) {
-    padding: 1rem;
+    padding: 3rem;
   }
 `;
 
 export const Title = styled.div`
   text-align: center;
-  margin-bottom: 2rem;
 
   h1 {
     font-weight: 900;
     font-size: 2rem;
-    color: #3962e9;
+    color: ${colors.titleText};
+    margin: 0 0 1rem 0;
   }
 `;
 
@@ -38,22 +61,22 @@ export const StyledSlider = styled(Slider)`
 
   .slick-dots li button:before {
     font-size: 10px;
-    color: rgb(90, 115, 198);
+    color: ${colors.sliderDot};
   }
 
   .slick-dots li.slick-active button:before {
-    color: #3962e9;
+    color: ${colors.sliderDotActive};
   }
 `;
 
 export const Review = styled.div`
-  background: #ffffff;
-  border: 1px solid #ddd;
+  background: ${colors.reviewBg};
+  border: 1px solid ${colors.reviewBorder};
   border-radius: 10px;
   padding: 1rem;
   max-width: 450px;
   min-height: 300px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 20px ${colors.reviewShadow};
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   display: flex;
   flex-direction: column;
@@ -61,18 +84,45 @@ export const Review = styled.div`
 
   &:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 30px ${colors.reviewHoverShadow};
   }
 `;
 
 export const ReviewHead = styled.div`
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 1rem;
   margin-bottom: 1rem;
   padding-bottom: 0.8rem;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid ${colors.reviewBorder};
   flex-shrink: 0;
+`;
+
+export const GoogleReviewLink = styled(PrismicLink)`
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  color: #4285f4;
+  padding: 0.3em;
+  border-radius: 999px;
+  text-decoration: none;
+  box-shadow: 0 1px 1px 1px ${colors.reviewBorder};
+
+  &:hover {
+    background: #f5f5f5;
+  }
+
+  &:focus-visible {
+    outline: 2px solid #4285f4;
+    outline-offset: 2px;
+  }
+
+  svg {
+    display: block;
+    flex-shrink: 0;
+  }
 `;
 
 export const UserIcon = styled.img`
@@ -86,8 +136,8 @@ export const LetterFallback = styled.div`
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: #007bff;
-  color: white;
+  background: ${colors.letterFallbackBg};
+  color: ${colors.letterFallbackText};
   font-weight: bold;
   font-size: 1.2rem;
   display: flex;
@@ -108,6 +158,6 @@ export const Stars = styled.div`
 
 export const ReviewText = styled.div`
   font-size: 0.95rem;
-  color: #555;
+  color: ${colors.reviewText};
   line-height: 1.6;
 `;

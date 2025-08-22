@@ -16,7 +16,7 @@ export const Theme = {
     maxWidth: "1136px",
   },
   typography: {
-    fontFamily: "Quicksand, sans-serif",
+    fontFamily: "Barlow, sans-serif",
     letterSpacing: "0px",
     h1: {
       desktop: {
