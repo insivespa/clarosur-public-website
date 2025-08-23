@@ -1,0 +1,12 @@
+import MyComponent from '../../../../slices/LandingServices';
+
+export default {
+  title: 'slices/LandingServices'
+}
+
+
+export const _Default = () => <MyComponent slice={{"variation":"default","version":"sktwi1xtmkfgx8626","items":[{"bgimage":{"dimensions":{"width":900,"height":500},"alt":null,"copyright":null,"url":"https://images.unsplash.com/photo-1471897488648-5eae4ac6686b"},"servicetitle":[{"type":"heading2","text":"Largest","spans":[]}],"description":[{"type":"paragraph","text":"Fugiat laboris deserunt aute duis labore fugiat culpa deserunt. Ipsum veniam nostrud elit culpa voluptate et id eu quis sint sunt nulla consectetur pariatur excepteur.","spans":[]}],"link":{"link_type":"Web","url":"http://google.com"}}],"primary":{"title":[{"type":"heading1","text":"Taken","spans":[]}]},"slice_type":"landing_services","id":"_Default"}} />
+_Default.storyName = ''
+
+export const _Nohover = () => <MyComponent slice={{"variation":"nohover","version":"sktwi1xtmkfgx8626","items":[{"bgimage":{"dimensions":{"width":900,"height":500},"alt":null,"copyright":null,"url":"https://images.unsplash.com/photo-1448932223592-d1fc686e76ea"},"servicetitle":[{"type":"heading2","text":"Double","spans":[]}],"description":[{"type":"paragraph","text":"Ex excepteur officia nostrud ullamco eu sit laborum est incididunt deserunt mollit mollit ipsum. Sint cillum amet officia. Quis ullamco nostrud consectetur minim.","spans":[]}]}],"primary":{"title":[{"type":"heading1","text":"Known","spans":[]}],"ctatext":[{"type":"paragraph","text":"Esse ea reprehenderit anim amet consectetur culpa pariatur est fugiat reprehenderit duis amet. Amet officia nulla dolor incididunt officia cupidatat cillum aliqua voluptate tempor non. Cillum occaecat cillum voluptate consequat eu sunt do ut.","spans":[]}],"ctaurl":{"link_type":"Web","url":"https://prismic.io"}},"slice_type":"landing_services","id":"_Nohover"}} />
+_Nohover.storyName = ''

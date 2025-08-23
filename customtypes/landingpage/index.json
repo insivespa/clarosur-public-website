@@ -1,0 +1,72 @@
+{
+  "id": "landingpage",
+  "label": "LandingPage",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "uid",
+          "placeholder": ""
+        }
+      },
+      "seotitle": {
+        "type": "Text",
+        "config": {
+          "label": "seoTitle",
+          "placeholder": ""
+        }
+      },
+      "seodescription": {
+        "type": "Text",
+        "config": {
+          "label": "seoDescription",
+          "placeholder": ""
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "landing_customer_review": {
+              "type": "SharedSlice"
+            },
+            "landing_faq": {
+              "type": "SharedSlice"
+            },
+            "landing_hero": {
+              "type": "SharedSlice"
+            },
+            "landing_timeline": {
+              "type": "SharedSlice"
+            },
+            "about": {
+              "type": "SharedSlice"
+            },
+            "landing_services": {
+              "type": "SharedSlice"
+            },
+            "our_projects": {
+              "type": "SharedSlice"
+            },
+            "slice_benefits": {
+              "type": "SharedSlice"
+            },
+            "landing_subhero": {
+              "type": "SharedSlice"
+            },
+            "landing_benefits_top": {
+              "type": "SharedSlice"
+            },
+            "landing_closing_form": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    }
+  }
+}

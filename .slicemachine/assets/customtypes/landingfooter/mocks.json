@@ -1,0 +1,77 @@
+{
+  "id": "mock-doc-id",
+  "url": null,
+  "type": "landingfooter",
+  "href": null,
+  "tags": [],
+  "first_publication_date": "1970-01-01T00:00:01+0000",
+  "last_publication_date": "1970-01-01T00:00:01+0000",
+  "slugs": [],
+  "linked_documents": [],
+  "lang": "en-us",
+  "alternate_languages": [],
+  "data": {
+    "logo": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1607582278038-6bebbd4d7b72"
+    },
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Reprehenderit commodo elit do dolor incididunt commodo. Tempor deserunt nulla proident consectetur amet id amet ex culpa ullamco aute sunt. Sint quis commodo ut ad labore amet id.",
+        "spans": []
+      }
+    ],
+    "copyright": [
+      {
+        "type": "paragraph",
+        "text": "Deserunt ullamco quis proident esse.",
+        "spans": []
+      }
+    ],
+    "contactgroup": [
+      {
+        "icon": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": null,
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1544731612-de7f96afe55f"
+        },
+        "label": [
+          {
+            "type": "paragraph",
+            "text": "Pariatur cillum id excepteur elit cupidatat. Id amet proident ut aliqua. Dolor elit occaecat reprehenderit dolore exercitation eiusmod occaecat consectetur consequat nisi sit tempor magna pariatur.",
+            "spans": []
+          }
+        ],
+        "url": {
+          "link_type": "Web",
+          "url": "http://google.com"
+        }
+      }
+    ],
+    "navlinks": [
+      {
+        "nav": [
+          {
+            "type": "paragraph",
+            "text": "Qui aute voluptate amet minim duis sit nulla. Est minim voluptate velit in est enim. Duis cillum laborum ex commodo.",
+            "spans": []
+          }
+        ],
+        "link": {
+          "link_type": "Web",
+          "url": "https://slicemachine.dev"
+        }
+      }
+    ]
+  }
+}

@@ -126,7 +126,7 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/manu/_PROYECTOS/clarosur.cl/clarosur-public-website/slices/CardList/default/preview.png",
+            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-public-website\\slices\\CardList\\default\\preview.png",
             "width": 2714,
             "height": 1606
           }
@@ -369,7 +369,7 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/manu/_PROYECTOS/clarosur.cl/clarosur-public-website/slices/Comparative/default/preview.png",
+            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-public-website\\slices\\Comparative\\default\\preview.png",
             "width": 1059,
             "height": 795
           }
@@ -526,7 +526,7 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/manu/_PROYECTOS/clarosur.cl/clarosur-public-website/slices/Contact/default/preview.png",
+            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-public-website\\slices\\Contact\\default\\preview.png",
             "width": 1200,
             "height": 1772
           }
@@ -848,17 +848,17 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/manu/_PROYECTOS/clarosur.cl/clarosur-public-website/slices/Hero/default/preview.png",
+            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-public-website\\slices\\Hero\\default\\preview.png",
             "width": 1562,
             "height": 669
           },
           "noButtonNoDescription": {
-            "path": "/Users/manu/_PROYECTOS/clarosur.cl/clarosur-public-website/slices/Hero/noButtonNoDescription/preview.png",
+            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-public-website\\slices\\Hero\\noButtonNoDescription\\preview.png",
             "width": 1562,
             "height": 669
           },
           "noButton": {
-            "path": "/Users/manu/_PROYECTOS/clarosur.cl/clarosur-public-website/slices/Hero/noButton/preview.png",
+            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-public-website\\slices\\Hero\\noButton\\preview.png",
             "width": 1562,
             "height": 669
           }
@@ -1096,21 +1096,1380 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/manu/_PROYECTOS/clarosur.cl/clarosur-public-website/slices/Ideas/default/preview.png",
+            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-public-website\\slices\\Ideas\\default\\preview.png",
             "width": 1398,
             "height": 432
           },
           "noButtonNobg": {
-            "path": "/Users/manu/_PROYECTOS/clarosur.cl/clarosur-public-website/slices/Ideas/noButtonNobg/preview.png",
+            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-public-website\\slices\\Ideas\\noButtonNobg\\preview.png",
             "width": 1398,
             "height": 432
           },
           "noButton": {
-            "path": "/Users/manu/_PROYECTOS/clarosur.cl/clarosur-public-website/slices/Ideas/noButton/preview.png",
+            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-public-website\\slices\\Ideas\\noButton\\preview.png",
             "width": 1398,
             "height": 432
           }
         }
+      },
+      "about": {
+        "library": "slices",
+        "id": "about",
+        "name": "LandingAbout",
+        "description": "About",
+        "model": {
+          "id": "about",
+          "type": "SharedSlice",
+          "name": "LandingAbout",
+          "description": "About",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "About",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "heading1",
+                    "label": "Title",
+                    "placeholder": "This is where it all begins..."
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "paragraph",
+                    "label": "Description",
+                    "placeholder": "A nice description of your feature"
+                  }
+                },
+                "image": {
+                  "type": "Image",
+                  "config": {
+                    "label": "image",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Shinning",
+                  "spans": []
+                }
+              ],
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Amet laboris adipisicing est ut pariatur duis in cillum magna. Pariatur ipsum nisi labore fugiat ullamco tempor exercitation sunt ut aliqua nulla excepteur.",
+                  "spans": []
+                }
+              ],
+              "image": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1587613865763-4b8b0d19e8ab"
+              }
+            },
+            "slice_type": "about"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      },
+      "slice_benefits": {
+        "library": "slices",
+        "id": "slice_benefits",
+        "name": "LandingBenefits",
+        "description": "SliceBenefits",
+        "model": {
+          "id": "slice_benefits",
+          "type": "SharedSlice",
+          "name": "LandingBenefits",
+          "description": "SliceBenefits",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "SliceBenefits",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "heading1",
+                    "label": "Title",
+                    "placeholder": "This is where it all begins..."
+                  }
+                }
+              },
+              "items": {
+                "icon": {
+                  "type": "Image",
+                  "config": {
+                    "label": "icon",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "keytitle": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "keyTitle",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph"
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "description",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph"
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "icon": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1493119508027-2b584f234d6c"
+                },
+                "keytitle": [
+                  {
+                    "type": "paragraph",
+                    "text": "Do anim sint adipisicing tempor ea sit adipisicing mollit commodo incididunt. Dolore non ipsum officia exercitation amet irure ipsum est sunt eiusmod dolor eu amet. Aliqua anim occaecat adipisicing nostrud nisi est ex ut et sunt reprehenderit consequat esse excepteur eu.",
+                    "spans": []
+                  }
+                ],
+                "description": [
+                  {
+                    "type": "paragraph",
+                    "text": "Id deserunt aute deserunt. Exercitation anim Lorem minim incididunt Lorem ut.",
+                    "spans": []
+                  }
+                ]
+              }
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Cloud",
+                  "spans": []
+                }
+              ]
+            },
+            "slice_type": "slice_benefits"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      },
+      "landing_benefits_top": {
+        "library": "slices",
+        "id": "landing_benefits_top",
+        "name": "LandingBenefitsTop",
+        "description": "LandingBenefitsTop",
+        "model": {
+          "id": "landing_benefits_top",
+          "type": "SharedSlice",
+          "name": "LandingBenefitsTop",
+          "description": "LandingBenefitsTop",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "LandingBenefitsTop",
+              "primary": {
+                "bgimage": {
+                  "type": "Image",
+                  "config": {
+                    "label": "bgImage",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                }
+              },
+              "items": {
+                "metric": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "metric",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "heading2"
+                  }
+                },
+                "metrictext": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "metricText",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph"
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "metric": [
+                  {
+                    "type": "heading2",
+                    "text": "Satisfied",
+                    "spans": []
+                  }
+                ],
+                "metrictext": [
+                  {
+                    "type": "paragraph",
+                    "text": "Adipisicing ullamco cupidatat occaecat adipisicing laborum reprehenderit veniam tempor minim irure ex ullamco officia.",
+                    "spans": []
+                  }
+                ]
+              }
+            ],
+            "primary": {
+              "bgimage": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1491975474562-1f4e30bc9468"
+              }
+            },
+            "slice_type": "landing_benefits_top"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      },
+      "landing_closing_form": {
+        "library": "slices",
+        "id": "landing_closing_form",
+        "name": "LandingClosingForm",
+        "description": "LandingClosingForm",
+        "model": {
+          "id": "landing_closing_form",
+          "type": "SharedSlice",
+          "name": "LandingClosingForm",
+          "description": "LandingClosingForm",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "LandingClosingForm",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "heading1",
+                    "label": "Title",
+                    "placeholder": "This is where it all begins..."
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "paragraph",
+                    "label": "Description",
+                    "placeholder": "A nice description of your feature"
+                  }
+                },
+                "ctatext": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "ctaText",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph"
+                  }
+                },
+                "bgimage": {
+                  "type": "Image",
+                  "config": {
+                    "label": "bgImage",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Outer",
+                  "spans": []
+                }
+              ],
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Dolore cillum ipsum voluptate eu eiusmod veniam in. Dolore consequat elit fugiat aliquip excepteur commodo magna minim aliquip exercitation dolor nisi.",
+                  "spans": []
+                }
+              ],
+              "ctatext": [
+                {
+                  "type": "paragraph",
+                  "text": "Est fugiat officia dolore magna excepteur adipisicing proident dolor quis reprehenderit laboris culpa velit qui.",
+                  "spans": []
+                }
+              ],
+              "bgimage": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1589321599763-d66926c29613"
+              }
+            },
+            "slice_type": "landing_closing_form"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      },
+      "landing_customer_review": {
+        "library": "slices",
+        "id": "landing_customer_review",
+        "name": "LandingCustomerReview",
+        "description": "LandingCustomerReview",
+        "model": {
+          "id": "landing_customer_review",
+          "type": "SharedSlice",
+          "name": "LandingCustomerReview",
+          "description": "LandingCustomerReview",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "LandingCustomerReview",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "heading1",
+                    "label": "Title",
+                    "placeholder": "This is where it all begins..."
+                  }
+                }
+              },
+              "items": {
+                "usericon": {
+                  "type": "Image",
+                  "config": {
+                    "label": "userIcon",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "username": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "userName",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph"
+                  }
+                },
+                "userreview": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "userReview",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph"
+                  }
+                },
+                "stars": {
+                  "type": "Number",
+                  "config": {
+                    "label": "stars",
+                    "placeholder": ""
+                  }
+                },
+                "googlelink": {
+                  "type": "Link",
+                  "config": {
+                    "label": "googleLink",
+                    "placeholder": "",
+                    "select": null
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "usericon": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1504198070170-4ca53bb1c1fa"
+                },
+                "username": [
+                  {
+                    "type": "paragraph",
+                    "text": "Veniam officia dolor laborum velit laboris commodo ad est ut nisi officia nostrud duis ullamco adipisicing. Sit minim voluptate officia officia culpa incididunt cupidatat et labore. Cillum aute sunt ipsum irure labore.",
+                    "spans": []
+                  }
+                ],
+                "userreview": [
+                  {
+                    "type": "paragraph",
+                    "text": "Velit dolor aliquip labore.",
+                    "spans": []
+                  }
+                ],
+                "stars": 87,
+                "googlelink": {
+                  "link_type": "Web",
+                  "url": "http://twitter.com"
+                }
+              }
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Describe",
+                  "spans": []
+                }
+              ]
+            },
+            "slice_type": "landing_customer_review"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      },
+      "landing_faq": {
+        "library": "slices",
+        "id": "landing_faq",
+        "name": "LandingFaq",
+        "description": "LandingFaq",
+        "model": {
+          "id": "landing_faq",
+          "type": "SharedSlice",
+          "name": "LandingFaq",
+          "description": "LandingFaq",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "LandingFaq",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Title",
+                    "placeholder": "This is where it all begins...",
+                    "allowTargetBlank": true,
+                    "single": "heading1"
+                  }
+                }
+              },
+              "items": {
+                "question": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "question",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph"
+                  }
+                },
+                "answer": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "answer",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph"
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "question": [
+                  {
+                    "type": "paragraph",
+                    "text": "Dolor ex reprehenderit nisi aute voluptate mollit. Ad exercitation minim est anim minim aliqua nostrud sint elit eu. Exercitation officia dolore incididunt id culpa veniam amet.",
+                    "spans": []
+                  }
+                ],
+                "answer": [
+                  {
+                    "type": "paragraph",
+                    "text": "Ullamco laboris reprehenderit id nulla incididunt quis Lorem sit deserunt ipsum amet aliquip.",
+                    "spans": []
+                  }
+                ]
+              }
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Whole",
+                  "spans": []
+                }
+              ]
+            },
+            "slice_type": "landing_faq"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      },
+      "landing_hero": {
+        "library": "slices",
+        "id": "landing_hero",
+        "name": "LandingHero",
+        "description": "LandingHero",
+        "model": {
+          "id": "landing_hero",
+          "type": "SharedSlice",
+          "name": "LandingHero",
+          "description": "LandingHero",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "LandingHero",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "heading1",
+                    "label": "Title",
+                    "placeholder": "This is where it all begins..."
+                  }
+                },
+                "subtitle": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "subtitle",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph"
+                  }
+                },
+                "tagline": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "tagline",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph"
+                  }
+                },
+                "formtitle": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "formTitle",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "heading1"
+                  }
+                },
+                "formsubtitle": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "formSubtitle",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph"
+                  }
+                },
+                "ctatext": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "ctaText",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph"
+                  }
+                },
+                "bgimage": {
+                  "type": "Image",
+                  "config": {
+                    "label": "bgImage",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                }
+              },
+              "items": {
+                "icon": {
+                  "type": "Image",
+                  "config": {
+                    "label": "icon",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "keyword": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "keyword",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "icon": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1593642633279-1796119d5482"
+                },
+                "keyword": [
+                  {
+                    "type": "paragraph",
+                    "text": "Duis dolor tempor quis cupidatat reprehenderit enim reprehenderit magna sunt aute tempor laboris. Culpa minim sint mollit pariatur minim adipisicing exercitation culpa ullamco voluptate voluptate consectetur veniam minim.",
+                    "spans": []
+                  }
+                ]
+              }
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Check",
+                  "spans": []
+                }
+              ],
+              "subtitle": [
+                {
+                  "type": "paragraph",
+                  "text": "Labore ut cupidatat adipisicing ea officia consectetur adipisicing. Deserunt ad ex ad minim sit mollit cillum eu anim. Proident anim sit sint amet nulla do laboris ad eu eu consectetur consectetur exercitation magna nulla.",
+                  "spans": []
+                }
+              ],
+              "tagline": [
+                {
+                  "type": "paragraph",
+                  "text": "Sit nisi pariatur ad laborum officia ullamco. Incididunt sit ea laboris adipisicing veniam ad quis exercitation ea laboris.",
+                  "spans": []
+                }
+              ],
+              "formtitle": [
+                {
+                  "type": "heading1",
+                  "text": "Party",
+                  "spans": []
+                }
+              ],
+              "formsubtitle": [
+                {
+                  "type": "paragraph",
+                  "text": "In ut occaecat ipsum. Mollit dolor laborum eiusmod aute nulla.",
+                  "spans": []
+                }
+              ],
+              "ctatext": [
+                {
+                  "type": "paragraph",
+                  "text": "Dolore esse minim ullamco aliquip elit.",
+                  "spans": []
+                }
+              ],
+              "bgimage": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+              }
+            },
+            "slice_type": "landing_hero"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      },
+      "our_projects": {
+        "library": "slices",
+        "id": "our_projects",
+        "name": "LandingProjects",
+        "description": "OurProjects",
+        "model": {
+          "id": "our_projects",
+          "type": "SharedSlice",
+          "name": "LandingProjects",
+          "description": "OurProjects",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "OurProjects",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "heading1",
+                    "label": "Title",
+                    "placeholder": "This is where it all begins..."
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "paragraph",
+                    "label": "Description",
+                    "placeholder": "A nice description of your feature"
+                  }
+                },
+                "ctatext": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "ctaText",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph"
+                  }
+                },
+                "ctaurl": {
+                  "type": "Link",
+                  "config": {
+                    "label": "ctaUrl",
+                    "placeholder": "",
+                    "select": null
+                  }
+                }
+              },
+              "items": {
+                "projecttitle": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "projectTitle",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "heading2"
+                  }
+                },
+                "location": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "location",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph"
+                  }
+                },
+                "projectdescription": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "projectDescription",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "before": {
+                  "type": "Image",
+                  "config": {
+                    "label": "before",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "after": {
+                  "type": "Image",
+                  "config": {
+                    "label": "after",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "projecttitle": [
+                  {
+                    "type": "heading2",
+                    "text": "Clock",
+                    "spans": []
+                  }
+                ],
+                "location": [
+                  {
+                    "type": "paragraph",
+                    "text": "Mollit elit laboris enim veniam elit nostrud ut exercitation laboris qui irure magna nostrud non est.",
+                    "spans": []
+                  }
+                ],
+                "projectdescription": [
+                  {
+                    "type": "paragraph",
+                    "text": "Duis amet esse sit dolore dolore aute veniam consectetur fugiat pariatur voluptate aliquip dolore.",
+                    "spans": []
+                  }
+                ],
+                "before": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e"
+                },
+                "after": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1494173853739-c21f58b16055"
+                }
+              }
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Present",
+                  "spans": []
+                }
+              ],
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Eiusmod eiusmod consequat do proident qui eiusmod id sint do laboris non deserunt. Laborum aliquip dolor irure quis exercitation in. Nulla cillum mollit consequat irure duis velit.",
+                  "spans": []
+                }
+              ],
+              "ctatext": [
+                {
+                  "type": "paragraph",
+                  "text": "Tempor pariatur reprehenderit sint. Culpa minim nisi dolore irure proident deserunt enim dolore dolore tempor proident minim.",
+                  "spans": []
+                }
+              ],
+              "ctaurl": {
+                "link_type": "Web",
+                "url": "http://google.com"
+              }
+            },
+            "slice_type": "our_projects"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      },
+      "landing_services": {
+        "library": "slices",
+        "id": "landing_services",
+        "name": "LandingServices",
+        "description": "LandingServices",
+        "model": {
+          "id": "landing_services",
+          "type": "SharedSlice",
+          "name": "LandingServices",
+          "description": "LandingServices",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "LandingServices",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "title",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "heading1"
+                  }
+                }
+              },
+              "items": {
+                "bgimage": {
+                  "type": "Image",
+                  "config": {
+                    "label": "bgimage",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "servicetitle": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "servicetitle",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "heading2"
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "description",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph"
+                  }
+                },
+                "link": {
+                  "type": "Link",
+                  "config": {
+                    "label": "link",
+                    "placeholder": "",
+                    "allowTargetBlank": false,
+                    "select": null
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            },
+            {
+              "id": "nohover",
+              "name": "nohover",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "LandingServices",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "title",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "heading1"
+                  }
+                },
+                "ctatext": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "ctaText",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph"
+                  }
+                },
+                "ctaurl": {
+                  "type": "Link",
+                  "config": {
+                    "label": "ctaUrl",
+                    "placeholder": "",
+                    "select": null
+                  }
+                }
+              },
+              "items": {
+                "bgimage": {
+                  "type": "Image",
+                  "config": {
+                    "label": "bgimage",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "servicetitle": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "servicetitle",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "heading2"
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "description",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph"
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "bgimage": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1471897488648-5eae4ac6686b"
+                },
+                "servicetitle": [
+                  {
+                    "type": "heading2",
+                    "text": "Largest",
+                    "spans": []
+                  }
+                ],
+                "description": [
+                  {
+                    "type": "paragraph",
+                    "text": "Fugiat laboris deserunt aute duis labore fugiat culpa deserunt. Ipsum veniam nostrud elit culpa voluptate et id eu quis sint sunt nulla consectetur pariatur excepteur.",
+                    "spans": []
+                  }
+                ],
+                "link": {
+                  "link_type": "Web",
+                  "url": "http://google.com"
+                }
+              }
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Taken",
+                  "spans": []
+                }
+              ]
+            },
+            "slice_type": "landing_services"
+          },
+          "nohover": {
+            "variation": "nohover",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "bgimage": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1448932223592-d1fc686e76ea"
+                },
+                "servicetitle": [
+                  {
+                    "type": "heading2",
+                    "text": "Double",
+                    "spans": []
+                  }
+                ],
+                "description": [
+                  {
+                    "type": "paragraph",
+                    "text": "Ex excepteur officia nostrud ullamco eu sit laborum est incididunt deserunt mollit mollit ipsum. Sint cillum amet officia. Quis ullamco nostrud consectetur minim.",
+                    "spans": []
+                  }
+                ]
+              }
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Known",
+                  "spans": []
+                }
+              ],
+              "ctatext": [
+                {
+                  "type": "paragraph",
+                  "text": "Esse ea reprehenderit anim amet consectetur culpa pariatur est fugiat reprehenderit duis amet. Amet officia nulla dolor incididunt officia cupidatat cillum aliqua voluptate tempor non. Cillum occaecat cillum voluptate consequat eu sunt do ut.",
+                  "spans": []
+                }
+              ],
+              "ctaurl": {
+                "link_type": "Web",
+                "url": "https://prismic.io"
+              }
+            },
+            "slice_type": "landing_services"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      },
+      "landing_subhero": {
+        "library": "slices",
+        "id": "landing_subhero",
+        "name": "LandingSubhero",
+        "description": "LandingSubhero",
+        "model": {
+          "id": "landing_subhero",
+          "type": "SharedSlice",
+          "name": "LandingSubhero",
+          "description": "LandingSubhero",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "LandingSubhero",
+              "primary": {},
+              "items": {
+                "text": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "text",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph"
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "text": [
+                  {
+                    "type": "paragraph",
+                    "text": "Dolore officia consequat aliqua. Elit laboris ipsum excepteur ullamco in labore incididunt id ea non minim ipsum magna minim anim.",
+                    "spans": []
+                  }
+                ]
+              }
+            ],
+            "primary": {},
+            "slice_type": "landing_subhero"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      },
+      "landing_timeline": {
+        "library": "slices",
+        "id": "landing_timeline",
+        "name": "LandingTimeline",
+        "description": "LandingTimeline",
+        "model": {
+          "id": "landing_timeline",
+          "type": "SharedSlice",
+          "name": "LandingTimeline",
+          "description": "LandingTimeline",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "LandingTimeline",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "heading1",
+                    "label": "Title",
+                    "placeholder": "This is where it all begins..."
+                  }
+                }
+              },
+              "items": {
+                "step": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "step",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph"
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "step": [
+                  {
+                    "type": "paragraph",
+                    "text": "Eiusmod do ad commodo officia aliqua officia non nulla duis velit aliquip. Labore eu quis voluptate et elit cupidatat quis incididunt irure eiusmod enim.",
+                    "spans": []
+                  }
+                ]
+              }
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Letter",
+                  "spans": []
+                }
+              ]
+            },
+            "slice_type": "landing_timeline"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
       },
       "logo_list": {
         "library": "slices",
@@ -1344,17 +2703,17 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/manu/_PROYECTOS/clarosur.cl/clarosur-public-website/slices/LogoList/default/preview.png",
+            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-public-website\\slices\\LogoList\\default\\preview.png",
             "width": 1133,
             "height": 177
           },
           "onlyLogosBg": {
-            "path": "/Users/manu/_PROYECTOS/clarosur.cl/clarosur-public-website/slices/LogoList/onlyLogosBg/preview.png",
+            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-public-website\\slices\\LogoList\\onlyLogosBg\\preview.png",
             "width": 1133,
             "height": 177
           },
           "buttonTitleDescription": {
-            "path": "/Users/manu/_PROYECTOS/clarosur.cl/clarosur-public-website/slices/LogoList/buttonTitleDescription/preview.png",
+            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-public-website\\slices\\LogoList\\buttonTitleDescription\\preview.png",
             "width": 1820,
             "height": 727
           }
@@ -1491,12 +2850,12 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/manu/_PROYECTOS/clarosur.cl/clarosur-public-website/slices/Metrics/default/preview.png",
+            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-public-website\\slices\\Metrics\\default\\preview.png",
             "width": 1375,
             "height": 486
           },
           "noBackground": {
-            "path": "/Users/manu/_PROYECTOS/clarosur.cl/clarosur-public-website/slices/Metrics/noBackground/preview.png",
+            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-public-website\\slices\\Metrics\\noBackground\\preview.png",
             "width": 1166,
             "height": 372
           }
@@ -1601,7 +2960,7 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/manu/_PROYECTOS/clarosur.cl/clarosur-public-website/slices/Projects/default/preview.png",
+            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-public-website\\slices\\Projects\\default\\preview.png",
             "width": 1127,
             "height": 626
           }
@@ -1943,22 +3302,22 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/manu/_PROYECTOS/clarosur.cl/clarosur-public-website/slices/Services/default/preview.png",
+            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-public-website\\slices\\Services\\default\\preview.png",
             "width": 1194,
             "height": 656
           },
           "noIconsNoButtons": {
-            "path": "/Users/manu/_PROYECTOS/clarosur.cl/clarosur-public-website/slices/Services/noIconsNoButtons/preview.png",
+            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-public-website\\slices\\Services\\noIconsNoButtons\\preview.png",
             "width": 1194,
             "height": 656
           },
           "noIcons": {
-            "path": "/Users/manu/_PROYECTOS/clarosur.cl/clarosur-public-website/slices/Services/noIcons/preview.png",
+            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-public-website\\slices\\Services\\noIcons\\preview.png",
             "width": 1194,
             "height": 656
           },
           "imageText": {
-            "path": "/Users/manu/_PROYECTOS/clarosur.cl/clarosur-public-website/slices/Services/imageText/preview.png",
+            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-public-website\\slices\\Services\\imageText\\preview.png",
             "width": 1194,
             "height": 656
           }
@@ -2086,7 +3445,7 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/manu/_PROYECTOS/clarosur.cl/clarosur-public-website/slices/Staff/default/preview.png",
+            "path": "C:\\Users\\fox\\Desktop\\Insive\\clarosur-public-website\\slices\\Staff\\default\\preview.png",
             "width": 1134,
             "height": 1177
           }

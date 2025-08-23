@@ -5,6 +5,17 @@ import Comparative from './Comparative';
 import Contact from './Contact';
 import Hero from './Hero';
 import Ideas from './Ideas';
+import LandingAbout from './LandingAbout';
+import LandingBenefits from './LandingBenefits';
+import LandingBenefitsTop from './LandingBenefitsTop';
+import LandingClosingForm from './LandingClosingForm';
+import LandingCustomerReview from './LandingCustomerReview';
+import LandingFaq from './LandingFaq';
+import LandingHero from './LandingHero';
+import LandingProjects from './LandingProjects';
+import LandingServices from './LandingServices';
+import LandingSubhero from './LandingSubhero';
+import LandingTimeline from './LandingTimeline';
 import LogoList from './LogoList';
 import Metrics from './Metrics';
 import Projects from './Projects';
@@ -17,6 +28,17 @@ export {
 	Contact,
 	Hero,
 	Ideas,
+	LandingAbout,
+	LandingBenefits,
+	LandingBenefitsTop,
+	LandingClosingForm,
+	LandingCustomerReview,
+	LandingFaq,
+	LandingHero,
+	LandingProjects,
+	LandingServices,
+	LandingSubhero,
+	LandingTimeline,
 	LogoList,
 	Metrics,
 	Projects,
@@ -30,6 +52,17 @@ export const components = {
 	contact: Contact,
 	hero: Hero,
 	ideas: Ideas,
+	about: LandingAbout,
+	slice_benefits: LandingBenefits,
+	landing_benefits_top: LandingBenefitsTop,
+	landing_closing_form: LandingClosingForm,
+	landing_customer_review: LandingCustomerReview,
+	landing_faq: LandingFaq,
+	landing_hero: LandingHero,
+	our_projects: LandingProjects,
+	landing_services: LandingServices,
+	landing_subhero: LandingSubhero,
+	landing_timeline: LandingTimeline,
 	logo_list: LogoList,
 	metrics: Metrics,
 	projects: Projects,

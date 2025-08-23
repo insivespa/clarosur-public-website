@@ -1,0 +1,9 @@
+import MyComponent from '../../../../slices/LandingFaq';
+
+export default {
+  title: 'slices/LandingFaq'
+}
+
+
+export const _Default = () => <MyComponent slice={{"variation":"default","version":"sktwi1xtmkfgx8626","items":[{"question":[{"type":"paragraph","text":"Dolor ex reprehenderit nisi aute voluptate mollit. Ad exercitation minim est anim minim aliqua nostrud sint elit eu. Exercitation officia dolore incididunt id culpa veniam amet.","spans":[]}],"answer":[{"type":"paragraph","text":"Ullamco laboris reprehenderit id nulla incididunt quis Lorem sit deserunt ipsum amet aliquip.","spans":[]}]}],"primary":{"title":[{"type":"heading1","text":"Whole","spans":[]}]},"slice_type":"landing_faq","id":"_Default"}} />
+_Default.storyName = ''

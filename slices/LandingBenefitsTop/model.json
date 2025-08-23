@@ -1,0 +1,46 @@
+{
+  "id": "landing_benefits_top",
+  "type": "SharedSlice",
+  "name": "LandingBenefitsTop",
+  "description": "LandingBenefitsTop",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "LandingBenefitsTop",
+      "primary": {
+        "bgimage": {
+          "type": "Image",
+          "config": {
+            "label": "bgImage",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {
+        "metric": {
+          "type": "StructuredText",
+          "config": {
+            "label": "metric",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading2"
+          }
+        },
+        "metrictext": {
+          "type": "StructuredText",
+          "config": {
+            "label": "metricText",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph"
+          }
+        }
+      },
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}
