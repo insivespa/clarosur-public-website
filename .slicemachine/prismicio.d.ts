@@ -2281,6 +2281,16 @@ export interface LandingTimelineSliceDefaultPrimary {
  */
 export interface LandingTimelineSliceDefaultItem {
 	/**
+	 * title field in *LandingTimeline → Items*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landing_timeline.items[].title
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	title: prismic.RichTextField;
+	
+	/**
 	 * step field in *LandingTimeline → Items*
 	 *
 	 * - **Field Type**: Rich Text

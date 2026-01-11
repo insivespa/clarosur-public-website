@@ -121,3 +121,51 @@ export const ImageWrapper = styled.div`
     }
   }
 `;
+
+export const ContactButton = styled.a`
+  gap: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 1.5rem;
+  padding: 1rem 2rem;
+  min-height: 44px;
+
+  border-radius: 999px;
+  border: 2px solid #ffc107;
+  background-color: #ffc107;
+  color: #393b37;
+
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+
+  transition: background-color 0.25s ease, color 0.25s ease,
+    border-color 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
+
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    background-color: #ffd633;
+    border-color: #ffd633;
+    color: #393b37;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    background-color: #e0a800;
+    border-color: #d39e00;
+    color: #ffffff;
+    transform: translateY(0);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  /* ✅ Proper centering on mobile */
+  @media (max-width: 768px) {
+    display: flex;
+    margin: 1.5rem auto 0;
+  }
+`;

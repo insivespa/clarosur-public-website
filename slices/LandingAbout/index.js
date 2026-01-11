@@ -1,10 +1,9 @@
 import { PrismicRichText } from "@prismicio/react";
-import { Wrapper, ImageWrapper, TextSection } from "./style";
+import { Wrapper, ImageWrapper, TextSection, ContactButton } from "./style";
 
 /**
  * @typedef {import("@prismicio/client").Content.AboutSlice} AboutSlice
  * @typedef {import("@prismicio/react").SliceComponentProps<AboutSlice>} AboutProps
- * @param { AboutProps }
  */
 const About = ({ slice }) => {
   const image = slice?.primary?.image;
@@ -14,9 +13,19 @@ const About = ({ slice }) => {
       <TextSection>
         <div className="text-block">
           <PrismicRichText field={slice.primary.title} />
+
           {slice.primary.description && (
             <PrismicRichText field={slice.primary.description} />
           )}
+
+          {/* WhatsApp Button */}
+          <ContactButton
+            href="https://wa.me/56964904389"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Quiero contactarlos
+          </ContactButton>
         </div>
       </TextSection>
 

@@ -51,6 +51,12 @@
               "patternType": "PARAGRAPH",
               "blocks": 1
             }
+          },
+          "title": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
           }
         }
       }
