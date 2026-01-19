@@ -37,7 +37,7 @@ export const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 10rem;
+  padding: 1rem 6rem;
   background-color: ${theme.navBg};
 
   box-shadow: 0 2px 6px ${theme.navShadowLight},
@@ -52,6 +52,63 @@ export const Nav = styled.nav`
 
   @media (max-width: 768px) {
     padding: 1rem;
+  }
+
+  /* Hamburger menu styles */
+  .ham {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 400ms;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    z-index: 2001;
+    display: none;
+
+    @media (max-width: 1160px) {
+      display: block;
+    }
+  }
+
+  .hamRotate.active {
+    transform: rotate(45deg);
+  }
+
+  .line {
+    fill: none;
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+    stroke: ${theme.mobileMenuIcon};
+    stroke-width: 5.5;
+    stroke-linecap: round;
+  }
+
+  .ham8 .top {
+    stroke-dasharray: 40 160;
+  }
+
+  .ham8 .middle {
+    stroke-dasharray: 40 142;
+    transform-origin: 50%;
+    transition: transform 400ms;
+  }
+
+  .ham8 .bottom {
+    stroke-dasharray: 40 85;
+    transform-origin: 50%;
+    transition: transform 400ms, stroke-dashoffset 400ms;
+  }
+
+  .ham8.active .top {
+    stroke-dashoffset: -64px;
+  }
+
+  .ham8.active .middle {
+    transform: rotate(90deg);
+  }
+
+  .ham8.active .bottom {
+    stroke-dashoffset: -64px;
   }
 `;
 
@@ -103,21 +160,35 @@ export const MobileMenuIcon = styled.div`
     display: block;
     cursor: pointer;
     color: ${theme.mobileMenuIcon};
-    z-index: 1100;
+    z-index: 2001;
   }
 `;
 
 export const MobileMenu = styled.div`
-  position: fixed;
-  inset: 0;
-  height: 100vh;
-  width: 100vw;
-  background-color: ${theme.mobileMenuBg};
-  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.15);
-  transform: translateX(${({ isOpen }) => (isOpen ? "0" : "100%")});
-  transition: transform 0.3s ease-in-out;
-  padding: 1rem;
-  z-index: 2000;
+  display: none;
+
+  @media (max-width: 1160px) {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    inset: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: ${theme.mobileMenuBg};
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.15);
+    transform: translateX(${({ isOpen }) => (isOpen ? "0" : "100%")});
+    transition: transform 0.3s ease-in-out;
+    padding: 1rem;
+    z-index: 2000;
+    overflow-y: auto;
+  }
+`;
+
+export const MobileMenuHeader = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
 `;
 
 export const CloseIcon = styled.div`
@@ -125,22 +196,53 @@ export const CloseIcon = styled.div`
   justify-content: flex-end;
   cursor: pointer;
   color: ${theme.closeIcon};
+  z-index: 2001;
 `;
 
 export const MobileNavLinks = styled.ul`
   list-style: none;
-  padding: 2rem 0;
+  padding: 0;
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 2.5rem;
+  flex: 1;
+
+  li {
+    opacity: ${({ isOpen }) => (isOpen ? 1 : 0)};
+    transform: translateX(${({ isOpen }) => (isOpen ? 0 : "50px")});
+    transition: opacity 0.3s ease, transform 0.3s ease;
+
+    &:nth-child(1) {
+      transition-delay: ${({ isOpen }) => (isOpen ? "0.1s" : "0s")};
+    }
+    &:nth-child(2) {
+      transition-delay: ${({ isOpen }) => (isOpen ? "0.15s" : "0s")};
+    }
+    &:nth-child(3) {
+      transition-delay: ${({ isOpen }) => (isOpen ? "0.2s" : "0s")};
+    }
+    &:nth-child(4) {
+      transition-delay: ${({ isOpen }) => (isOpen ? "0.25s" : "0s")};
+    }
+    &:nth-child(5) {
+      transition-delay: ${({ isOpen }) => (isOpen ? "0.3s" : "0s")};
+    }
+    &:nth-child(6) {
+      transition-delay: ${({ isOpen }) => (isOpen ? "0.35s" : "0s")};
+    }
+  }
 
   li a {
     text-decoration: none;
     color: ${theme.mobileNavLink};
+    font-size: 1.1rem;
     font-weight: 500;
-    padding-bottom: 4px;
-    transition: all 0.3s ease;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: ${theme.navLinkHover};
+    }
   }
 
   .contact-btn {
@@ -154,10 +256,16 @@ export const MobileNavLinks = styled.ul`
     border-radius: 6px;
     font-weight: 500;
     text-decoration: none;
+    transition: all 0.3s ease;
 
     svg {
       font-size: 1rem;
       color: ${theme.contactBtnIconColor};
+    }
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(25, 188, 212, 0.3);
     }
   }
 `;
