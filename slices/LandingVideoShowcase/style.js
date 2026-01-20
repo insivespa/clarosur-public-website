@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
 export const Section = styled.section`
-  padding: 4rem 10rem;
+  padding: 2rem 10rem;
   background: ${(props) =>
     props.$isBackgroundVariation ? "#2b2b2b" : "white"};
 
   @media (max-width: 1024px) {
-    padding: 3rem 3rem;
+    padding: 2rem 1rem;
   }
 
   @media (max-width: 768px) {
@@ -16,11 +16,11 @@ export const Section = styled.section`
 
 export const Title = styled.div`
   text-align: center;
-  margin-bottom: 2rem;
 
   h1 {
     font-weight: 900;
-    font-size: 2.2rem;
+    font-size: 2rem;
+    margin: 0 0 1rem 0;
     color: ${(props) => (props.$isBackgroundVariation ? "white" : "#19bcd4")};
   }
 
