@@ -1,4 +1,5 @@
 import { PrismicRichText } from "@prismicio/react";
+import { useState, useEffect } from "react";
 import {
   ReactCompareSlider,
   ReactCompareSliderImage,
@@ -17,11 +18,67 @@ import {
 import { FiArrowRight } from "react-icons/fi";
 import { TiLocation } from "react-icons/ti";
 
-/**
- * @typedef {import("@prismicio/client").Content.OurProjectsSlice} OurProjectsSlice
- * @typedef {import("@prismicio/react").SliceComponentProps<OurProjectsSlice>} OurProjectsProps
- * @param { OurProjectsProps }
- */
+// Component to handle image comparison with dynamic aspect ratio
+
+const ImageCompareSlider = ({ beforeImage, afterImage }) => {
+  const [aspectRatio, setAspectRatio] = useState("16 / 9");
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const img = new Image();
+    img.onload = () => {
+      const ratio = img.width / img.height;
+
+      let adjustedRatio;
+      if (ratio >= 1) {
+        adjustedRatio = ratio;
+      } else {
+        adjustedRatio = ratio * 2;
+      }
+
+      setAspectRatio(`${adjustedRatio.toFixed(2)} / 1`);
+      setIsLoading(false);
+    };
+    img.onerror = () => {
+      setAspectRatio("16 / 9");
+      setIsLoading(false);
+    };
+    img.src = beforeImage.url;
+  }, [beforeImage.url]);
+
+  return (
+    <CompareSliderWrapper
+      style={{ aspectRatio: isLoading ? "16 / 9" : aspectRatio }}
+    >
+      <ReactCompareSlider
+        style={{ width: "100%", height: "100%" }}
+        itemOne={
+          <ReactCompareSliderImage
+            src={beforeImage.url}
+            alt={beforeImage?.alt || "Before image"}
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+            }}
+          />
+        }
+        itemTwo={
+          <ReactCompareSliderImage
+            src={afterImage.url}
+            alt={afterImage?.alt || "After image"}
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+            }}
+          />
+        }
+      />
+    </CompareSliderWrapper>
+  );
+};
+
 const OurProjects = ({ slice }) => (
   <>
     <Section id="trabajos">
@@ -45,7 +102,10 @@ const OurProjects = ({ slice }) => (
 
             {item?.location && (
               <ProjectLocation>
-                <TiLocation size={15} style={{ color: "#333", flexShrink: 0 }} />
+                <TiLocation
+                  size={15}
+                  style={{ color: "#333", flexShrink: 0 }}
+                />
                 <PrismicRichText field={item.location} />
               </ProjectLocation>
             )}
@@ -57,33 +117,10 @@ const OurProjects = ({ slice }) => (
             )}
 
             {item?.before?.url && item?.after?.url ? (
-              <CompareSliderWrapper>
-                <ReactCompareSlider
-                  style={{ width: "100%", height: "100%" }}
-                  itemOne={
-                    <ReactCompareSliderImage
-                      src={item.before.url}
-                      alt={item.before?.alt || "Before image"}
-                      style={{
-                        width: "100%",
-                        height: "100%",
-                        objectFit: "cover",
-                      }}
-                    />
-                  }
-                  itemTwo={
-                    <ReactCompareSliderImage
-                      src={item.after.url}
-                      alt={item.after?.alt || "After image"}
-                      style={{
-                        width: "100%",
-                        height: "100%",
-                        objectFit: "cover",
-                      }}
-                    />
-                  }
-                />
-              </CompareSliderWrapper>
+              <ImageCompareSlider
+                beforeImage={item.before}
+                afterImage={item.after}
+              />
             ) : (
               <p style={{ color: "red" }}>
                 Missing before/after images for this project

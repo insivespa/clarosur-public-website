@@ -1,0 +1,66 @@
+[
+  {
+    "variation": "default",
+    "version": "sktwi1xtmkfgx8626",
+    "items": [
+      {
+        "video": {
+          "link_type": "Media",
+          "name": "mock",
+          "kind": "image",
+          "url": "https://source.unsplash.com/random",
+          "size": "10kB"
+        }
+      }
+    ],
+    "primary": {
+      "title": [
+        {
+          "type": "heading1",
+          "text": "Hello",
+          "spans": []
+        }
+      ],
+      "description": [
+        {
+          "type": "paragraph",
+          "text": "In in voluptate Lorem. Commodo consequat nostrud qui laborum. Magna amet ut anim sunt nostrud irure esse.",
+          "spans": []
+        }
+      ]
+    },
+    "slice_type": "landing_video_showcase"
+  },
+  {
+    "variation": "backgroundColor",
+    "version": "sktwi1xtmkfgx8626",
+    "items": [
+      {
+        "video": {
+          "link_type": "Media",
+          "name": "mock",
+          "kind": "image",
+          "url": "https://source.unsplash.com/random",
+          "size": "10kB"
+        }
+      }
+    ],
+    "primary": {
+      "title": [
+        {
+          "type": "heading1",
+          "text": "Glass",
+          "spans": []
+        }
+      ],
+      "description": [
+        {
+          "type": "paragraph",
+          "text": "Deserunt veniam dolor pariatur adipisicing dolore. Nisi ullamco incididunt magna deserunt labore et eu eiusmod excepteur duis Lorem nostrud non magna. Aliqua irure dolore dolore anim mollit cillum ipsum commodo velit consectetur ullamco enim.",
+          "spans": []
+        }
+      ]
+    },
+    "slice_type": "landing_video_showcase"
+  }
+]

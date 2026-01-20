@@ -1,6 +1,6 @@
 import { PrismicRichText } from "@prismicio/react";
 import { FaqSection, Icon, Wrapper } from "./style";
-import { useState, useRef, useLayoutEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 const LandingFaq = ({ slice }) => {
@@ -16,7 +16,7 @@ const LandingFaq = ({ slice }) => {
     setOpenIndex((prev) => (prev === index ? null : index));
   };
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const newHeights = {};
     refs.current.forEach((ref, i) => {
       if (ref) {

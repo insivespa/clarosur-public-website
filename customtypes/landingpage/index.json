@@ -63,6 +63,9 @@
             },
             "landing_closing_form": {
               "type": "SharedSlice"
+            },
+            "landing_video_showcase": {
+              "type": "SharedSlice"
             }
           }
         }

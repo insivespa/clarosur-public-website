@@ -2487,6 +2487,179 @@
         },
         "screenshotPaths": {}
       },
+      "landing_video_showcase": {
+        "library": "slices",
+        "id": "landing_video_showcase",
+        "name": "LandingVideoShowcase",
+        "description": "LandingVideoShowcase",
+        "model": {
+          "id": "landing_video_showcase",
+          "type": "SharedSlice",
+          "name": "LandingVideoShowcase",
+          "description": "LandingVideoShowcase",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "LandingVideoShowcase",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "heading1",
+                    "label": "Title",
+                    "placeholder": "This is where it all begins..."
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "paragraph",
+                    "label": "Description",
+                    "placeholder": "A nice description of your feature"
+                  }
+                }
+              },
+              "items": {
+                "video": {
+                  "type": "Link",
+                  "config": {
+                    "label": "video",
+                    "placeholder": "",
+                    "select": "media"
+                  }
+                },
+                "thumbnail": {
+                  "type": "Image",
+                  "config": {
+                    "constraint": {},
+                    "thumbnails": [],
+                    "label": "Thumbnail"
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            },
+            {
+              "id": "backgroundColor",
+              "name": "backgroundColor",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "LandingVideoShowcase",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "heading1",
+                    "label": "Title",
+                    "placeholder": "This is where it all begins..."
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "paragraph",
+                    "label": "Description",
+                    "placeholder": "A nice description of your feature"
+                  }
+                }
+              },
+              "items": {
+                "video": {
+                  "type": "Link",
+                  "config": {
+                    "label": "video",
+                    "placeholder": "",
+                    "select": "media"
+                  }
+                },
+                "thumbnail": {
+                  "type": "Image",
+                  "config": {
+                    "constraint": {},
+                    "thumbnails": [],
+                    "label": "Thumbnail"
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "video": {
+                  "link_type": "Media",
+                  "name": "mock",
+                  "kind": "image",
+                  "url": "https://source.unsplash.com/random",
+                  "size": "10kB"
+                }
+              }
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Hello",
+                  "spans": []
+                }
+              ],
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "In in voluptate Lorem. Commodo consequat nostrud qui laborum. Magna amet ut anim sunt nostrud irure esse.",
+                  "spans": []
+                }
+              ]
+            },
+            "slice_type": "landing_video_showcase"
+          },
+          "backgroundColor": {
+            "variation": "backgroundColor",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "video": {
+                  "link_type": "Media",
+                  "name": "mock",
+                  "kind": "image",
+                  "url": "https://source.unsplash.com/random",
+                  "size": "10kB"
+                }
+              }
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Glass",
+                  "spans": []
+                }
+              ],
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Deserunt veniam dolor pariatur adipisicing dolore. Nisi ullamco incididunt magna deserunt labore et eu eiusmod excepteur duis Lorem nostrud non magna. Aliqua irure dolore dolore anim mollit cillum ipsum commodo velit consectetur ullamco enim.",
+                  "spans": []
+                }
+              ]
+            },
+            "slice_type": "landing_video_showcase"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      },
       "logo_list": {
         "library": "slices",
         "id": "logo_list",
