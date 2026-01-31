@@ -13,7 +13,9 @@
           }
         }
       }
-    }
+    },
+    "landing_project_carousel": {},
+    "carousel": {}
   },
   "slices": {
     "LandingFaq": {
@@ -225,6 +227,25 @@
     "LandingAbout": {
       "default": {
         "primary": {}
+      }
+    },
+    "LandingProjectCarousel": {
+      "default": {
+        "items": {},
+        "primary": {
+          "description": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          },
+          "title": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          }
+        }
       }
     }
   }
