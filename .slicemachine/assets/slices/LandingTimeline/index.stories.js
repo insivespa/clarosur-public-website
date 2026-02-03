@@ -5,5 +5,5 @@ export default {
 }
 
 
-export const _Default = () => <MyComponent slice={{"variation":"default","version":"sktwi1xtmkfgx8626","items":[{"step":[{"type":"paragraph","text":"Eiusmod do ad commodo officia aliqua officia non nulla duis velit aliquip. Labore eu quis voluptate et elit cupidatat quis incididunt irure eiusmod enim.","spans":[]}]}],"primary":{"title":[{"type":"heading1","text":"Letter","spans":[]}]},"slice_type":"landing_timeline","id":"_Default"}} />
+export const _Default = () => <MyComponent slice={{"variation":"default","version":"sktwi1xtmkfgx8626","items":[{"title":[{"type":"paragraph","text":"Ullamco deserunt do est consectetur ullamco aliquip proident consectetur enim pariatur. Mollit cillum enim aliqua consectetur et incididunt. Incididunt deserunt ex deserunt quis commodo est duis officia officia duis dolor anim occaecat aliqua consectetur.","spans":[]}],"step":[{"type":"paragraph","text":"Ex do commodo id.","spans":[]}]}],"primary":{"title":[{"type":"heading1","text":"Partly","spans":[]}]},"slice_type":"landing_timeline","id":"_Default"}} />
 _Default.storyName = ''

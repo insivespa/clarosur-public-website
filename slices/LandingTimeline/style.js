@@ -23,6 +23,8 @@ export const Section = styled.div`
     padding: 2rem 1rem;
   }
 
+  /* ===== SECTION TITLE ===== */
+
   .title h1 {
     font-weight: 900;
     font-size: 2rem;
@@ -30,6 +32,8 @@ export const Section = styled.div`
     text-align: center;
     margin: 0 0 1rem 0;
   }
+
+  /* ===== DESKTOP TIMELINE ===== */
 
   .step-wrapper {
     display: flex;
@@ -58,6 +62,7 @@ export const Section = styled.div`
     align-items: center;
     position: relative;
 
+    /* Step number */
     .step-number {
       position: relative;
       z-index: 1;
@@ -71,45 +76,96 @@ export const Section = styled.div`
       font-size: 1.2rem;
       background: ${colors.accent};
       border-radius: 10px;
-      margin-bottom: 1rem;
+      margin-bottom: 0.75rem;
     }
 
+    /* Text container */
     .step-text {
       text-align: center;
-      max-width: 120px;
+      max-width: 160px;
       color: ${colors.primaryText};
+
+      .step-title {
+        font-weight: 800;
+        font-size: 1.05rem;
+        margin: 0;
+        margin-bottom: 0.2rem;
+        line-height: 1.25;
+        letter-spacing: 0.2px;
+
+        p {
+          margin: 0;
+        }
+      }
+
+      /* Description */
+      .step-description {
+        font-size: 0.85rem;
+        opacity: 0.9;
+        line-height: 1.45;
+
+        p {
+          margin: 0;
+        }
+      }
     }
   }
+
+  /* ===== MOBILE TIMELINE ===== */
 
   .mobile-step-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 1.25rem;
+    margin-top: 2rem;
+  }
+
+  .mobile-step {
+    display: flex;
+    align-items: flex-start;
     gap: 1rem;
+  }
 
-    .mobile-step {
-      align-items: center;
-      display: flex;
-      gap: 1rem;
+  .mobile-step-number {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: ${colors.primaryText};
+    background-color: ${colors.accent};
+    border-radius: 6px;
+  }
+
+  .mobile-step-text {
+    color: ${colors.primaryText};
+
+    .mobile-step-title {
+      font-weight: 800;
+      font-size: 1.1rem;
+      margin: 0;
+      margin-bottom: 0.2rem;
+      line-height: 1.3;
+      letter-spacing: 0.2px;
+
+      p {
+        margin: 0;
+      }
     }
 
-    .mobile-step-number {
-      flex-shrink: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 40px;
-      height: 40px;
-      padding: 10px;
-      font-weight: bold;
-      font-size: 1.5rem;
-      color: ${colors.primaryText};
-      background-color: ${colors.accent};
-      border-radius: 5px;
-    }
+    /* Description */
+    .mobile-step-description {
+      font-size: 0.9rem;
+      opacity: 0.9;
+      line-height: 1.45;
 
-    .mobile-step-text {
-      color: ${colors.primaryText};
+      p {
+        margin: 0;
+      }
     }
   }
 `;

@@ -5,6 +5,19 @@ import type * as prismicClient from "@prismicio/client";
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
+interface CarouselDocumentData {}
+
+/**
+ * carousel document from Prismic
+ *
+ * - **API ID**: `carousel`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type CarouselDocument<Lang extends string = string> = prismic.PrismicDocumentWithUID<Simplify<CarouselDocumentData>, "carousel", Lang>;
+
 /**
  * Item in *footermenu → linkgroup*
  */
@@ -404,7 +417,7 @@ interface LandingnavDocumentData {
  */
 export type LandingnavDocument<Lang extends string = string> = prismic.PrismicDocumentWithoutUID<Simplify<LandingnavDocumentData>, "landingnav", Lang>;
 
-type LandingpageDocumentDataSlicesSlice = LandingCustomerReviewSlice | LandingFaqSlice | LandingHeroSlice | LandingTimelineSlice | AboutSlice | LandingServicesSlice | OurProjectsSlice | SliceBenefitsSlice | LandingSubheroSlice | LandingBenefitsTopSlice | LandingClosingFormSlice
+type LandingpageDocumentDataSlicesSlice = LandingCustomerReviewSlice | LandingFaqSlice | LandingHeroSlice | LandingTimelineSlice | AboutSlice | LandingServicesSlice | OurProjectsSlice | SliceBenefitsSlice | LandingSubheroSlice | LandingBenefitsTopSlice | LandingClosingFormSlice | LandingVideoShowcaseSlice | LandingProjectCarouselSlice
 
 /**
  * Content for LandingPage documents
@@ -602,7 +615,7 @@ interface PageDocumentData {
  */
 export type PageDocument<Lang extends string = string> = prismic.PrismicDocumentWithUID<Simplify<PageDocumentData>, "page", Lang>;
 
-export type AllDocumentTypes = FootermenuDocument | HomepageDocument | LandingfooterDocument | LandingnavDocument | LandingpageDocument | MenutopDocument | PageDocument;
+export type AllDocumentTypes = CarouselDocument | FootermenuDocument | HomepageDocument | LandingfooterDocument | LandingnavDocument | LandingpageDocument | MenutopDocument | PageDocument;
 
 /**
  * Primary content in *CardList → Default → Primary*
@@ -1939,6 +1952,130 @@ type LandingHeroSliceVariation = LandingHeroSliceDefault
 export type LandingHeroSlice = prismic.SharedSlice<"landing_hero", LandingHeroSliceVariation>;
 
 /**
+ * Primary content in *LandingProjectCarousel → Default → Primary*
+ */
+export interface LandingProjectCarouselSliceDefaultPrimary {
+	/**
+	 * Title field in *LandingProjectCarousel → Default → Primary*
+	 *
+	 * - **Field Type**: Title
+	 * - **Placeholder**: Our Projects
+	 * - **API ID Path**: landing_project_carousel.default.primary.title
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	title: prismic.TitleField;
+	
+	/**
+	 * Description field in *LandingProjectCarousel → Default → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landing_project_carousel.default.primary.description
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	description: prismic.RichTextField;
+	
+	/**
+	 * CTA Text field in *LandingProjectCarousel → Default → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: View All Projects
+	 * - **API ID Path**: landing_project_carousel.default.primary.ctatext
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	ctatext: prismic.RichTextField;
+	
+	/**
+	 * CTA URL field in *LandingProjectCarousel → Default → Primary*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landing_project_carousel.default.primary.ctaurl
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	ctaurl: prismic.LinkField;
+}
+
+/**
+ * Primary content in *LandingProjectCarousel → Items*
+ */
+export interface LandingProjectCarouselSliceDefaultItem {
+	/**
+	 * Project Title field in *LandingProjectCarousel → Items*
+	 *
+	 * - **Field Type**: Title
+	 * - **Placeholder**: Project name
+	 * - **API ID Path**: landing_project_carousel.items[].projecttitle
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	projecttitle: prismic.TitleField;
+	
+	/**
+	 * Location field in *LandingProjectCarousel → Items*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: City, State
+	 * - **API ID Path**: landing_project_carousel.items[].location
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	location: prismic.RichTextField;
+	
+	/**
+	 * Project Description field in *LandingProjectCarousel → Items*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: Describe the project...
+	 * - **API ID Path**: landing_project_carousel.items[].projectdescription
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	projectdescription: prismic.RichTextField;
+	
+	/**
+	 * Auto Scroll field in *LandingProjectCarousel → Items*
+	 *
+	 * - **Field Type**: Boolean
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: true
+	 * - **API ID Path**: landing_project_carousel.items[].autoscroll
+	 * - **Documentation**: https://prismic.io/docs/field#boolean
+	 */
+	autoscroll: prismic.BooleanField;
+	
+	/**
+	 * Images field in *LandingProjectCarousel → Items*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landing_project_carousel.items[].images
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	images: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for LandingProjectCarousel Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: LandingProjectCarousel
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type LandingProjectCarouselSliceDefault = prismic.SharedSliceVariation<"default", Simplify<LandingProjectCarouselSliceDefaultPrimary>, Simplify<LandingProjectCarouselSliceDefaultItem>>;
+
+/**
+ * Slice variation for *LandingProjectCarousel*
+ */
+type LandingProjectCarouselSliceVariation = LandingProjectCarouselSliceDefault
+
+/**
+ * LandingProjectCarousel Shared Slice
+ *
+ * - **API ID**: `landing_project_carousel`
+ * - **Description**: Project carousel with auto-scroll capability
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type LandingProjectCarouselSlice = prismic.SharedSlice<"landing_project_carousel", LandingProjectCarouselSliceVariation>;
+
+/**
  * Primary content in *LandingProjects → Default → Primary*
  */
 export interface OurProjectsSliceDefaultPrimary {
@@ -2281,6 +2418,16 @@ export interface LandingTimelineSliceDefaultPrimary {
  */
 export interface LandingTimelineSliceDefaultItem {
 	/**
+	 * title field in *LandingTimeline → Items*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landing_timeline.items[].title
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	title: prismic.RichTextField;
+	
+	/**
 	 * step field in *LandingTimeline → Items*
 	 *
 	 * - **Field Type**: Rich Text
@@ -2313,6 +2460,138 @@ type LandingTimelineSliceVariation = LandingTimelineSliceDefault
  * - **Documentation**: https://prismic.io/docs/slice
  */
 export type LandingTimelineSlice = prismic.SharedSlice<"landing_timeline", LandingTimelineSliceVariation>;
+
+/**
+ * Primary content in *LandingVideoShowcase → Default → Primary*
+ */
+export interface LandingVideoShowcaseSliceDefaultPrimary {
+	/**
+	 * Title field in *LandingVideoShowcase → Default → Primary*
+	 *
+	 * - **Field Type**: Title
+	 * - **Placeholder**: This is where it all begins...
+	 * - **API ID Path**: landing_video_showcase.default.primary.title
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	title: prismic.TitleField;
+	
+	/**
+	 * Description field in *LandingVideoShowcase → Default → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: A nice description of your feature
+	 * - **API ID Path**: landing_video_showcase.default.primary.description
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	description: prismic.RichTextField;
+}
+
+/**
+ * Primary content in *LandingVideoShowcase → Items*
+ */
+export interface LandingVideoShowcaseSliceDefaultItem {
+	/**
+	 * video field in *LandingVideoShowcase → Items*
+	 *
+	 * - **Field Type**: Link to Media
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landing_video_showcase.items[].video
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	video: prismic.LinkToMediaField;
+	
+	/**
+	 * Thumbnail field in *LandingVideoShowcase → Items*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landing_video_showcase.items[].thumbnail
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	thumbnail: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for LandingVideoShowcase Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: LandingVideoShowcase
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type LandingVideoShowcaseSliceDefault = prismic.SharedSliceVariation<"default", Simplify<LandingVideoShowcaseSliceDefaultPrimary>, Simplify<LandingVideoShowcaseSliceDefaultItem>>;
+
+/**
+ * Primary content in *LandingVideoShowcase → backgroundColor → Primary*
+ */
+export interface LandingVideoShowcaseSliceBackgroundColorPrimary {
+	/**
+	 * Title field in *LandingVideoShowcase → backgroundColor → Primary*
+	 *
+	 * - **Field Type**: Title
+	 * - **Placeholder**: This is where it all begins...
+	 * - **API ID Path**: landing_video_showcase.backgroundColor.primary.title
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	title: prismic.TitleField;
+	
+	/**
+	 * Description field in *LandingVideoShowcase → backgroundColor → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: A nice description of your feature
+	 * - **API ID Path**: landing_video_showcase.backgroundColor.primary.description
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	description: prismic.RichTextField;
+}
+
+/**
+ * Primary content in *LandingVideoShowcase → Items*
+ */
+export interface LandingVideoShowcaseSliceBackgroundColorItem {
+	/**
+	 * video field in *LandingVideoShowcase → Items*
+	 *
+	 * - **Field Type**: Link to Media
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landing_video_showcase.items[].video
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	video: prismic.LinkToMediaField;
+	
+	/**
+	 * Thumbnail field in *LandingVideoShowcase → Items*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: landing_video_showcase.items[].thumbnail
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	thumbnail: prismic.ImageField<never>;
+}
+
+/**
+ * backgroundColor variation for LandingVideoShowcase Slice
+ *
+ * - **API ID**: `backgroundColor`
+ * - **Description**: LandingVideoShowcase
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type LandingVideoShowcaseSliceBackgroundColor = prismic.SharedSliceVariation<"backgroundColor", Simplify<LandingVideoShowcaseSliceBackgroundColorPrimary>, Simplify<LandingVideoShowcaseSliceBackgroundColorItem>>;
+
+/**
+ * Slice variation for *LandingVideoShowcase*
+ */
+type LandingVideoShowcaseSliceVariation = LandingVideoShowcaseSliceDefault | LandingVideoShowcaseSliceBackgroundColor
+
+/**
+ * LandingVideoShowcase Shared Slice
+ *
+ * - **API ID**: `landing_video_showcase`
+ * - **Description**: LandingVideoShowcase
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type LandingVideoShowcaseSlice = prismic.SharedSlice<"landing_video_showcase", LandingVideoShowcaseSliceVariation>;
 
 /**
  * Primary content in *LogoList → Default → Primary*
@@ -2995,6 +3274,8 @@ declare module "@prismicio/client" {
 	
 	namespace Content {
 		export type {
+			CarouselDocument,
+			CarouselDocumentData,
 			FootermenuDocument,
 			FootermenuDocumentData,
 			FootermenuDocumentDataLinkgroupItem,
@@ -3084,6 +3365,11 @@ declare module "@prismicio/client" {
 			LandingHeroSliceDefaultItem,
 			LandingHeroSliceVariation,
 			LandingHeroSliceDefault,
+			LandingProjectCarouselSlice,
+			LandingProjectCarouselSliceDefaultPrimary,
+			LandingProjectCarouselSliceDefaultItem,
+			LandingProjectCarouselSliceVariation,
+			LandingProjectCarouselSliceDefault,
 			OurProjectsSlice,
 			OurProjectsSliceDefaultPrimary,
 			OurProjectsSliceDefaultItem,
@@ -3106,6 +3392,14 @@ declare module "@prismicio/client" {
 			LandingTimelineSliceDefaultItem,
 			LandingTimelineSliceVariation,
 			LandingTimelineSliceDefault,
+			LandingVideoShowcaseSlice,
+			LandingVideoShowcaseSliceDefaultPrimary,
+			LandingVideoShowcaseSliceDefaultItem,
+			LandingVideoShowcaseSliceBackgroundColorPrimary,
+			LandingVideoShowcaseSliceBackgroundColorItem,
+			LandingVideoShowcaseSliceVariation,
+			LandingVideoShowcaseSliceDefault,
+			LandingVideoShowcaseSliceBackgroundColor,
 			LogoListSlice,
 			LogoListSliceDefaultPrimary,
 			LogoListSliceDefaultItem,

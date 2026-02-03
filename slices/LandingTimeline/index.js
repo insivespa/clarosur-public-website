@@ -67,7 +67,21 @@ const LandingTimeline = ({ slice }) => {
             <div key={idx} className="mobile-step">
               <div className="mobile-step-number">{idx + 1}</div>
               <div className="mobile-step-text">
-                <PrismicRichText field={i.step} />
+                {i.title && (
+                  <div>
+                    <PrismicRichText
+                      field={i.title}
+                      components={{
+                        paragraph: ({ children }) => (
+                          <h4 className="mobile-step-title">{children}</h4>
+                        ),
+                      }}
+                    />
+                  </div>
+                )}
+                <div className="mobile-step-description">
+                  <PrismicRichText field={i.step} />
+                </div>
               </div>
             </div>
           ))}
@@ -104,6 +118,18 @@ const LandingTimeline = ({ slice }) => {
           >
             <div className="step-number">{idx + 1}</div>
             <div className="step-text">
+              {i.title && (
+                <div>
+                  <PrismicRichText
+                    field={i.title}
+                    components={{
+                      paragraph: ({ children }) => (
+                        <h4 className="step-title">{children}</h4>
+                      ),
+                    }}
+                  />
+                </div>
+              )}
               <PrismicRichText field={i.step} />
             </div>
           </div>

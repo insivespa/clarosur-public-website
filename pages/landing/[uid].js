@@ -65,7 +65,16 @@ const LandingPage = (props) => {
 export async function getStaticProps({ previewData, params: { uid } }) {
   try {
     const client = createClient({ previewData });
-    const page = await client.getByUID("landingpage", uid);
+    const page = await client.getByUID("landingpage", uid, {
+      fetchLinks: [
+        "carousel.project_title",
+        "carousel.location",
+        "carousel.description",
+        "carousel.auto_scroll",
+        "carousel.images",
+      ],
+    });
+
     const landingNav = await client.getSingle("landingnav");
     const landingFooter = await client.getSingle("landingfooter");
 

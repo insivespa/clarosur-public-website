@@ -21,6 +21,15 @@
         }
       },
       "items": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "title",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph"
+          }
+        },
         "step": {
           "type": "StructuredText",
           "config": {

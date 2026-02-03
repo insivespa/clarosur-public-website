@@ -13,7 +13,9 @@
           }
         }
       }
-    }
+    },
+    "landing_project_carousel": {},
+    "carousel": {}
   },
   "slices": {
     "LandingFaq": {
@@ -47,6 +49,12 @@
         "primary": {},
         "items": {
           "step": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          },
+          "title": {
             "config": {
               "patternType": "PARAGRAPH",
               "blocks": 1
@@ -219,6 +227,25 @@
     "LandingAbout": {
       "default": {
         "primary": {}
+      }
+    },
+    "LandingProjectCarousel": {
+      "default": {
+        "items": {},
+        "primary": {
+          "description": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          },
+          "title": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          }
+        }
       }
     }
   }

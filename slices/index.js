@@ -12,10 +12,12 @@ import LandingClosingForm from './LandingClosingForm';
 import LandingCustomerReview from './LandingCustomerReview';
 import LandingFaq from './LandingFaq';
 import LandingHero from './LandingHero';
+import LandingProjectCarousel from './LandingProjectCarousel';
 import LandingProjects from './LandingProjects';
 import LandingServices from './LandingServices';
 import LandingSubhero from './LandingSubhero';
 import LandingTimeline from './LandingTimeline';
+import LandingVideoShowcase from './LandingVideoShowcase';
 import LogoList from './LogoList';
 import Metrics from './Metrics';
 import Projects from './Projects';
@@ -35,10 +37,12 @@ export {
 	LandingCustomerReview,
 	LandingFaq,
 	LandingHero,
+	LandingProjectCarousel,
 	LandingProjects,
 	LandingServices,
 	LandingSubhero,
 	LandingTimeline,
+	LandingVideoShowcase,
 	LogoList,
 	Metrics,
 	Projects,
@@ -59,10 +63,12 @@ export const components = {
 	landing_customer_review: LandingCustomerReview,
 	landing_faq: LandingFaq,
 	landing_hero: LandingHero,
+	landing_project_carousel: LandingProjectCarousel,
 	our_projects: LandingProjects,
 	landing_services: LandingServices,
 	landing_subhero: LandingSubhero,
 	landing_timeline: LandingTimeline,
+	landing_video_showcase: LandingVideoShowcase,
 	logo_list: LogoList,
 	metrics: Metrics,
 	projects: Projects,
