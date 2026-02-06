@@ -164,15 +164,22 @@ export const ProjectDescription = styled.div`
 
 export const CompareSliderWrapper = styled.div`
   width: 100%;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 16px;
   overflow: hidden;
-  aspect-ratio: 16 / 9;
+  min-height: 280px;
+  max-height: 320px;
 
   @media (max-width: 768px) {
     margin-left: -1rem;
     margin-right: -1rem;
     width: calc(100% + 2rem);
     border-radius: 0;
+    min-height: 220px;
+    max-height: 260px;
   }
 `;
 

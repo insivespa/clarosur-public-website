@@ -57,6 +57,18 @@ export const StyledSlider = styled(Slider)`
 
   .slick-dots {
     bottom: -30px;
+
+    @media (max-width: 992px) {
+      bottom: -40px;
+    }
+
+    @media (max-width: 480px) {
+      bottom: -25px;
+    }
+
+    @media (max-width: 390px) {
+      bottom: -30px;
+    }
   }
 
   .slick-dots li button:before {
@@ -75,12 +87,13 @@ export const Review = styled.div`
   border-radius: 10px;
   padding: 1rem;
   max-width: 450px;
-  min-height: 300px;
+  height: 300px;
   box-shadow: 0 4px 20px ${colors.reviewShadow};
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  overflow-y: scroll;
 
   &:hover {
     transform: translateY(-4px);

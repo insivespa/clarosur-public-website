@@ -11,8 +11,6 @@ import {
   CarouselWrapper,
   CarouselContainer,
   CarouselButton,
-  CarouselDots,
-  Dot,
   CtaButton,
   ProjectLocation,
 } from "./style";
@@ -58,13 +56,6 @@ const ImageCarousel = ({ images, autoScroll = true }) => {
     stopAutoScroll();
     setDirection(1);
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    startAutoScroll();
-  };
-
-  const goToSlide = (index) => {
-    stopAutoScroll();
-    setDirection(index > currentIndex ? 1 : -1);
-    setCurrentIndex(index);
     startAutoScroll();
   };
 

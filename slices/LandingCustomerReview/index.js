@@ -1,4 +1,4 @@
-import { PrismicLink, PrismicRichText } from "@prismicio/react";
+import { PrismicRichText } from "@prismicio/react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import {
@@ -15,12 +15,6 @@ import {
   GoogleReviewLink,
 } from "./style";
 import { TiStarFullOutline } from "react-icons/ti";
-
-/**
- * @typedef {import("@prismicio/client").Content.LandingCustomerReviewSlice} LandingCustomerReviewSlice
- * @typedef {import("@prismicio/react").SliceComponentProps<LandingCustomerReviewSlice>} LandingCustomerReviewProps
- * @param { LandingCustomerReviewProps }
- */
 
 const LandingCustomerReview = ({ slice }) => {
   const title = slice.primary.title;

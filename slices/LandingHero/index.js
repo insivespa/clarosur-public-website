@@ -13,14 +13,10 @@ import {
   Keyword,
   TextArea,
   Tagline,
+  MobileCTAButton,
+  FormContainer,
 } from "./style";
 import { asText } from "@prismicio/helpers";
-
-/**
- * @typedef {import("@prismicio/client").Content.LandingHeroSlice} LandingHeroSlice
- * @typedef {import("@prismicio/react").SliceComponentProps<LandingHeroSlice>} LandingHeroProps
- * @param { LandingHeroProps }
- */
 
 // EmailJS configuration
 const SERVICE_ID = "service_yy76iay";
@@ -50,7 +46,7 @@ const LandingHero = ({ slice }) => {
   const hasFormTitle = useMemo(() => !!asText(formtitle)?.trim(), [formtitle]);
   const hasFormSubtitle = useMemo(
     () => !!asText(formsubtitle)?.trim(),
-    [formsubtitle]
+    [formsubtitle],
   );
   const showFormHeader = hasFormTitle || hasFormSubtitle;
 
@@ -111,6 +107,13 @@ const LandingHero = ({ slice }) => {
     }
   };
 
+  const scrollToForm = () => {
+    const formSection = document.getElementById("closing");
+    if (formSection) {
+      formSection.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return (
     <Section id="inicio" bgimage={bgimage?.url}>
       <div>
@@ -139,9 +142,13 @@ const LandingHero = ({ slice }) => {
             )}
           </>
         )}
+
+        <MobileCTAButton onClick={scrollToForm}>
+          {asText(ctatext) || "Contactar"}
+        </MobileCTAButton>
       </div>
 
-      <div>
+      <FormContainer>
         <Form onSubmit={handleSubmit(onSubmit)} noValidate>
           {showFormHeader && (
             <div style={{ marginBottom: "10px" }}>
@@ -266,7 +273,7 @@ const LandingHero = ({ slice }) => {
         >
           {status.sent ? status.message : ""}
         </p>
-      </div>
+      </FormContainer>
     </Section>
   );
 };
