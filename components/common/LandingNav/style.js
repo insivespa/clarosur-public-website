@@ -46,6 +46,8 @@ export const Nav = styled.nav`
   backdrop-filter: blur(8px) saturate(120%);
   -webkit-backdrop-filter: blur(8px) saturate(120%);
 
+  overflow-x: clip;
+
   img {
     cursor: pointer;
   }

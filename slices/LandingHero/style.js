@@ -62,7 +62,6 @@ export const Section = styled.section`
   }
 `;
 
-/* ======= Typography ======= */
 export const Title = styled.div`
   margin-bottom: clamp(0.5rem, 1.5vw, 1rem);
   text-wrap: balance;
@@ -107,7 +106,6 @@ export const Tagline = styled.div`
   }
 `;
 
-/* ======= Keyword “chips” ======= */
 export const KeywordWrapper = styled.ul`
   list-style: none;
   padding: 0;
@@ -163,7 +161,6 @@ export const Keyword = styled.li`
   }
 `;
 
-/* ======= Form Card ======= */
 export const Form = styled.form`
   display: flex;
   flex-direction: column;
@@ -195,9 +192,17 @@ export const Form = styled.form`
     font-size: clamp(0.95rem, 0.6vw + 0.75rem, 1.0625rem);
     opacity: 0.9;
   }
+
+  @media (max-width: 768px) {
+    padding: 1rem;
+    gap: 0;
+
+    & > div:first-child {
+      display: none;
+    }
+  }
 `;
 
-/* ======= Inputs ======= */
 export const InputWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -261,6 +266,10 @@ export const InputWrapper = styled.div`
       visibility: visible;
     }
   }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const TextArea = styled.textarea`
@@ -307,5 +316,57 @@ export const ButtonWrapper = styled.div`
       cursor: not-allowed;
       filter: grayscale(10%);
     }
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 0;
+
+    button {
+      padding: 14px 20px;
+      font-size: 1.05rem;
+    }
+  }
+`;
+
+export const MobileCTAButton = styled.button`
+  display: none;
+
+  @media (max-width: 768px) {
+    display: block;
+    width: 100%;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding: 14px 24px;
+    border-radius: 999px;
+    border: none;
+
+    background: ${tokens.primary};
+    color: ${tokens.textWhite};
+    font-weight: 600;
+    font-size: 1.05rem;
+
+    cursor: pointer;
+    transition: transform 120ms ease, box-shadow 120ms ease,
+      background 120ms ease;
+
+    box-shadow: 0 10px 20px ${tokens.buttonShadow},
+      0 0 0 0 ${tokens.buttonShadow};
+
+    &:hover {
+      background: ${tokens.primaryHover};
+      transform: translateY(-1px);
+      box-shadow: 0 14px 26px ${tokens.buttonHoverShadow};
+    }
+
+    &:active {
+      transform: translateY(0);
+      box-shadow: 0 8px 16px ${tokens.buttonActiveShadow} inset;
+    }
+  }
+`;
+
+export const FormContainer = styled.div`
+  @media (max-width: 768px) {
+    display: none;
   }
 `;
