@@ -31,7 +31,7 @@ const SliceBenefits = ({ slice, topSlice }) => {
   };
 
   return (
-    <Section aria-labelledby="benefits-title">
+    <Section id="beneficios" aria-labelledby="benefits-title">
       {slice?.primary?.title && (
         <Header id="benefits-title">
           <PrismicRichText field={slice.primary.title} />

@@ -81,7 +81,7 @@ const ImageCompareSlider = ({ beforeImage, afterImage }) => {
 
 const OurProjects = ({ slice }) => (
   <>
-    <Section id="trabajos">
+    <Section id="proyectos">
       <Title>
         {slice?.primary?.title && (
           <PrismicRichText field={slice.primary.title} />
