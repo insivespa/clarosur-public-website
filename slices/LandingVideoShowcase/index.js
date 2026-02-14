@@ -42,7 +42,7 @@ const LandingVideoShowcase = ({ slice }) => {
   }, [videos]);
 
   return (
-    <Section $isBackgroundVariation={isBackgroundVariation}>
+    <Section id="videos" $isBackgroundVariation={isBackgroundVariation}>
       <Title $isBackgroundVariation={isBackgroundVariation}>
         <PrismicRichText field={title} />
       </Title>
@@ -69,6 +69,7 @@ const LandingVideoShowcase = ({ slice }) => {
                   controls
                   playsInline
                   preload="metadata"
+                  muted
                   $orientation={orientation}
                   $isBackgroundVariation={isBackgroundVariation}
                 />
